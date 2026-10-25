@@ -40,7 +40,11 @@ jobs:
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
           git add -A data docs
           git diff --cached --quiet || git commit -m "agent1: new products"
-          git pull --rebase -q && git push
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours -q --no-edit origin main && git push -q origin HEAD:main && break
+            git merge --abort 2>/dev/null || true
+            sleep 5
+          done
       - name: Agent 2 - images and pins
         run: python agent2_pinterest.py
       - name: Save state
@@ -49,4 +53,8 @@ jobs:
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
           git add -A data docs
           git diff --cached --quiet || git commit -m "agent2: pins and stats"
-          git pull --rebase -q && git push
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours -q --no-edit origin main && git push -q origin HEAD:main && break
+            git merge --abort 2>/dev/null || true
+            sleep 5
+          done
