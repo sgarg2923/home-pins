@@ -1,0 +1,62 @@
+name: daily-pins
+on:
+  schedule:
+    - cron: "0 4 * * *"     # 09:30 IST
+    - cron: "30 12 * * *"   # 18:00 IST
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pins
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+      FK_AFFILIATE_ID: ${{ secrets.FK_AFFILIATE_ID }}
+      FK_AFFILIATE_TOKEN: ${{ secrets.FK_AFFILIATE_TOKEN }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+      PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+      PINTEREST_API_BASE: ${{ secrets.PINTEREST_API_BASE }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-u2net
+      - run: pip install -r requirements.txt
+      - name: Agent 1 - research, copy, landing pages
+        run: python agent1_research.py
+      - name: Publish landing pages
+        run: |
+          git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A data docs
+          git diff --cached --quiet || git commit -m "agent1: new products"
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours -q --no-edit origin main && git push -q origin HEAD:main && break
+            git merge --abort 2>/dev/null || true
+            sleep 5
+          done
+      - name: Agent 2 - images and pins
+        run: python agent2_pinterest.py
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A data docs
+          git diff --cached --quiet || git commit -m "agent2: pins and stats"
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours -q --no-edit origin main && git push -q origin HEAD:main && break
+            git merge --abort 2>/dev/null || true
+            sleep 5
+          done
