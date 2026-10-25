@@ -11,8 +11,8 @@ CF_ACC, CF_TOK = os.environ["CF_ACCOUNT_ID"], os.environ["CF_API_TOKEN"]
 W, H = 1000, 1500
 PH = {"Authorization": f"Bearer {PTOKEN}", "Content-Type": "application/json"}
 SCENES = {
-    "marble": "a clean white marble kitchen countertop, soft morning window light, blurred modern Indian kitchen behind",
-    "wood": "a warm wooden table in a cozy Indian living room, soft daylight, blurred cushions and plants behind",
+    "marble": "a clean white marble kitchen countertop, soft morning window light, blurred modern kitchen behind",
+    "wood": "a warm wooden table in a cozy living room, soft daylight, blurred cushions and plants behind",
     "pastel": "a minimal pastel beige studio backdrop with a smooth tabletop and soft shadows",
     "shelf": "a light oak shelf next to a bright window, blurred green plants and white wall behind",
 }
@@ -164,6 +164,26 @@ def compose(cut, bg, text):
     return base64.b64encode(buf.getvalue()).decode()
 
 
+def compose_card(img, bg, text):
+    """Amazon-safe mode: the original product image stays 100% unaltered; only the surrounding scene is new."""
+    img = img.convert("RGB")
+    s = min(840 / img.width, 900 / img.height, 2.0)
+    img = img.resize((max(1, round(img.width * s)), max(1, round(img.height * s))), Image.LANCZOS)
+    mask = Image.new("L", img.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, img.width - 1, img.height - 1), 28, fill=255)
+    x, y = (W - img.width) // 2, 900 - img.height // 2 + 40
+    layer = Image.new("L", (W, H), 0)
+    layer.paste(mask, (x, y + 22))
+    layer = layer.filter(ImageFilter.GaussianBlur(24)).point(lambda v: int(v * 0.45))
+    bg = bg.convert("RGB")
+    bg.paste(Image.new("RGB", (W, H), (0, 0, 0)), (0, 0), layer)
+    bg.paste(img, (x, y), mask)
+    headline(bg, text)
+    buf = io.BytesIO()
+    bg.save(buf, "JPEG", quality=88)
+    return base64.b64encode(buf.getvalue()).decode()
+
+
 # ---------- pinterest ----------
 def page_live(url, wait=600):
     end = time.time() + wait
@@ -203,7 +223,11 @@ def main():
                 print("Landing page not live yet, will retry next run:", it["page_url"])
                 continue
             it["scene"] = it.get("scene") or choose_scene()
-            b64 = compose(cutout(load_product(it)), background(it["scene"]), it["overlay_text"])
+            prod, bg = load_product(it), background(it["scene"])
+            if it["store"] == "amazon" and os.getenv("AMAZON_CUTOUT") != "1":
+                b64 = compose_card(prod, bg, it["overlay_text"])
+            else:
+                b64 = compose(cutout(prod), bg, it["overlay_text"])
             pin = pin_it(it, b64)
             it.update(status="posted", pin_id=pin.get("id"), posted_on=today())
             print("Pinned:", it["pin_title"], pin.get("id"))
