@@ -99,13 +99,13 @@ def manual_products(used):
         return []
     out = []
     for row in csv.DictReader(open(path, encoding="utf-8")):
-        if not (row.get("name") and row.get("image") and row.get("link")):
+        if not (row.get("name") and row.get("link")):
             continue
         pid = "m-" + slugify(row["name"])
         if pid in used:
             continue
-        img, local = row["image"].strip(), None
-        if not img.startswith("http"):
+        img, local = (row.get("image") or "").strip(), None
+        if img and not img.startswith("http"):
             if not os.path.exists(img):
                 continue
             os.makedirs(f"{DOCS}/img", exist_ok=True)
@@ -168,13 +168,16 @@ def build_site(queue):
         uniq.setdefault(it["pid"], it)
     for it in uniq.values():
         store = STORES[it["store"]]
+        img_url = it["image"] or f'{SITE}/img/{it["slug"]}.jpg'
+        note = "" if it["image"] else ('<p class="d">Illustrative AI-generated image, not the actual product. '
+                                       'Please check the product page for the real photos and details.</p>')
         body = (f'<p><a href="{SITE}/">&larr; More home &amp; kitchen finds</a></p><h1>{html.escape(it["title"])}</h1>'
-                f'<img src="{html.escape(it["image"])}" alt="{html.escape(it["title"])}">'
+                f'<img src="{html.escape(img_url)}" alt="{html.escape(it["title"])}" onerror="this.style.display=\'none\'">{note}'
                 f'<p>{html.escape(it["page_text"])}</p>'
                 f'<a class="btn" rel="sponsored nofollow noopener" href="{html.escape(it["affiliate_link"])}">View current price on {store}</a>'
                 f'<p class="d">{html.escape(DISCLOSURE[it["store"]])}</p>')
-        open(f'{DOCS}/p/{it["slug"]}.html', "w", encoding="utf-8").write(page(it["title"], body, it["image"]))
-    cards = "".join(f'<a href="{SITE}/p/{i["slug"]}.html"><img src="{html.escape(i["image"])}" alt=""><br>{html.escape(i["title"][:60])}</a>'
+        open(f'{DOCS}/p/{it["slug"]}.html', "w", encoding="utf-8").write(page(it["title"], body, img_url))
+    cards = "".join(f'<a href="{SITE}/p/{i["slug"]}.html"><img src="{html.escape(i["image"] or SITE + "/img/" + i["slug"] + ".jpg")}" alt="" onerror="this.style.display=\'none\'"><br>{html.escape(i["title"][:60])}</a>'
                     for i in list(uniq.values())[-60:][::-1])
     idx = (f'<h1>Home &amp; Kitchen Finds</h1><p>Practical picks for your home. '
            f'<span class="d">Some links are affiliate links; I may earn a commission at no extra cost to you.</span></p><div class="g">{cards}</div>')
