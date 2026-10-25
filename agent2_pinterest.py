@@ -164,6 +164,31 @@ def compose(cut, bg, text):
     return base64.b64encode(buf.getvalue()).decode()
 
 
+def lifestyle_pin(it):
+    """No official product photo available: make a generic AI lifestyle image (clearly illustrative, no brand)."""
+    prompt = (f"{it['keyword']} in a bright, modern, tidy home, styled lifestyle photo, natural light, "
+              "photorealistic, no text, no logos, no brand names, no people")
+    last = None
+    for fn in (cf_image, pollinations_image):
+        for _ in range(2):
+            try:
+                im = Image.open(io.BytesIO(fn(prompt))).convert("RGB")
+                s = H / im.height
+                im = im.resize((round(im.width * s), H), Image.LANCZOS)
+                left = max(0, (im.width - W) // 2)
+                bg = im.crop((left, 0, left + W, H)).resize((W, H))
+                os.makedirs("docs/img", exist_ok=True)
+                bg.save(f"docs/img/{it['slug']}.jpg", "JPEG", quality=85)   # also shown on the landing page
+                headline(bg, it["overlay_text"])
+                buf = io.BytesIO()
+                bg.save(buf, "JPEG", quality=88)
+                return base64.b64encode(buf.getvalue()).decode()
+            except Exception as e:
+                last = e
+                print(f"{fn.__name__} failed: {e}")
+    raise RuntimeError(f"image generation failed: {last}")
+
+
 def compose_card(img, bg, text):
     """Amazon-safe mode: the original product image stays 100% unaltered; only the surrounding scene is new."""
     img = img.convert("RGB")
@@ -223,11 +248,15 @@ def main():
                 print("Landing page not live yet, will retry next run:", it["page_url"])
                 continue
             it["scene"] = it.get("scene") or choose_scene()
-            prod, bg = load_product(it), background(it["scene"])
-            if it["store"] == "amazon" and os.getenv("AMAZON_CUTOUT") != "1":
-                b64 = compose_card(prod, bg, it["overlay_text"])
+            if not it.get("image"):
+                b64 = lifestyle_pin(it)
+                it["scene"] = "lifestyle"
             else:
-                b64 = compose(cutout(prod), bg, it["overlay_text"])
+                prod, bg = load_product(it), background(it["scene"])
+                if it["store"] == "amazon" and os.getenv("AMAZON_CUTOUT") != "1":
+                    b64 = compose_card(prod, bg, it["overlay_text"])
+                else:
+                    b64 = compose(cutout(prod), bg, it["overlay_text"])
             pin = pin_it(it, b64)
             it.update(status="posted", pin_id=pin.get("id"), posted_on=today())
             print("Pinned:", it["pin_title"], pin.get("id"))
