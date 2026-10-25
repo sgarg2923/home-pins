@@ -118,7 +118,7 @@ def manual_products(used):
 
 # ---------- copy ----------
 def write_copy(p, n_variants):
-    system = ("You write honest Pinterest copy for home & kitchen products for an Indian audience. "
+    system = ("You write honest Pinterest copy for home & kitchen products for a global English-speaking audience. "
               "Use ONLY facts present in the product data. Never invent specs, prices, ratings or discounts. "
               "Reply with ONLY one JSON object.")
     user = f"""Product: {p['title']}
@@ -190,7 +190,7 @@ def main():
     n, ppp, _ = plan(state)
     used = set(jload(HISTORY, []))
     picked = manual_products(used)[:n]
-    if len(picked) < n:
+    if len(picked) < n and FK_ID and FK_TOKEN:
         for kw in rank_keywords():
             if len(picked) >= n:
                 break
@@ -200,7 +200,9 @@ def main():
             if fresh:
                 picked.append(fresh[0])
     if not picked:
-        sys.exit("No products found. Set FK_AFFILIATE_ID/FK_AFFILIATE_TOKEN or add rows to inbox/manual_products.csv")
+        print("NO NEW PRODUCTS: add rows to inbox/manual_products.csv (or set Flipkart keys). Posting pending queue only.")
+        build_site(queue)
+        return
     for p in picked:
         page_text, variants = write_copy(p, ppp)
         slug = f"{slugify(p['title'])[:45]}-{slugify(p['id'])[-8:]}"
