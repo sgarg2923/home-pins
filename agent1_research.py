@@ -7,6 +7,8 @@ SITE = os.environ["SITE_BASE_URL"].rstrip("/")
 FK_ID, FK_TOKEN = os.getenv("FK_AFFILIATE_ID"), os.getenv("FK_AFFILIATE_TOKEN")
 PRICE_MIN, PRICE_MAX = 199, 2999
 ANCHOR = "home decor"
+# Pinterest website-claim tag (kept on every generated page so the claim never breaks)
+VERIFY_META = '<meta name="p:domain_verify" content="%s"/>' % (os.getenv("PINTEREST_VERIFY") or "ff656e25a52b7f22a3ff1cef9239d416")
 
 SEEDS = {
     "decor": ["led strip lights", "wall shelves", "macrame wall hanging", "table lamp", "artificial plants",
@@ -155,7 +157,7 @@ CSS = ("body{font-family:system-ui,sans-serif;margin:0;background:#faf7f4;color:
 def page(title, body, img=""):
     og = f'<meta property="og:title" content="{html.escape(title)}"><meta property="og:image" content="{html.escape(img)}">' if img else ""
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>{html.escape(title)}</title>{og}<style>{CSS}</style></head><body><main>{body}</main></body></html>')
+            f'{VERIFY_META}<title>{html.escape(title)}</title>{og}<style>{CSS}</style></head><body><main>{body}</main></body></html>')
 
 
 def build_site(queue):
