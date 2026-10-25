@@ -1,0 +1,5 @@
+requests>=2.31.0
+pytrends>=4.9.2
+pillow>=10.1.0
+rembg>=2.0.57
+onnxruntime>=1.17.0
