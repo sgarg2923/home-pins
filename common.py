@@ -64,3 +64,25 @@ def cf_text(system, user, max_tokens=900):
             last = e
             time.sleep(5 * (i + 1))
     raise RuntimeError(f"Cloudflare text failed: {last}")
+
+
+def detect_store(link):
+    l = (link or "").lower()
+    return "flipkart" if ("flipkart" in l or "fkrt" in l) else "amazon"
+
+
+CATALOG = f"{DATA}/catalog.json"
+CAT_RULES = [
+    ("Festive", ("diwali", "diya", "rangoli", "marigold", "festive", "christmas", "puja", "pooja", "tea light")),
+    ("Kitchen", ("kitchen", "chopper", "frother", "tumbler", "bottle", "lids", "slicer", "mandoline", "dish", "mug", "air fryer", "tea set")),
+    ("Organization", ("organizer", "organiser", "rack", "storage", "bins", "drawer", "under sink", "shelf")),
+    ("Decor", ("lights", "lamp", "decor", "garland", "curtain", "candle", "mirror", "plant", "frame")),
+]
+
+
+def guess_category(text):
+    t = (text or "").lower()
+    for cat, words in CAT_RULES:
+        if any(w in t for w in words):
+            return cat
+    return "Home Finds"

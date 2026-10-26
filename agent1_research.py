@@ -84,7 +84,7 @@ def flipkart_search(keyword):
             continue
         if not PRICE_MIN <= float(price) <= PRICE_MAX:
             continue
-        out.append({"id": "fk-" + b["productId"].lower(), "store": "flipkart", "keyword": keyword,
+        out.append({"id": "fk-" + b["productId"].lower(), "store": "flipkart", "category": guess_category(keyword + " " + b.get("title", "")), "keyword": keyword,
                     "title": b.get("title", keyword)[:140], "desc": (b.get("productDescription") or "")[:400],
                     "image": img, "image_local": None, "link": b["productUrl"],
                     "discount": 1 - float(price) / float(mrp or price)})
@@ -112,8 +112,9 @@ def manual_products(used):
             fn = os.path.basename(img)
             shutil.copy(img, f"{DOCS}/img/{fn}")
             local, img = img, f"{SITE}/img/{fn}"
-        store = "amazon" if "amazon." in row["link"] or "amzn." in row["link"] else "flipkart"
-        out.append({"id": pid, "store": store, "keyword": row.get("keyword") or row["name"], "title": row["name"],
+        store = detect_store(row["link"])
+        cat = (row.get("category") or "").strip() or guess_category(row["name"] + " " + (row.get("keyword") or ""))
+        out.append({"id": pid, "store": store, "category": cat, "keyword": row.get("keyword") or row["name"], "title": row["name"],
                     "desc": "", "image": img, "image_local": local, "link": row["link"], "discount": 0})
     return out
 
@@ -147,41 +148,29 @@ Make the variants clearly different from each other."""
     return f"{p['title']}. A practical pick for your home.", base[:n_variants]
 
 
-# ---------- landing pages (free GitHub Pages) ----------
-CSS = ("body{font-family:system-ui,sans-serif;margin:0;background:#faf7f4;color:#222}main{max-width:720px;margin:auto;padding:20px}"
-       "img{max-width:100%;height:auto;border-radius:12px;background:#fff}a.btn{display:block;text-align:center;background:#e60023;color:#fff;"
-       "padding:14px;border-radius:999px;font-weight:700;text-decoration:none;margin:20px 0}.d{font-size:13px;color:#666}"
-       ".g{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}.g a{color:#222;text-decoration:none;font-size:14px}")
+# ---------- catalog + site ----------
+def load_catalog(queue):
+    cat = jload(CATALOG, [])
+    if not cat and queue:      # bootstrap from an older queue
+        seen = {}
+        for it in queue:
+            if it["pid"] not in seen:
+                seen[it["pid"]] = {"pid": it["pid"], "store": detect_store(it["affiliate_link"]), "title": it["title"],
+                                   "link": it["affiliate_link"], "page_text": it["page_text"], "slug": it["slug"],
+                                   "image": it.get("image") or "", "created": it["created"],
+                                   "category": guess_category(it["title"] + " " + it["keyword"])}
+        cat = list(seen.values())
+    return cat
 
 
-def page(title, body, img=""):
-    og = f'<meta property="og:title" content="{html.escape(title)}"><meta property="og:image" content="{html.escape(img)}">' if img else ""
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'{VERIFY_META}<title>{html.escape(title)}</title>{og}<style>{CSS}</style></head><body><main>{body}</main></body></html>')
-
-
-def build_site(queue):
-    os.makedirs(f"{DOCS}/p", exist_ok=True)
-    open(f"{DOCS}/.nojekyll", "w").close()
-    uniq = {}
-    for it in queue:
-        uniq.setdefault(it["pid"], it)
-    for it in uniq.values():
-        store = STORES[it["store"]]
-        img_url = it["image"] or f'{SITE}/img/{it["slug"]}.jpg'
-        note = "" if it["image"] else ('<p class="d">Illustrative AI-generated image, not the actual product. '
-                                       'Please check the product page for the real photos and details.</p>')
-        body = (f'<p><a href="{SITE}/">&larr; More home &amp; kitchen finds</a></p><h1>{html.escape(it["title"])}</h1>'
-                f'<img src="{html.escape(img_url)}" alt="{html.escape(it["title"])}" onerror="this.style.display=\'none\'">{note}'
-                f'<p>{html.escape(it["page_text"])}</p>'
-                f'<a class="btn" rel="sponsored nofollow noopener" href="{html.escape(it["affiliate_link"])}">View current price on {store}</a>'
-                f'<p class="d">{html.escape(DISCLOSURE[it["store"]])}</p>')
-        open(f'{DOCS}/p/{it["slug"]}.html', "w", encoding="utf-8").write(page(it["title"], body, img_url))
-    cards = "".join(f'<a href="{SITE}/p/{i["slug"]}.html"><img src="{html.escape(i["image"] or SITE + "/img/" + i["slug"] + ".jpg")}" alt="" onerror="this.style.display=\'none\'"><br>{html.escape(i["title"][:60])}</a>'
-                    for i in list(uniq.values())[-60:][::-1])
-    idx = (f'<h1>Home &amp; Kitchen Finds</h1><p>Practical picks for your home. '
-           f'<span class="d">Some links are affiliate links; I may earn a commission at no extra cost to you.</span></p><div class="g">{cards}</div>')
-    open(f"{DOCS}/index.html", "w", encoding="utf-8").write(page("Home & Kitchen Finds", idx))
+def rebuild_site(queue):
+    try:
+        import sitegen
+        sitegen.build(load_catalog(queue))
+    except Exception as ex:      # never block pinning because of a site problem
+        import traceback
+        traceback.print_exc()
+        print("SITE BUILD FAILED (pins will still be posted):", ex)
 
 
 # ---------- main ----------
@@ -190,7 +179,7 @@ def main():
     queue = jload(QUEUE, [])
     if state.get("last_added") == today():
         print("Products for today already added.")
-        build_site(queue)
+        rebuild_site(queue)
         return
     n, ppp, _ = plan(state)
     used = set(jload(HISTORY, []))
@@ -206,7 +195,7 @@ def main():
                 picked.append(fresh[0])
     if not picked:
         print("NO NEW PRODUCTS: add rows to inbox/manual_products.csv (or set Flipkart keys). Posting pending queue only.")
-        build_site(queue)
+        rebuild_site(queue)
         return
     for p in picked:
         page_text, variants = write_copy(p, ppp)
@@ -217,12 +206,17 @@ def main():
                           "affiliate_link": p["link"], "slug": slug, "page_url": f"{SITE}/p/{slug}.html",
                           "page_text": page_text, "status": "pending", "attempts": 0, "created": today(), **v})
         used.add(p["id"])
+        catalog = load_catalog(queue)
+        if not any(x["pid"] == p["id"] for x in catalog):
+            catalog.append({"pid": p["id"], "store": p["store"], "title": p["title"], "link": p["link"], "page_text": page_text,
+                            "slug": slug, "image": p["image"], "created": today(), "category": p["category"]})
+        jsave(CATALOG, catalog)
     queue = queue[-400:]
     jsave(QUEUE, queue)
     jsave(HISTORY, sorted(used))
     state["last_added"] = today()
     jsave(STATE, state)
-    build_site(queue)
+    rebuild_site(queue)
     print(f"Added {len(picked)} products x {ppp} pin(s).")
 
 
