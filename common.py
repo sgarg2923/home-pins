@@ -6,6 +6,7 @@ DATA, DOCS = "data", "docs"
 QUEUE, HISTORY, STATE, STATS = (f"{DATA}/{n}.json" for n in ("queue", "history", "state", "stats"))
 WARMUP_DAYS = 14          # new Pinterest accounts: start slow, then scale up
 PRODUCTS_PER_DAY = 2
+DIGITAL_PER_DAY = 1        # one pin per day for your own digital products
 
 
 def jload(path, default):
@@ -39,7 +40,7 @@ def plan(state):
     """(products/day, pins per product, pins per run). Two runs/day. Auto-scales after warm-up."""
     days = (dt.date.fromisoformat(today()) - dt.date.fromisoformat(state["start"])).days
     ppp = 1 if days < WARMUP_DAYS else 2
-    return PRODUCTS_PER_DAY, ppp, math.ceil(PRODUCTS_PER_DAY * ppp / 2)
+    return PRODUCTS_PER_DAY, ppp, math.ceil((PRODUCTS_PER_DAY * ppp + DIGITAL_PER_DAY) / 2)
 
 
 def slugify(s):

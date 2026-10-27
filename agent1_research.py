@@ -173,10 +173,70 @@ def rebuild_site(queue):
         print("SITE BUILD FAILED (pins will still be posted):", ex)
 
 
+# ---------- own digital products (Gumroad etc.) ----------
+DIGITAL = "digital_products.json"
+
+
+def find_file(name):
+    for d in (".", "digital", "digital/images", "inbox", "docs/digital"):
+        p = os.path.join(d, name)
+        if os.path.exists(p):
+            return p
+    return None
+
+
+def add_digital(queue):
+    """Keeps your own products on the website and adds at most ONE new digital pin to the queue per day."""
+    items = jload(DIGITAL, [])
+    if not items:
+        return queue
+    catalog = load_catalog(queue)
+    changed = False
+    for pr in items:
+        pid = "dg-" + slugify(pr["name"])[:30]
+        if any(x["pid"] == pid for x in catalog):
+            continue
+        cover = find_file(pr.get("cover", ""))
+        img = ""
+        if cover:
+            os.makedirs(f"{DOCS}/digital", exist_ok=True)
+            shutil.copy(cover, f"{DOCS}/digital/{os.path.basename(cover)}")
+            img = f"{SITE}/digital/{os.path.basename(cover)}"
+        catalog.append({"pid": pid, "store": "own", "title": pr["name"], "link": pr["url"], "page_text": pr["summary"],
+                        "slug": slugify(pr["name"])[:45] + "-" + pid[-6:], "image": img, "created": today(),
+                        "category": pr.get("category", "Printables")})
+        changed = True
+    if changed:
+        jsave(CATALOG, catalog)
+    state = get_state()
+    if state.get("last_digital") != today():
+        queued = {q["id"] for q in queue}
+        for pr in items:
+            pid = "dg-" + slugify(pr["name"])[:30]
+            sep = "&" if "?" in pr["url"] else "?"
+            link = f"{pr['url']}{sep}utm_source=pinterest&utm_medium=pin&utm_campaign={slugify(pr['name'])[:30]}"
+            for i, pin in enumerate(pr.get("pins", [])):
+                qid = f"{pid}-p{i}-v0"
+                path = find_file(pin["image"])
+                if qid in queued or not path:
+                    continue
+                queue.append({"id": qid, "pid": pid, "store": "own", "keyword": pr["name"], "title": pin["title"],
+                              "image": "", "image_local": None, "affiliate_link": pr["url"], "page_url": link, "slug": pid,
+                              "page_text": pr["summary"], "pin_title": pin["title"], "pin_description": pin["description"],
+                              "alt_text": pin["alt_text"], "overlay_text": "", "group": "digital", "pin_image": path,
+                              "status": "pending", "attempts": 0, "created": today()})
+                state["last_digital"] = today()
+                jsave(STATE, state)
+                jsave(QUEUE, queue)
+                print("Queued digital pin:", pin["title"])
+                return queue
+    return queue
+
+
 # ---------- main ----------
 def main():
+    queue = add_digital(jload(QUEUE, []))
     state = get_state()
-    queue = jload(QUEUE, [])
     if state.get("last_added") == today():
         print("Products for today already added.")
         rebuild_site(queue)

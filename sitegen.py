@@ -9,12 +9,13 @@ DOCS = "docs"
 PER_PAGE = 10
 VERIFY = os.getenv("PINTEREST_VERIFY") or "ff656e25a52b7f22a3ff1cef9239d416"
 POLICY_DATE = "October 26, 2026"
-CAT_ORDER = ["Kitchen", "Organization", "Decor", "Festive"]
+CAT_ORDER = ["Kitchen", "Organization", "Decor", "Festive", "Printables"]
 CAT_TEXT = {
     "Kitchen": "Handy kitchen tools, drinkware and gadgets that make everyday cooking easier.",
     "Organization": "Storage ideas and organizers to tidy up your kitchen, cabinets and drawers.",
     "Decor": "Cozy lighting and simple decor touches that make a home feel warm.",
     "Festive": "Decorations and ideas for festivals and celebrations, including Diwali.",
+    "Printables": "Printable planners and trackers you can download instantly and print at home.",
 }
 e = html.escape
 PH = f"{SITE}/assets/placeholder.svg"
@@ -267,23 +268,31 @@ def product_page(c, cats, p, catalog):
     related = [x for x in catalog if x["pid"] != p["pid"] and x["category"] == p["category"]][:4]
     if len(related) < 4:
         related += [x for x in catalog if x["pid"] != p["pid"] and x not in related][:4 - len(related)]
+    own = p.get("store") == "own"
+    cta = "Get the printable" if own else "Check price on Amazon"
+    rel = "noopener" if own else "sponsored nofollow noopener"
     ai = not p.get("image")
     cap = ('<figcaption>Illustrative AI-generated image, not the actual product. Please see the Amazon page for real photos and details.</figcaption>'
            if ai else "")
     share_t = e(p["title"])
+    amz_note = (f'<p class="note">As an Amazon Associate I earn from qualifying purchases. Price, ratings and delivery details are shown on Amazon and may change. '
+                f'<a href="{u("disclosure.html")}">Affiliate disclosure</a>.</p>')
+    amz_box = "<li>Check the size, colour and what is included on the Amazon page.</li><li>Read recent customer reviews, especially the critical ones.</li><li>Confirm that the item ships to your country.</li>"
+    own_note = '<p class="note">Instant digital download from our shop. No physical item is shipped. For personal use only.</p>'
+    own_box = "<li>You receive a ZIP file with printable PDFs right after purchase.</li><li>US Letter and A4 sizes, three colour themes.</li><li>Print as many copies as you like for yourself.</li>"
     body = f"""<div class="container">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="{SITE}/">Home</a> &rsaquo; <a href="{u('category-' + slugify(p['category']) + '.html')}">{e(p['category'])}</a> &rsaquo; {e(p['title'])}</nav>
 <article class="product"><figure><img src="{e(main_img(p))}" alt="{share_t}" width="800" height="1000" onerror="{ONERR}">{cap}</figure>
 <div class="info"><span class="tag">{e(p['category'])}</span><h1>{share_t}</h1>
 <p class="meta">Added {e(nice_date(p.get('created', '')))}</p><p>{e(p['page_text'])}</p>
-<p><a class="btn" rel="sponsored nofollow noopener" target="_blank" href="{e(p['link'])}">Check price on Amazon</a></p>
-<p class="note">As an Amazon Associate I earn from qualifying purchases. Price, ratings and delivery details are shown on Amazon and may change. <a href="{u('disclosure.html')}">Affiliate disclosure</a>.</p>
-<div class="box"><strong>Before you buy</strong><ul><li>Check the size, colour and what is included on the Amazon page.</li><li>Read recent customer reviews, especially the critical ones.</li><li>Confirm that the item ships to your country.</li></ul></div>
+<p><a class="btn" rel="{rel}" target="_blank" href="{e(p['link'])}">{cta}</a></p>
+{own_note if own else amz_note}
+<div class="box"><strong>{"Good to know" if own else "Before you buy"}</strong><ul>{own_box if own else amz_box}</ul></div>
 <div class="share"><a href="https://www.pinterest.com/pin/create/button/?url={e(url)}&amp;media={e(main_img(p))}&amp;description={share_t}" target="_blank" rel="noopener">Save on Pinterest</a>
 <a href="https://wa.me/?text={share_t}%20{e(url)}" target="_blank" rel="noopener">Share on WhatsApp</a>
 <a href="{u('contact.html')}">Report an issue</a></div></div></article>
 <section style="margin-top:44px"><div class="section-title"><h2>You might also like</h2></div><div class="grid">{''.join(card(x) for x in related)}</div></section></div>
-<div class="sticky-cta"><a class="btn" rel="sponsored nofollow noopener" target="_blank" href="{e(p['link'])}">Check price on Amazon</a></div>"""
+<div class="sticky-cta"><a class="btn" rel="{rel}" target="_blank" href="{e(p['link'])}">{cta}</a></div>"""
     write(f"p/{p['slug']}.html", layout(c, cats, p["title"], p["page_text"], body, url, active=p["category"], og_img=main_img(p), body_class="has-cta"))
 
 

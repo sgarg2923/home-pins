@@ -243,10 +243,13 @@ def page_live(url, wait=600):
 
 
 def pin_it(it, b64):
-    tag = {"flipkart": "#affiliate Affiliate link, I may earn a commission.",
-           "amazon": "#affiliate As an Amazon Associate I earn from qualifying purchases."}[detect_store(it["affiliate_link"])]
+    if it.get("store") == "own":          # your own product: no affiliate disclosure needed
+        tag = ""
+    else:
+        tag = {"flipkart": "#affiliate Affiliate link, I may earn a commission.",
+               "amazon": "#affiliate As an Amazon Associate I earn from qualifying purchases."}[detect_store(it["affiliate_link"])]
     payload = {"board_id": BOARD, "title": it["pin_title"][:100],
-               "description": it["pin_description"][: 495 - len(tag)] + "\n\n" + tag,
+               "description": it["pin_description"][: 495 - len(tag)] + (("\n\n" + tag) if tag else ""),
                "link": it["page_url"], "alt_text": it["alt_text"][:500],
                "media_source": {"source_type": "image_base64", "content_type": "image/jpeg", "data": b64}}
     r = requests.post(f"{API}/pins", headers=PH, json=payload, timeout=120)
@@ -262,18 +265,24 @@ def main():
     jsave(QUEUE, queue)
     per_run = plan(get_state())[2]
     fatal = False
-    for it in [i for i in queue if i["status"] == "pending" and not i.get("image")][:6]:
+    for it in [i for i in queue if i["status"] == "pending" and not i.get("image") and not i.get("pin_image")][:6]:
         try:                      # make every pending page image now, so the website never shows a gap
             ensure_scene_image(it)
         except Exception as e:
             print("page image failed:", e)
     for it in [i for i in queue if i["status"] == "pending"][:per_run]:
         try:
-            if not page_live(it["page_url"]):
+            if it.get("pin_image"):                       # ready-made pin image (own digital product)
+                with open(it["pin_image"], "rb") as fh:
+                    b64 = base64.b64encode(fh.read()).decode()
+            elif not page_live(it["page_url"]):
                 print("Landing page not live yet, will retry next run:", it["page_url"])
                 continue
-            it["scene"] = it.get("scene") or choose_scene()
-            if not it.get("image"):
+            else:
+                it["scene"] = it.get("scene") or choose_scene()
+            if it.get("pin_image"):
+                pass
+            elif not it.get("image"):
                 b64 = lifestyle_pin(it)
                 it["scene"] = "lifestyle"
             else:
