@@ -1,15 +1,16 @@
 """Agent 2: keep the REAL product photo (background removed only), generate a new AI background,
 add a headline, publish the pin, then learn from analytics."""
-import os, io, sys, time, base64, random, datetime as dt, urllib.parse
+import os, io, sys, time, base64, random, subprocess, datetime as dt, urllib.parse
 import requests
 from PIL import Image, ImageFilter, ImageDraw, ImageFont
 from common import *
 
 API = os.getenv("PINTEREST_API_BASE") or "https://api-sandbox.pinterest.com/v5"
-PTOKEN, BOARD = os.environ["PINTEREST_ACCESS_TOKEN"], os.environ["PINTEREST_BOARD_ID"]
+BOARD = os.environ["PINTEREST_BOARD_ID"]
 CF_ACC, CF_TOK = os.environ["CF_ACCOUNT_ID"], os.environ["CF_API_TOKEN"]
 W, H = 1000, 1500
-PH = {"Authorization": f"Bearer {PTOKEN}", "Content-Type": "application/json"}
+PH = {"Content-Type": "application/json"}      # Authorization is added in main()
+POSTED_LOG = "data/posted_log.json"
 SCENES = {
     "marble": "a clean white marble kitchen countertop, soft morning window light, blurred modern kitchen behind",
     "wood": "a warm wooden table in a cozy living room, soft daylight, blurred cushions and plants behind",
@@ -242,25 +243,133 @@ def page_live(url, wait=600):
     return False
 
 
+def get_token():
+    """Preferred: refresh token (OAuth) -> fresh access token every run. Fallback: a ready access token (e.g. 30-day sandbox token)."""
+    rt, aid, sec = (os.getenv(k) or "" for k in ("PINTEREST_REFRESH_TOKEN", "PINTEREST_APP_ID", "PINTEREST_APP_SECRET"))
+    if rt and aid and sec:
+        try:
+            basic = base64.b64encode(f"{aid}:{sec}".encode()).decode()
+            r = requests.post(f"{API}/oauth/token", headers={"Authorization": f"Basic {basic}", "Content-Type": "application/x-www-form-urlencoded"},
+                              data={"grant_type": "refresh_token", "refresh_token": rt}, timeout=30)
+            if r.ok and r.json().get("access_token"):
+                j = r.json()
+                days = int(j.get("refresh_token_expires_in", 0) or 0) // 86400
+                if days:
+                    print(f"Token refreshed. Refresh token valid for about {days} more days.")
+                    if days < 14:
+                        note(f"WARNING: your Pinterest refresh token expires in about {days} days. Run pinterest_auth.py again and update the secret.")
+                return j["access_token"]
+            print(f"Token refresh failed ({r.status_code}): {r.text[:150]}")
+        except Exception as e:
+            print("Token refresh error:", e)
+    return (os.getenv("PINTEREST_ACCESS_TOKEN") or "").strip()
+
+
+NOTES = []
+
+
+def note(s):
+    NOTES.append(s)
+    print(s)
+
+
+def board_pins():
+    """(title, link) of pins already on the board. Used so a pin is NEVER posted twice. None if the list is unavailable."""
+    seen, bookmark = set(), None
+    try:
+        for _ in range(8):
+            params = {"page_size": 100}
+            if bookmark:
+                params["bookmark"] = bookmark
+            r = requests.get(f"{API}/boards/{BOARD}/pins", headers=PH, params=params, timeout=30)
+            if not r.ok:
+                print(f"Could not list board pins ({r.status_code}); relying on the local log only.")
+                return None
+            d = r.json()
+            for p in d.get("items", []):
+                seen.add(((p.get("title") or "").strip(), (p.get("link") or "").split("?")[0]))
+            bookmark = d.get("bookmark")
+            if not bookmark:
+                break
+        return seen
+    except Exception as e:
+        print("Board listing skipped:", e)
+        return None
+
+
+def checkpoint(msg):
+    """Inside GitHub Actions: save progress to the repo right after each pin, so a crash can never cause a re-post."""
+    if os.getenv("GITHUB_ACTIONS") != "true":
+        return
+    try:
+        run = lambda *a: subprocess.run(a, check=False, capture_output=True, text=True)
+        run("git", "config", "user.name", "bot")
+        run("git", "config", "user.email", "bot@users.noreply.github.com")
+        run("git", "add", "-A", "data", "docs")
+        if run("git", "diff", "--cached", "--quiet").returncode != 0:
+            run("git", "commit", "-m", msg)
+            for _ in range(3):
+                if run("git", "pull", "--no-rebase", "-X", "ours", "-q", "--no-edit", "origin", "main").returncode == 0 \
+                        and run("git", "push", "-q", "origin", "HEAD:main").returncode == 0:
+                    break
+    except Exception as e:
+        print("checkpoint skipped:", e)
+
+
+def report(queue):
+    posted = [i for i in queue if i["status"] == "posted"]
+    pend = [i for i in queue if i["status"] == "pending"]
+    fail = [i for i in queue if i["status"] == "failed"]
+    t = today()
+    lines = ["### Pinterest agent report", "",
+             f"- **Already posted:** {len(posted)} (today: {sum(1 for i in posted if i.get('posted_on') == t)})",
+             f"- **Waiting in queue:** {len(pend)}", f"- **Failed (gave up after 3 tries):** {len(fail)}", ""]
+    lines += [f"- {n}" for n in NOTES]
+    if posted:
+        lines += ["", "| Date | Pin | Pin ID |", "|---|---|---|"]
+        lines += [f"| {i.get('posted_on', '')} | {i['pin_title'][:70]} | {i.get('pin_id', '')} |" for i in posted[-15:][::-1]]
+    text = "\n".join(lines)
+    print("\n" + text)
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        try:
+            with open(path, "a", encoding="utf-8") as f:
+                f.write(text + "\n")
+        except Exception:
+            pass
+
+
 def pin_it(it, b64):
     if it.get("store") == "own":          # your own product: no affiliate disclosure needed
         tag = ""
     else:
         tag = {"flipkart": "#affiliate Affiliate link, I may earn a commission.",
                "amazon": "#affiliate As an Amazon Associate I earn from qualifying purchases."}[detect_store(it["affiliate_link"])]
+    tail = ""
+    if not it.get("image") and not it.get("pin_image"):
+        tail += "\n\nImage: AI-generated illustration."
+    if tag:
+        tail += "\n\n" + tag
     payload = {"board_id": BOARD, "title": it["pin_title"][:100],
-               "description": it["pin_description"][: 495 - len(tag)] + (("\n\n" + tag) if tag else ""),
+               "description": it["pin_description"][: 495 - len(tail)] + tail,
                "link": it["page_url"], "alt_text": it["alt_text"][:500],
                "media_source": {"source_type": "image_base64", "content_type": "image/jpeg", "data": b64}}
     r = requests.post(f"{API}/pins", headers=PH, json=payload, timeout=120)
     if r.status_code in (401, 403):
-        raise PermissionError(f"Pinterest auth/permission error {r.status_code}: {r.text[:200]}")
+        raise PermissionError(f"Pinterest auth/permission error {r.status_code}: {r.text[:200]}. "
+                              "If this says authentication failed, the token is wrong or expired (sandbox tokens last 30 days). Create a new token and update the GitHub secret.")
     r.raise_for_status()
     return r.json()
 
 
 def main():
+    token = get_token()
+    if not token:
+        print("No Pinterest token found. Add PINTEREST_ACCESS_TOKEN (or the refresh-token secrets) in GitHub Secrets.")
+        sys.exit(1)
+    PH["Authorization"] = "Bearer " + token
     queue = jload(QUEUE, [])
+    existing = board_pins()
     learn(queue)
     jsave(QUEUE, queue)
     per_run = plan(get_state())[2]
@@ -271,6 +380,12 @@ def main():
         except Exception as e:
             print("page image failed:", e)
     for it in [i for i in queue if i["status"] == "pending"][:per_run]:
+        key = (it["pin_title"][:100].strip(), it["page_url"].split("?")[0])
+        if existing is not None and key in existing:        # already on the board: never post twice
+            it.update(status="posted", pin_id=it.get("pin_id") or "already-on-board", posted_on=it.get("posted_on") or today())
+            note(f"Skipped duplicate (already on the board): {it['pin_title'][:60]}")
+            jsave(QUEUE, queue)
+            continue
         try:
             if it.get("pin_image"):                       # ready-made pin image (own digital product)
                 with open(it["pin_image"], "rb") as fh:
@@ -293,6 +408,13 @@ def main():
                     b64 = compose(cutout(prod), bg, it["overlay_text"])
             pin = pin_it(it, b64)
             it.update(status="posted", pin_id=pin.get("id"), posted_on=today())
+            if existing is not None:
+                existing.add(key)
+            log = jload(POSTED_LOG, [])
+            log.append({"id": it["id"], "title": it["pin_title"], "pin_id": pin.get("id"), "date": today()})
+            jsave(POSTED_LOG, log)
+            jsave(QUEUE, queue)
+            checkpoint("agent2: pinned " + it["id"][:40])
             print("Pinned:", it["pin_title"], pin.get("id"))
         except PermissionError as e:
             print(e)
@@ -307,6 +429,7 @@ def main():
         if fatal:
             break
         time.sleep(45)
+    report(queue)
     if fatal:
         sys.exit(1)
 
