@@ -113,9 +113,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin1-plan-2027-money.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-10-27"
+    "created": "2026-10-27",
+    "pin_id": "343118065387915067",
+    "posted_on": "2026-10-30"
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
