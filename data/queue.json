@@ -353,9 +353,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin5-debt-payoff.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-10-31"
+    "created": "2026-10-31",
+    "pin_id": "343118065387921732",
+    "posted_on": "2026-10-31"
   },
   {
     "store": "amazon",
