@@ -195,9 +195,14 @@ def add_digital(queue):
     items = [pr for pr in items if str(pr.get("url", "")).startswith("http")]     # skip products without a real link yet
     for pr in items:
         pid = "dg-" + slugify(pr["name"])[:30]
-        if any(x["pid"] == pid for x in catalog):
-            continue
         cover = find_file(pr.get("cover", ""))
+        old = next((x for x in catalog if x["pid"] == pid), None)
+        if old:
+            new = {"link": pr["url"], "extra": pr.get("extra_links", []), "category": pr.get("category", "Printables"), "page_text": pr["summary"]}
+            if any(old.get(k) != v for k, v in new.items()):
+                old.update(new)
+                changed = True
+            continue
         img = ""
         if cover:
             os.makedirs(f"{DOCS}/digital", exist_ok=True)
@@ -205,7 +210,7 @@ def add_digital(queue):
             img = f"{SITE}/digital/{os.path.basename(cover)}"
         catalog.append({"pid": pid, "store": "own", "title": pr["name"], "link": pr["url"], "page_text": pr["summary"],
                         "slug": slugify(pr["name"])[:45] + "-" + pid[-6:], "image": img, "created": today(),
-                        "category": pr.get("category", "Printables")})
+                        "category": pr.get("category", "Printables"), "extra": pr.get("extra_links", [])})
         changed = True
     if changed:
         jsave(CATALOG, catalog)

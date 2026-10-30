@@ -1,7 +1,7 @@
 """Static site generator for the affiliate site (GitHub Pages /docs).
 Builds: home (10/page pagination), category pages, product pages, search, About, Contact,
 Privacy, Disclosure, Terms, 404, sitemap.xml, robots.txt, shared CSS/JS, logo."""
-import os, io, json, html, math, datetime as dt
+import os, io, json, html, math, shutil, datetime as dt
 from common import jload, slugify
 
 SITE = os.environ["SITE_BASE_URL"].rstrip("/")
@@ -26,6 +26,23 @@ CAT_TEXT = {
 }
 e = html.escape
 PH = f"{SITE}/assets/placeholder.svg"
+BS_CSS, BS_JS = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+
+
+def use_local_bootstrap():
+    """If bootstrap.min.css and bootstrap.bundle.min.js are in the repo, copy them to docs/assets and use them (no CDN)."""
+    global BS_CSS, BS_JS
+    for name, var in (("bootstrap.min.css", "css"), ("bootstrap.bundle.min.js", "js")):
+        for d in (".", "vendor", "assets_src"):
+            p = os.path.join(d, name)
+            if os.path.exists(p):
+                os.makedirs(os.path.join(DOCS, "assets"), exist_ok=True)
+                shutil.copy(p, os.path.join(DOCS, "assets", name))
+                if var == "css":
+                    BS_CSS = u("assets/" + name)
+                else:
+                    BS_JS = u("assets/" + name)
+                break
 ONERR = f"this.onerror=null;this.src='{PH}'"
 
 
@@ -100,7 +117,7 @@ nav.main a:hover,nav.main a[aria-current]{background:#f1e4d8}
 .btn{display:inline-block;background:var(--accent);color:#fff!important;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;font-size:16px;text-align:center}
 .btn:hover{background:var(--accent-d)}.btn.alt{background:#fff;color:var(--text)!important;border:1px solid var(--line)}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}.chips a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;text-decoration:none;color:var(--text);font-weight:600;font-size:15px}.chips a:hover{border-color:var(--accent)}
-main{padding:34px 0 56px}.section-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}.section-title p{margin:0;color:var(--muted)}
+main{padding:34px 0 56px}body.home main{padding:0 0 56px}.section-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}.section-title p{margin:0;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(80,50,30,.12)}
@@ -128,7 +145,7 @@ main{padding:34px 0 56px}.section-title{display:flex;justify-content:space-betwe
 .dropdown-header{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.dropdown-item{border-radius:8px;padding:.45rem .8rem;font-weight:500}.dropdown-item.active,.dropdown-item:active{background:var(--accent);color:#fff}
 @media(min-width:992px){.navbar .dropdown:hover>.dropdown-menu{display:block;margin-top:0}}
 .btn-search{border:0;background:var(--accent);color:#fff;font-weight:700;border-radius:999px;padding:.3rem 1rem}.btn-search:hover{background:var(--accent-d)}
-.sl-wrap{margin-top:-24px;position:relative;z-index:2}.carousel{border-radius:20px;overflow:hidden;background:#2b2623;box-shadow:0 12px 30px rgba(80,50,30,.18)}
+.sl-wrap{margin-top:14px;position:relative;z-index:2}.carousel{border-radius:20px;overflow:hidden;background:#2b2623;box-shadow:0 12px 30px rgba(80,50,30,.18)}
 .slide-link{display:block;color:#fff;text-decoration:none}.slide-img{width:100%;height:340px;object-fit:cover}.slide-cap{min-height:340px;padding:2.2rem 3.2rem;display:flex;flex-direction:column;justify-content:center;gap:12px;background:linear-gradient(135deg,#3a302b,#2b2623)}
 .slide-cap h3{font-size:clamp(1.3rem,3vw,1.9rem);color:#fff;margin:0}.slide-cap .btn{align-self:flex-start}
 @media(max-width:767px){.slide-img{height:230px}.slide-cap{min-height:0;padding:1.2rem 1.2rem 3rem}}
@@ -241,7 +258,7 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
 <meta property="og:description" content="{e(desc[:200])}"><meta property="og:url" content="{e(canonical)}"><meta property="og:image" content="{e(og)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#c96f4a">
 <link rel="icon" href="{u('assets/logo.png')}"><link rel="apple-touch-icon" href="{u('assets/logo.png')}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="{BS_CSS}">
 <link rel="stylesheet" href="{u('assets/style.css')}">{extra_head}</head>
 <body class="{body_class}"><a class="skip" href="#content">Skip to content</a>
 <div class="strip">As an Amazon Associate I earn from qualifying purchases. <a href="{u('disclosure.html')}">Details</a></div>
@@ -256,7 +273,7 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
 <div><h4>Company</h4><ul><li><a href="{u('about.html')}">About</a></li><li><a href="{u('contact.html')}">Contact</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="{u('privacy.html')}">Privacy Policy</a></li><li><a href="{u('disclosure.html')}">Affiliate Disclosure</a></li><li><a href="{u('terms.html')}">Terms &amp; Disclaimer</a></li></ul></div>
 </div><div class="legal">&copy; {dt.date.today().year} {e(c['name'])}. As an Amazon Associate I earn from qualifying purchases. Prices, ratings and availability are set by Amazon and can change at any time. Product names and logos belong to their owners.</div></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{BS_JS}"></script>
 <script src="{u('assets/site.js')}" defer></script></body></html>"""
 
 
@@ -318,7 +335,7 @@ def listing(c, cats, base, items, heading, intro, active, hero=False, crumb=""):
         if n < total:
             links += f'<link rel="next" href="{page_url(base, n + 1)}">'
         t = c["name"] + " | " + c["tagline"] if (base == "index" and n == 1) else (heading + (f" - page {n}" if n > 1 else ""))
-        write(page_name(base, n), layout(c, cats, t, intro or c["tagline"], body, page_url(base, n), active=active, extra_head=links))
+        write(page_name(base, n), layout(c, cats, t, intro or c["tagline"], body, page_url(base, n), active=active, extra_head=links, body_class="home" if (base == "index" and n == 1) else ""))
     return total
 
 
@@ -334,6 +351,8 @@ def product_page(c, cats, p, catalog):
     cap = ('<figcaption>Illustrative AI-generated image, not the actual product. Please see the Amazon page for real photos and details.</figcaption>'
            if ai else "")
     share_t = e(p["title"])
+    extras = "".join(f'<p><a class="btn alt" rel="noopener" target="_blank" href="{e(x["url"])}">Also on {e(x["label"])}</a></p>'
+                     for x in (p.get("extra") or []) if str(x.get("url", "")).startswith("http")) if own else ""
     amz_note = (f'<p class="note">As an Amazon Associate I earn from qualifying purchases. Price, ratings and delivery details are shown on Amazon and may change. '
                 f'<a href="{u("disclosure.html")}">Affiliate disclosure</a>.</p>')
     amz_box = "<li>Check the size, colour and what is included on the Amazon page.</li><li>Read recent customer reviews, especially the critical ones.</li><li>Confirm that the item ships to your country.</li>"
@@ -345,6 +364,7 @@ def product_page(c, cats, p, catalog):
 <div class="info"><span class="tag">{e(p['category'])}</span><h1>{share_t}</h1>
 <p class="meta">Added {e(nice_date(p.get('created', '')))}</p><p>{e(p['page_text'])}</p>
 <p><a class="btn" rel="{rel}" target="_blank" href="{e(p['link'])}">{cta}</a></p>
+{extras}
 {own_note if own else amz_note}
 <div class="box"><strong>{"Good to know" if own else "Before you buy"}</strong><ul>{own_box if own else amz_box}</ul></div>
 <div class="share"><a href="https://www.pinterest.com/pin/create/button/?url={e(url)}&amp;media={e(main_img(p))}&amp;description={share_t}" target="_blank" rel="noopener">Save on Pinterest</a>
@@ -419,6 +439,7 @@ def static_pages(c, cats):
 
 # ---------------- build ----------------
 def build(catalog):
+    use_local_bootstrap()
     c = cfg()
     items = sorted(catalog, key=lambda p: (p.get("created", ""), p["pid"]), reverse=True)
     for p in items:
