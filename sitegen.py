@@ -121,17 +121,20 @@ main{padding:34px 0 56px}.section-title{display:flex;justify-content:space-betwe
 .prose{max-width:760px}.prose h2{margin-top:1.6em;font-size:22px}.prose li{margin:.3em 0}
 .card-form label{display:block;font-weight:600;margin:14px 0 6px}.card-form input,.card-form select,.card-form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
 .card-form textarea{min-height:150px}.hp{position:absolute;left:-9999px}
-.dd{position:relative}.ddb{font:inherit;font-weight:600;font-size:15px;background:none;border:0;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--text)}.ddb:hover{background:#f1e4d8}
-.ddm{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(80,50,30,.15);padding:8px;z-index:60}
-.dd.open .ddm,.dd:hover .ddm,.dd:focus-within .ddm{display:block}.ddm a{display:block;padding:8px 12px!important;border-radius:8px!important}.ddh{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 12px 2px}
-@media(max-width:860px){.ddm{position:static;box-shadow:none;border:0;padding:0 0 0 10px}.dd:hover .ddm{display:none}.dd.open .ddm{display:block}.ddb{width:100%;text-align:left}}
-.sl-wrap{margin-top:-24px}.slider{position:relative;height:340px;border-radius:20px;overflow:hidden;background:#2b2623;box-shadow:0 12px 30px rgba(80,50,30,.18)}
-.slide{position:absolute;inset:0;display:flex;opacity:0;transition:opacity .6s;pointer-events:none;color:#fff;text-decoration:none}.slide.on{opacity:1;pointer-events:auto}
-.slide img{width:42%;height:100%;object-fit:cover}.slide .cap{flex:1;padding:34px;display:flex;flex-direction:column;gap:10px;justify-content:center;background:linear-gradient(135deg,#3a302b,#2b2623)}
-.slide h3{font-size:clamp(20px,3vw,30px);margin:0;color:#fff}.slide .btn{align-self:flex-start;margin-top:6px}
-.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:24px;cursor:pointer;z-index:3}.sl-btn.prev{left:12px}.sl-btn.next{right:12px}
-.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;gap:8px;justify-content:center;z-index:3}.dot{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer;padding:0}.dot.on{background:#fff}
-@media(max-width:640px){.slider{height:420px}.slide{flex-direction:column}.slide img{width:100%;height:55%}.slide .cap{padding:18px}}
+
+.navbar{padding:.35rem 0}.navbar-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--text)}.navbar-brand img{width:38px;height:38px;border-radius:10px}
+.navbar .nav-link{color:var(--text);font-weight:600;border-radius:999px;padding:.5rem .9rem}.navbar .nav-link:hover,.navbar .nav-link.active{background:#f1e4d8;color:var(--text)}
+.navbar-toggler{border-color:var(--line)}.dropdown-menu{border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(80,50,30,.15);padding:8px;min-width:220px}
+.dropdown-header{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.dropdown-item{border-radius:8px;padding:.45rem .8rem;font-weight:500}.dropdown-item.active,.dropdown-item:active{background:var(--accent);color:#fff}
+@media(min-width:992px){.navbar .dropdown:hover>.dropdown-menu{display:block;margin-top:0}}
+.btn-search{border:0;background:var(--accent);color:#fff;font-weight:700;border-radius:999px;padding:.3rem 1rem}.btn-search:hover{background:var(--accent-d)}
+.sl-wrap{margin-top:-24px;position:relative;z-index:2}.carousel{border-radius:20px;overflow:hidden;background:#2b2623;box-shadow:0 12px 30px rgba(80,50,30,.18)}
+.slide-link{display:block;color:#fff;text-decoration:none}.slide-img{width:100%;height:340px;object-fit:cover}.slide-cap{min-height:340px;padding:2.2rem 3.2rem;display:flex;flex-direction:column;justify-content:center;gap:12px;background:linear-gradient(135deg,#3a302b,#2b2623)}
+.slide-cap h3{font-size:clamp(1.3rem,3vw,1.9rem);color:#fff;margin:0}.slide-cap .btn{align-self:flex-start}
+@media(max-width:767px){.slide-img{height:230px}.slide-cap{min-height:0;padding:1.2rem 1.2rem 3rem}}
+.carousel-indicators{margin-bottom:.6rem}.carousel-control-prev,.carousel-control-next{width:9%}
+.f-brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:#fff!important;text-decoration:none;margin-bottom:10px}.f-brand img{width:48px;height:48px;border-radius:12px}
+.f-pin{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#e60023;color:#fff!important;margin-top:6px}.f-pin:hover{background:#ad081b}
 .sticky-cta{display:none}
 @media(max-width:860px){.sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px;z-index:40}.sticky-cta .btn{display:block}body.has-cta{padding-bottom:76px}}
 footer.site{background:#2b2623;color:#d9cdc1;padding:44px 0 26px;font-size:14.5px}footer.site a{color:#f3e9de}footer.site h4{color:#fff;margin:0 0 10px}
@@ -202,25 +205,33 @@ def make_logo(path):
 
 
 # ---------------- layout ----------------
+PINPATH = "M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"
+
+
 def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noindex=False, extra_head="", body_class=""):
     full = title if c["name"] in title else f"{title} | {c['name']}"
     og = og_img or u("assets/logo.png")
-    nav = [f'<a href="{SITE}/"{" aria-current=page" if active == "home" else ""}>Home</a>']
-    def _grp(label, names):
-        items = [x for x in cats if x in names]
-        if not items:
-            return ""
-        return f'<div class="ddh">{e(label)}</div>' + "".join(
-            f'<a href="{u("category-" + slugify(x) + ".html")}"{" aria-current=page" if active == x else ""}>{e(x)}</a>' for x in items)
     other = [x for x in cats if x not in HOME_CATS + DIGITAL_CATS]
-    dd = _grp("Home & Kitchen", HOME_CATS) + _grp("Digital downloads", DIGITAL_CATS) + (_grp("More", other) if other else "")
-    nav.append(f'<div class="dd"><button type="button" class="ddb" aria-expanded="false">Categories &#9662;</button><div class="ddm">{dd}</div></div>')
-    nav.append(f'<a href="{u("about.html")}"{" aria-current=page" if active == "about" else ""}>About</a>')
-    nav.append(f'<a href="{u("contact.html")}"{" aria-current=page" if active == "contact" else ""}>Contact</a>')
-    search = (f'<form class="search" role="search" action="{u("search.html")}" method="get">'
-              '<input type="search" name="q" placeholder="Search finds" aria-label="Search"><button type="submit" aria-label="Search">&#128269;</button></form>')
+    def _dd(label, names):
+        its = [x for x in cats if x in names]
+        if not its:
+            return ""
+        return f'<li><h6 class="dropdown-header">{e(label)}</h6></li>' + "".join(
+            f'<li><a class="dropdown-item{" active" if active == x else ""}" href="{u("category-" + slugify(x) + ".html")}">{e(x)}</a></li>' for x in its)
+    parts = [p for p in (_dd("Home & Kitchen", HOME_CATS), _dd("Digital downloads", DIGITAL_CATS), _dd("More", other)) if p]
+    menu = '<li><hr class="dropdown-divider"></li>'.join(parts)
+    def _link(href, label, key):
+        cur = ' active" aria-current="page' if active == key else ""
+        return f'<li class="nav-item"><a class="nav-link{cur}" href="{href}">{label}</a></li>'
+    nav_items = (_link(SITE + "/", "Home", "home")
+                 + f'<li class="nav-item dropdown"><a class="nav-link dropdown-toggle{" active" if active in cats else ""}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a><ul class="dropdown-menu">{menu}</ul></li>'
+                 + _link(u("about.html"), "About", "about") + _link(u("contact.html"), "Contact", "contact"))
+    search = (f'<form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="{u("search.html")}" method="get">'
+              '<input class="form-control form-control-sm me-2" type="search" name="q" placeholder="Search finds" aria-label="Search">'
+              '<button class="btn-search" type="submit">Search</button></form>')
     fcats = "".join(f'<li><a href="{u("category-" + slugify(x) + ".html")}">{e(x)}</a></li>' for x in cats)
-    pin = f'<li><a href="{e(c["pinterest_url"])}" rel="noopener" target="_blank">Pinterest</a></li>' if c.get("pinterest_url") else ""
+    pin_btn = (f'<a class="f-pin" href="{e(c["pinterest_url"])}" target="_blank" rel="noopener" aria-label="{e(c["name"])} on Pinterest" title="Follow us on Pinterest">'
+               f'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="{PINPATH}"/></svg></a>') if c.get("pinterest_url") else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="p:domain_verify" content="{VERIFY}"/>
@@ -230,20 +241,22 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
 <meta property="og:description" content="{e(desc[:200])}"><meta property="og:url" content="{e(canonical)}"><meta property="og:image" content="{e(og)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#c96f4a">
 <link rel="icon" href="{u('assets/logo.png')}"><link rel="apple-touch-icon" href="{u('assets/logo.png')}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="{u('assets/style.css')}">{extra_head}</head>
 <body class="{body_class}"><a class="skip" href="#content">Skip to content</a>
 <div class="strip">As an Amazon Associate I earn from qualifying purchases. <a href="{u('disclosure.html')}">Details</a></div>
-<header class="site"><div class="container bar">
-<a class="brand" href="{SITE}/"><img src="{u('assets/logo.png')}" alt="" width="38" height="38"><span>{e(c['name'])}</span></a>
-<button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
-<nav class="main" id="nav" aria-label="Main">{''.join(nav)}{search}</nav></div></header>
+<header class="site"><nav class="navbar navbar-expand-lg" aria-label="Main"><div class="container">
+<a class="navbar-brand" href="{SITE}/"><img src="{u('assets/logo.png')}" alt="" width="38" height="38"><span>{e(c['name'])}</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto align-items-lg-center">{nav_items}</ul>{search}</div></div></nav></header>
 <main id="content">{body}</main>
 <footer class="site"><div class="container"><div class="fgrid">
-<div><h4>{e(c['name'])}</h4><p>{e(c['tagline'])}.</p><p>We share products we found while researching popular, well-reviewed home and kitchen items.</p></div>
+<div><a class="f-brand" href="{SITE}/"><img src="{u('assets/logo.png')}" alt="" width="48" height="48"><span>{e(c['name'])}</span></a><p>{e(c['tagline'])}.</p><p>We share products we found while researching popular, well-reviewed home and kitchen items.</p>{pin_btn}</div>
 <div><h4>Explore</h4><ul><li><a href="{SITE}/">All finds</a></li>{fcats}<li><a href="{u('search.html')}">Search</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="{u('about.html')}">About</a></li><li><a href="{u('contact.html')}">Contact</a></li>{pin}</ul></div>
+<div><h4>Company</h4><ul><li><a href="{u('about.html')}">About</a></li><li><a href="{u('contact.html')}">Contact</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="{u('privacy.html')}">Privacy Policy</a></li><li><a href="{u('disclosure.html')}">Affiliate Disclosure</a></li><li><a href="{u('terms.html')}">Terms &amp; Disclaimer</a></li></ul></div>
 </div><div class="legal">&copy; {dt.date.today().year} {e(c['name'])}. As an Amazon Associate I earn from qualifying purchases. Prices, ratings and availability are set by Amazon and can change at any time. Product names and logos belong to their owners.</div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{u('assets/site.js')}" defer></script></body></html>"""
 
 
@@ -274,14 +287,14 @@ def card(p):
 def slider(items):
     if not items:
         return ""
-    sl = "".join(f'<a class="slide{" on" if i == 0 else ""}" href="{u("p/" + p["slug"] + ".html")}" aria-label="{e(p["title"])}">'
-                 f'<img src="{e(thumb_img(p))}" alt="" width="400" height="500" onerror="{ONERR}">'
-                 f'<div class="cap"><span class="tag">{e(p["category"])}</span><h3>{e(p["title"])}</h3><span class="btn">View this find &rarr;</span></div></a>'
-                 for i, p in enumerate(items))
-    dots = "".join(f'<button type="button" class="dot{" on" if i == 0 else ""}" aria-label="Slide {i + 1}"></button>' for i in range(len(items)))
-    return (f'<section class="container sl-wrap" aria-roledescription="carousel" aria-label="Latest finds"><div class="slider">{sl}'
-            f'<button type="button" class="sl-btn prev" aria-label="Previous">&#8249;</button><button type="button" class="sl-btn next" aria-label="Next">&#8250;</button>'
-            f'<div class="dots">{dots}</div></div></section>')
+    ind = "".join(f'<button type="button" data-bs-target="#latest" data-bs-slide-to="{i}"{" class=active aria-current=true" if i == 0 else ""} aria-label="Slide {i + 1}"></button>' for i in range(len(items)))
+    its = "".join(f'''<div class="carousel-item{" active" if i == 0 else ""}" data-bs-interval="5000"><a class="slide-link" href="{u("p/" + p["slug"] + ".html")}">
+<div class="row g-0"><div class="col-md-5"><img class="slide-img" src="{e(thumb_img(p))}" alt="{e(p["title"])}" width="400" height="500" onerror="{ONERR}"></div>
+<div class="col-md-7 slide-cap"><span class="tag">{e(p["category"])}</span><h3>{e(p["title"])}</h3><span class="btn">View this find &rarr;</span></div></div></a></div>''' for i, p in enumerate(items))
+    return (f'<section class="container sl-wrap" aria-label="Latest finds"><div id="latest" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover">'
+            f'<div class="carousel-indicators">{ind}</div><div class="carousel-inner">{its}</div>'
+            '<button class="carousel-control-prev" type="button" data-bs-target="#latest" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>'
+            '<button class="carousel-control-next" type="button" data-bs-target="#latest" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div></section>')
 
 
 def listing(c, cats, base, items, heading, intro, active, hero=False, crumb=""):
