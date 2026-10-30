@@ -281,9 +281,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin4-bill-tracker.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-10-30"
+    "created": "2026-10-30",
+    "pin_id": "343118065387919960",
+    "posted_on": "2026-10-30"
   },
   {
     "store": "amazon",
