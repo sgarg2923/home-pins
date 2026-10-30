@@ -52,7 +52,8 @@
     "slug": "2027-budget-money-planner-lanner",
     "image": "https://sgarg2923.github.io/home-pins/digital/product-cover-1600x1200.jpg",
     "created": "2026-10-27",
-    "category": "Printables"
+    "category": "Planners",
+    "extra": []
   },
   {
     "pid": "m-5-pcs-artificial-marigold-garland-5-ft",
@@ -119,5 +120,27 @@
     "image": "",
     "created": "2026-10-30",
     "category": "Decor"
+  },
+  {
+    "pid": "m-l-shaped-2-tier-pull-out-under-sink-organizer",
+    "store": "amazon",
+    "title": "L-Shaped 2 Tier Pull Out Under Sink Organizer",
+    "link": "https://link.amazon/B02lWyGK7",
+    "page_text": "L-Shaped 2 Tier Pull Out Under Sink Organizer. A practical pick for your home.",
+    "slug": "l-shaped-2-tier-pull-out-under-sink-organizer-rganizer",
+    "image": "",
+    "created": "2026-10-31",
+    "category": "Organization"
+  },
+  {
+    "pid": "m-spaceaid-spice-drawer-organizer-with-28-jars",
+    "store": "amazon",
+    "title": "SpaceAid Spice Drawer Organizer with 28 Jars",
+    "link": "https://link.amazon/B0g8ILraT",
+    "page_text": "SpaceAid Spice Drawer Organizer with 28 Jars. A practical pick for your home.",
+    "slug": "spaceaid-spice-drawer-organizer-with-28-jars--28-jars",
+    "image": "",
+    "created": "2026-10-31",
+    "category": "Organization"
   }
 ]
