@@ -209,9 +209,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin3-52-week-challenge.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-10-29"
+    "created": "2026-10-29",
+    "pin_id": "343118065387919904",
+    "posted_on": "2026-10-30"
   },
   {
     "store": "amazon",
