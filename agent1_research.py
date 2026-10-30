@@ -192,6 +192,7 @@ def add_digital(queue):
         return queue
     catalog = load_catalog(queue)
     changed = False
+    items = [pr for pr in items if str(pr.get("url", "")).startswith("http")]     # skip products without a real link yet
     for pr in items:
         pid = "dg-" + slugify(pr["name"])[:30]
         if any(x["pid"] == pid for x in catalog):

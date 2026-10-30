@@ -2,7 +2,7 @@
   {
     "name": "2027 Budget & Money Planner",
     "url": "https://nestnookprints.gumroad.com/l/iaflmx",
-    "category": "Printables",
+    "category": "Planners",
     "cover": "product-cover-1600x1200.jpg",
     "summary": "A printable budget planner for 2027 with a monthly budget, bill tracker, expense tracker, savings goals, debt payoff tracker and a 52-week savings challenge. Instant PDF download in US Letter and A4, in three colour themes. Print as many copies as you need for your own use.",
     "pins": [
@@ -36,6 +36,47 @@
         "description": "Pay off debt faster with a clear plan. This printable debt payoff tracker helps you list every debt and track your progress month by month. Instant PDF download. #debtpayoff #debtfree #debttracker #budgetplanner",
         "alt_text": "Debt payoff tracker printable page"
       }
-    ]
+    ],
+    "type": "Planners"
+  },
+  {
+    "name": "30-Day Discipline Challenge Tracker",
+    "url": "PASTE_GUMROAD_LINK_HERE",
+    "category": "Trackers",
+    "cover": "challenge-cover-1600x1200.jpg",
+    "summary": "A printable 30-day challenge tracker with a streak page, daily log, urge and trigger log, replacement actions, weekly reviews, a reset plan and a milestones page. Instant PDF download in US Letter and A4, in five colour themes. You choose the challenge. A self-help tool, not medical advice.",
+    "pins": [
+      {
+        "image": "cpin1-30-day-challenge.jpg",
+        "title": "30-Day Challenge Tracker Printable | November Self-Discipline Challenge",
+        "description": "Build a streak and keep your word to yourself. This printable 30-day challenge tracker has a streak page, daily log, urge log, weekly reviews and a reset plan. Instant PDF download in US Letter and A4. #30daychallenge #habittracker #selfdiscipline #printabletracker",
+        "alt_text": "30 day challenge tracker printable pages on a soft background"
+      },
+      {
+        "image": "cpin2-streak-tracker.jpg",
+        "title": "30-Day Streak Tracker Printable | Habit Tracker",
+        "description": "Colour one circle every day and watch your streak grow. Milestones at day 7, 14, 21 and 30 keep you motivated. Printable PDF, instant download. #habittracker #streaktracker #30daychallenge #selfimprovement",
+        "alt_text": "30 day streak tracker printable with milestone days"
+      },
+      {
+        "image": "cpin3-urge-log.jpg",
+        "title": "Urge and Trigger Log Printable | Build Better Habits",
+        "description": "Know your triggers, change your habits. Write down what set off the urge and what you did instead. Part of the 30-day challenge tracker printable. Instant download. #habitplanner #selfdiscipline #printableplanner #habitchange",
+        "alt_text": "Printable urge and trigger log page"
+      },
+      {
+        "image": "cpin4-weekly-review.jpg",
+        "title": "Weekly Review Printable for Your 30-Day Challenge",
+        "description": "Reflect, adjust and repeat. A weekly review page for wins, struggles and what to change, with a 1 to 10 rating. Printable PDF in US Letter and A4. #weeklyreview #goaltracker #habittracker #30daychallenge",
+        "alt_text": "Weekly review printable page"
+      },
+      {
+        "image": "cpin5-reset-plan.jpg",
+        "title": "Slipped? Restart Without Guilt | Printable Reset Plan",
+        "description": "A slip is information, not failure. This printable 5-step reset plan helps you restart today. Part of the 30-day discipline challenge tracker. Instant PDF download. #selfdiscipline #habitplanner #mindset #30daychallenge",
+        "alt_text": "Printable reset plan page"
+      }
+    ],
+    "type": "Trackers"
   }
 ]

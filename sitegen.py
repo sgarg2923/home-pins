@@ -9,12 +9,19 @@ DOCS = "docs"
 PER_PAGE = 10
 VERIFY = os.getenv("PINTEREST_VERIFY") or "ff656e25a52b7f22a3ff1cef9239d416"
 POLICY_DATE = "October 26, 2026"
-CAT_ORDER = ["Kitchen", "Organization", "Decor", "Festive", "Printables"]
+HOME_CATS = ["Kitchen", "Organization", "Decor", "Festive"]
+DIGITAL_CATS = ["Planners", "Trackers", "Worksheets", "Wall Art", "Templates", "Printables"]
+CAT_ORDER = HOME_CATS + DIGITAL_CATS
 CAT_TEXT = {
     "Kitchen": "Handy kitchen tools, drinkware and gadgets that make everyday cooking easier.",
     "Organization": "Storage ideas and organizers to tidy up your kitchen, cabinets and drawers.",
     "Decor": "Cozy lighting and simple decor touches that make a home feel warm.",
     "Festive": "Decorations and ideas for festivals and celebrations, including Diwali.",
+    "Planners": "Printable planners for money, goals and daily life. Instant download.",
+    "Trackers": "Habit, challenge and progress trackers you can print at home.",
+    "Worksheets": "Printable worksheets for learning and planning.",
+    "Wall Art": "Printable wall art for a quick home refresh.",
+    "Templates": "Digital templates (resume, Notion and more).",
     "Printables": "Printable planners and trackers you can download instantly and print at home.",
 }
 e = html.escape
@@ -114,6 +121,17 @@ main{padding:34px 0 56px}.section-title{display:flex;justify-content:space-betwe
 .prose{max-width:760px}.prose h2{margin-top:1.6em;font-size:22px}.prose li{margin:.3em 0}
 .card-form label{display:block;font-weight:600;margin:14px 0 6px}.card-form input,.card-form select,.card-form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
 .card-form textarea{min-height:150px}.hp{position:absolute;left:-9999px}
+.dd{position:relative}.ddb{font:inherit;font-weight:600;font-size:15px;background:none;border:0;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--text)}.ddb:hover{background:#f1e4d8}
+.ddm{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(80,50,30,.15);padding:8px;z-index:60}
+.dd.open .ddm,.dd:hover .ddm,.dd:focus-within .ddm{display:block}.ddm a{display:block;padding:8px 12px!important;border-radius:8px!important}.ddh{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 12px 2px}
+@media(max-width:860px){.ddm{position:static;box-shadow:none;border:0;padding:0 0 0 10px}.dd:hover .ddm{display:none}.dd.open .ddm{display:block}.ddb{width:100%;text-align:left}}
+.sl-wrap{margin-top:-24px}.slider{position:relative;height:340px;border-radius:20px;overflow:hidden;background:#2b2623;box-shadow:0 12px 30px rgba(80,50,30,.18)}
+.slide{position:absolute;inset:0;display:flex;opacity:0;transition:opacity .6s;pointer-events:none;color:#fff;text-decoration:none}.slide.on{opacity:1;pointer-events:auto}
+.slide img{width:42%;height:100%;object-fit:cover}.slide .cap{flex:1;padding:34px;display:flex;flex-direction:column;gap:10px;justify-content:center;background:linear-gradient(135deg,#3a302b,#2b2623)}
+.slide h3{font-size:clamp(20px,3vw,30px);margin:0;color:#fff}.slide .btn{align-self:flex-start;margin-top:6px}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:24px;cursor:pointer;z-index:3}.sl-btn.prev{left:12px}.sl-btn.next{right:12px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;gap:8px;justify-content:center;z-index:3}.dot{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer;padding:0}.dot.on{background:#fff}
+@media(max-width:640px){.slider{height:420px}.slide{flex-direction:column}.slide img{width:100%;height:55%}.slide .cap{padding:18px}}
 .sticky-cta{display:none}
 @media(max-width:860px){.sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px;z-index:40}.sticky-cta .btn{display:block}body.has-cta{padding-bottom:76px}}
 footer.site{background:#2b2623;color:#d9cdc1;padding:44px 0 26px;font-size:14.5px}footer.site a{color:#f3e9de}footer.site h4{color:#fff;margin:0 0 10px}
@@ -126,6 +144,13 @@ JS = """
 (function(){
 var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
 if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});}
+var dd=document.querySelector('.dd .ddb');if(dd){dd.addEventListener('click',function(){var p=dd.parentNode,o=p.classList.toggle('open');dd.setAttribute('aria-expanded',o?'true':'false');});}
+var sl=document.querySelector('.slider');
+if(sl){var S=sl.querySelectorAll('.slide'),D=sl.querySelectorAll('.dot'),k=0,t=null;
+function go(i){k=(i+S.length)%S.length;S.forEach(function(x,j){x.classList.toggle('on',j===k);});D.forEach(function(x,j){x.classList.toggle('on',j===k);});}
+function play(){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){clearInterval(t);t=setInterval(function(){go(k+1);},5000);}}
+sl.querySelector('.prev').onclick=function(){go(k-1);};sl.querySelector('.next').onclick=function(){go(k+1);};
+D.forEach(function(x,j){x.onclick=function(){go(j);};});sl.addEventListener('mouseenter',function(){clearInterval(t);});sl.addEventListener('mouseleave',play);play();}
 var r=document.getElementById('results');
 if(r){
   var q=(new URLSearchParams(location.search).get('q')||'').trim();
@@ -181,8 +206,15 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
     full = title if c["name"] in title else f"{title} | {c['name']}"
     og = og_img or u("assets/logo.png")
     nav = [f'<a href="{SITE}/"{" aria-current=page" if active == "home" else ""}>Home</a>']
-    for cat in cats:
-        nav.append(f'<a href="{u("category-" + slugify(cat) + ".html")}"{" aria-current=page" if active == cat else ""}>{e(cat)}</a>')
+    def _grp(label, names):
+        items = [x for x in cats if x in names]
+        if not items:
+            return ""
+        return f'<div class="ddh">{e(label)}</div>' + "".join(
+            f'<a href="{u("category-" + slugify(x) + ".html")}"{" aria-current=page" if active == x else ""}>{e(x)}</a>' for x in items)
+    other = [x for x in cats if x not in HOME_CATS + DIGITAL_CATS]
+    dd = _grp("Home & Kitchen", HOME_CATS) + _grp("Digital downloads", DIGITAL_CATS) + (_grp("More", other) if other else "")
+    nav.append(f'<div class="dd"><button type="button" class="ddb" aria-expanded="false">Categories &#9662;</button><div class="ddm">{dd}</div></div>')
     nav.append(f'<a href="{u("about.html")}"{" aria-current=page" if active == "about" else ""}>About</a>')
     nav.append(f'<a href="{u("contact.html")}"{" aria-current=page" if active == "contact" else ""}>Contact</a>')
     search = (f'<form class="search" role="search" action="{u("search.html")}" method="get">'
@@ -239,6 +271,19 @@ def card(p):
             f'<h3><a href="{url}">{e(p["title"])}</a></h3><a class="more" href="{url}">View details &rarr;</a></div></article>')
 
 
+def slider(items):
+    if not items:
+        return ""
+    sl = "".join(f'<a class="slide{" on" if i == 0 else ""}" href="{u("p/" + p["slug"] + ".html")}" aria-label="{e(p["title"])}">'
+                 f'<img src="{e(thumb_img(p))}" alt="" width="400" height="500" onerror="{ONERR}">'
+                 f'<div class="cap"><span class="tag">{e(p["category"])}</span><h3>{e(p["title"])}</h3><span class="btn">View this find &rarr;</span></div></a>'
+                 for i, p in enumerate(items))
+    dots = "".join(f'<button type="button" class="dot{" on" if i == 0 else ""}" aria-label="Slide {i + 1}"></button>' for i in range(len(items)))
+    return (f'<section class="container sl-wrap" aria-roledescription="carousel" aria-label="Latest finds"><div class="slider">{sl}'
+            f'<button type="button" class="sl-btn prev" aria-label="Previous">&#8249;</button><button type="button" class="sl-btn next" aria-label="Next">&#8250;</button>'
+            f'<div class="dots">{dots}</div></div></section>')
+
+
 def listing(c, cats, base, items, heading, intro, active, hero=False, crumb=""):
     total = max(1, math.ceil(len(items) / PER_PAGE))
     for n in range(1, total + 1):
@@ -249,7 +294,8 @@ def listing(c, cats, base, items, heading, intro, active, hero=False, crumb=""):
             chips = "".join(f'<a href="{u("category-" + slugify(x) + ".html")}">{e(x)}</a>' for x in cats)
             head = (f'<section class="hero"><div class="container"><h1>{e(c["tagline"])}</h1>'
                     f'<p>Simple, honest picks for your kitchen, storage and home. No fluff, just things people actually buy and use.</p>'
-                    f'<a class="btn" href="#finds">Browse the latest finds</a><div class="chips">{chips}</div></div></section>')
+                    f'<a class="btn" href="#finds">Browse the latest finds</a><div class="chips">{chips}</div></div></section>'
+                    + slider(items[:5]))
         title_h = heading if n == 1 else f"{heading} (page {n})"
         body = (head + f'<div class="container" id="finds">{crumb}<div class="section-title"><h2>{e(title_h)}</h2><p>{e(intro)}</p></div>'
                 f'<div class="grid">{grid}</div>{pager(base, n, total)}</div>')
