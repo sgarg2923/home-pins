@@ -159,7 +159,7 @@ def compose(cut, bg, text):
     bg = bg.convert("RGB")
     bg.paste(Image.new("RGB", (W, H), (0, 0, 0)), (0, 0), layer)
     bg.paste(cut, (x, y), cut)
-    headline(bg, text)
+    bg = finish(bg, text)
     buf = io.BytesIO()
     bg.save(buf, "JPEG", quality=88)
     return base64.b64encode(buf.getvalue()).decode()
@@ -215,6 +215,17 @@ def lifestyle_pin(it):
     return base64.b64encode(buf.getvalue()).decode()
 
 
+def finish(img, text, key=""):
+    """Final design pass (banner / frame / split / badge). Falls back to the simple headline."""
+    try:
+        import pin_design
+        return pin_design.design(img, text, jload("site.json", {}).get("name", ""), key=key or text)
+    except Exception as e:
+        print("pin_design failed, using simple headline:", e)
+        headline(img, text)
+        return img
+
+
 def compose_card(img, bg, text):
     """Amazon-safe mode: the original product image stays 100% unaltered; only the surrounding scene is new."""
     img = img.convert("RGB")
@@ -229,7 +240,7 @@ def compose_card(img, bg, text):
     bg = bg.convert("RGB")
     bg.paste(Image.new("RGB", (W, H), (0, 0, 0)), (0, 0), layer)
     bg.paste(img, (x, y), mask)
-    headline(bg, text)
+    bg = finish(bg, text)
     buf = io.BytesIO()
     bg.save(buf, "JPEG", quality=88)
     return base64.b64encode(buf.getvalue()).decode()
