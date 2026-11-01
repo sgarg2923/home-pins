@@ -204,7 +204,12 @@ def ensure_scene_image(it):
 
 def lifestyle_pin(it):
     bg = ensure_scene_image(it).copy()
-    headline(bg, it["overlay_text"])
+    try:                                  # advanced designed pin (4 templates); falls back to the simple headline
+        import pin_design
+        bg = pin_design.design(bg, it["overlay_text"], jload("site.json", {}).get("name", ""), key=it["id"])
+    except Exception as e:
+        print("pin_design failed, using simple headline:", e)
+        headline(bg, it["overlay_text"])
     buf = io.BytesIO()
     bg.save(buf, "JPEG", quality=88)
     return base64.b64encode(buf.getvalue()).decode()
