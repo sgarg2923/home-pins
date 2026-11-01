@@ -246,6 +246,8 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
     search = (f'<form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="{u("search.html")}" method="get">'
               '<input class="form-control form-control-sm me-2" type="search" name="q" placeholder="Search finds" aria-label="Search">'
               '<button class="btn-search" type="submit">Search</button></form>')
+    tok = (c.get("cloudflare_analytics_token") or "").strip()
+    analytics = (f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "{e(tok)}"}}\'></script>') if tok else ""
     fcats = "".join(f'<li><a href="{u("category-" + slugify(x) + ".html")}">{e(x)}</a></li>' for x in cats)
     pin_btn = (f'<a class="f-pin" href="{e(c["pinterest_url"])}" target="_blank" rel="noopener" aria-label="{e(c["name"])} on Pinterest" title="Follow us on Pinterest">'
                f'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="{PINPATH}"/></svg></a>') if c.get("pinterest_url") else ""
@@ -273,7 +275,7 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
 <div><h4>Company</h4><ul><li><a href="{u('about.html')}">About</a></li><li><a href="{u('contact.html')}">Contact</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="{u('privacy.html')}">Privacy Policy</a></li><li><a href="{u('disclosure.html')}">Affiliate Disclosure</a></li><li><a href="{u('terms.html')}">Terms &amp; Disclaimer</a></li></ul></div>
 </div><div class="legal">&copy; {dt.date.today().year} {e(c['name'])}. As an Amazon Associate I earn from qualifying purchases. Prices, ratings and availability are set by Amazon and can change at any time. Product names and logos belong to their owners.</div></div></footer>
-<script src="{BS_JS}"></script>
+<script src="{BS_JS}"></script>{analytics}
 <script src="{u('assets/site.js')}" defer></script></body></html>"""
 
 
@@ -406,7 +408,7 @@ def static_pages(c, cats):
     L("Privacy Policy", f"Privacy Policy of {c['name']}.", f"""<h1>Privacy Policy</h1><p>Last updated: {POLICY_DATE}</p>
 <p>{name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy. This policy explains what information is handled when you use this website.</p>
 <h2>Information we collect</h2><ul><li><strong>Contact form:</strong> if you write to us, we receive your name, email address and message. We use them only to reply to you. The form is processed by a third-party form service (FormSubmit), which forwards the message to our inbox.</li><li><strong>Search:</strong> the site search runs in your browser. We do not store what you search for.</li><li><strong>Hosting logs:</strong> our host (GitHub Pages) may record technical data such as IP address and browser type for security and operations.</li></ul>
-<p>We do not require accounts, we do not sell personal data, and we do not run advertising or analytics trackers on this site.</p>
+<p>We do not require accounts, we do not sell personal data, and we do not run advertising trackers on this site. " + ("We use Cloudflare Web Analytics, a cookie-free service, to count visits and see which pages are popular. It does not track you across other websites or build a profile about you." if (c.get("cloudflare_analytics_token") or "").strip() else "We do not run analytics trackers either.") + "</p>
 <h2>Cookies and third parties</h2><p>This site does not set its own cookies. When you click an affiliate link, Amazon may set cookies on its own website so that a purchase can be credited to us. Pinterest, WhatsApp and Amazon have their own privacy policies, and we are not responsible for their practices.</p>
 <h2>Pinterest data</h2><p>We use the Pinterest API only with our own Pinterest business account, the account that owns this website. Our tool creates pins on that account and reads basic statistics (impressions, clicks and saves) about our own pins. We do not collect, store, sell or share data about other Pinterest users. Our Pinterest access tokens are kept as encrypted secrets and are used only for this purpose. Pinterest access can be revoked at any time in the Pinterest account settings.</p>
 <h2>Affiliate links</h2><p>As an Amazon Associate I earn from qualifying purchases. See our <a href="{u('disclosure.html')}">Affiliate Disclosure</a>.</p>
