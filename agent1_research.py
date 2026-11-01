@@ -241,6 +241,11 @@ def add_digital(queue):
 
 # ---------- main ----------
 def main():
+    try:
+        import agent3_radar
+        agent3_radar.run_if_due()
+    except Exception as ex:      # the radar must never stop the daily work
+        print("Radar skipped:", ex)
     queue = add_digital(jload(QUEUE, []))
     state = get_state()
     if state.get("last_added") == today():
