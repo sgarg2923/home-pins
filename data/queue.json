@@ -497,8 +497,10 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./jan27-cpin2-streak-tracker.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-02"
+    "created": "2026-11-02",
+    "pin_id": "343118065387941663",
+    "posted_on": "2026-11-02"
   }
 ]
