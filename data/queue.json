@@ -17,9 +17,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin1-plan-2027-money.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-03"
+    "created": "2026-11-03",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-03"
   },
   {
     "store": "amazon",
@@ -34,13 +36,15 @@
     "slug": "stanley-quencher-h2-0-flowstate-tumbler-40-oz-er-40-oz",
     "page_url": "https://sgarg2923.github.io/home-pins/p/stanley-quencher-h2-0-flowstate-tumbler-40-oz-er-40-oz.html",
     "page_text": "Stanley Quencher H2.0 FlowState Tumbler 40 oz. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-03",
     "pin_title": "Insulated Tumbler for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for insulated tumbler? A practical pick to refresh your space. #homedecor #insulatedtumbler #homeideas",
-    "alt_text": "Stanley Quencher H2.0 FlowState Tumbler 40 oz styled in a home"
+    "alt_text": "Stanley Quencher H2.0 FlowState Tumbler 40 oz styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-03"
   },
   {
     "store": "amazon",
