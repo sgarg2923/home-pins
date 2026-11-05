@@ -199,13 +199,15 @@
     "slug": "utopia-home-fridge-organizer-bins-8-pack-s-8-pack",
     "page_url": "https://sgarg2923.github.io/home-pins/p/utopia-home-fridge-organizer-bins-8-pack-s-8-pack.html",
     "page_text": "Utopia Home Fridge Organizer Bins 8 Pack. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-05",
     "pin_title": "Fridge Organizer for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for fridge organizer? A practical pick to refresh your space. #homedecor #fridgeorganizer #homeideas",
-    "alt_text": "Utopia Home Fridge Organizer Bins 8 Pack styled in a home"
+    "alt_text": "Utopia Home Fridge Organizer Bins 8 Pack styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-06"
   },
   {
     "id": "dg-2027-budget-money-planner-p3-v0",
@@ -225,9 +227,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./pin4-bill-tracker.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-06"
+    "created": "2026-11-06",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-06"
   },
   {
     "store": "amazon",
