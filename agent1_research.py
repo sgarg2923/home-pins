@@ -92,31 +92,51 @@ def flipkart_search(keyword):
     return out
 
 
-def manual_products(used):
-    """inbox/manual_products.csv: name,keyword,image,link  (use for Amazon: SiteStripe image + link)."""
+def manual_queue(used):
+    """Reads inbox/manual_products.csv safely (BOM, odd headers, missing image files) and reports every row it cannot use."""
     path = "inbox/manual_products.csv"
+    res = {"candidates": [], "skipped": [], "total": 0, "used": 0, "rows": [], "error": ""}
     if not os.path.exists(path):
-        return []
-    out = []
-    for row in csv.DictReader(open(path, encoding="utf-8")):
-        if not (row.get("name") and row.get("link")):
-            continue
-        pid = "m-" + slugify(row["name"])
-        if pid in used:
-            continue
-        img, local = (row.get("image") or "").strip(), None
-        if img and not img.startswith("http"):
-            if not os.path.exists(img):
+        res["error"] = "inbox/manual_products.csv not found"
+        return res
+    seen = set()
+    with open(path, encoding="utf-8-sig", newline="") as f:
+        for ln, raw in enumerate(csv.DictReader(f), start=2):
+            row = {(k or "").strip().lower(): (v or "").strip() for k, v in raw.items() if k is not None}
+            if not any(row.values()):
                 continue
-            os.makedirs(f"{DOCS}/img", exist_ok=True)
-            fn = os.path.basename(img)
-            shutil.copy(img, f"{DOCS}/img/{fn}")
-            local, img = img, f"{SITE}/img/{fn}"
-        store = detect_store(row["link"])
-        cat = (row.get("category") or "").strip() or guess_category(row["name"] + " " + (row.get("keyword") or ""))
-        out.append({"id": pid, "store": store, "category": cat, "keyword": row.get("keyword") or row["name"], "title": row["name"],
-                    "desc": "", "image": img, "image_local": local, "link": row["link"], "discount": 0})
-    return out
+            res["total"] += 1
+            nm, lk = row.get("name", ""), row.get("link", "")
+            res["rows"].append({"name": nm, "link": lk})
+            why = "name is empty" if not nm else "link is empty" if not lk else "link must start with http" if not lk.startswith("http") else ""
+            pid = "m-" + slugify(nm) if nm else ""
+            if not why and pid in seen:
+                why = "same name appears twice in the CSV"
+            if why:
+                res["skipped"].append({"line": ln, "name": nm[:50], "reason": why})
+                continue
+            seen.add(pid)
+            if pid in used:
+                res["used"] += 1
+                continue
+            img, local = row.get("image", ""), None
+            if img and not img.startswith("http"):
+                if os.path.exists(img):
+                    os.makedirs(f"{DOCS}/img", exist_ok=True)
+                    fn = os.path.basename(img)
+                    shutil.copy(img, f"{DOCS}/img/{fn}")
+                    local, img = img, f"{SITE}/img/{fn}"
+                else:                                   # missing image file: do NOT skip the product, use the AI picture instead
+                    res["skipped"].append({"line": ln, "name": nm[:50], "reason": f"image file '{img}' not found (product added without it)"})
+                    img = ""
+            cat = row.get("category", "") or guess_category(nm + " " + row.get("keyword", ""))
+            res["candidates"].append({"id": pid, "store": detect_store(lk), "category": cat, "keyword": row.get("keyword") or nm, "title": nm,
+                                      "desc": "", "image": img, "image_local": local, "link": lk, "discount": 0})
+    return res
+
+
+def manual_products(used):
+    return manual_queue(used)["candidates"]
 
 
 # ---------- copy ----------
@@ -240,6 +260,13 @@ def add_digital(queue):
 
 
 # ---------- main ----------
+def csv_report(mq, picked_n=0):
+    """Numbers + messages the dashboard shows about the CSV."""
+    left = len(mq["candidates"]) - picked_n
+    return {"total_rows": mq["total"], "already_added": mq["used"], "remaining": max(left, 0), "skipped": mq["skipped"][:15],
+            "last6": mq["rows"][-6:], "error": mq["error"]}
+
+
 def main():
     try:
         import agent3_radar
@@ -248,13 +275,23 @@ def main():
         print("Radar skipped:", ex)
     queue = add_digital(jload(QUEUE, []))
     state = get_state()
-    if state.get("last_added") == today():
-        print("Products for today already added.")
+    force = os.getenv("FORCE_ADD", "").strip().lower() in ("1", "true", "yes")
+    used = set(jload(HISTORY, []))
+    mq = manual_queue(used)
+    n, ppp, _ = plan(state)
+    prev = jload(STATUS, {})
+    same_day = prev.get("date") == today()
+    base = {"updated": now_ist(), "date": today(), "mode": "forced (Add now button)" if force else "scheduled/manual run"}
+    if state.get("last_added") == today() and not force:
+        done = prev.get("added_today", []) if same_day else []
+        nxt = [c["title"] for c in mq["candidates"][:n]]
+        set_status(**base, outcome="already_today", added_today=done, next_up=[c["title"] for c in mq["candidates"][:4]], csv=csv_report(mq),
+                   message=f"Today's products were already added ({', '.join(x['name'] for x in done) or 'earlier run'}). Nothing was added again. "
+                           f"Next up: {', '.join(nxt) or 'nothing left in the CSV'}. Use 'Add next products now' to add them early.")
+        print("Products for today already added. Next up:", nxt)
         rebuild_site(queue)
         return
-    n, ppp, _ = plan(state)
-    used = set(jload(HISTORY, []))
-    picked = manual_products(used)[:n]
+    picked = mq["candidates"][:n]
     if len(picked) < n and FK_ID and FK_TOKEN:
         for kw in rank_keywords():
             if len(picked) >= n:
@@ -265,9 +302,13 @@ def main():
             if fresh:
                 picked.append(fresh[0])
     if not picked:
-        print("NO NEW PRODUCTS: add rows to inbox/manual_products.csv (or set Flipkart keys). Posting pending queue only.")
+        why = mq["error"] or ("the CSV has no usable rows" if not mq["used"] else f"all {mq['used']} usable products in the CSV are already added")
+        set_status(**base, outcome="no_new_products", added_today=prev.get("added_today", []) if same_day else [], next_up=[], csv=csv_report(mq),
+                   message=f"No product was added: {why}. Upload new products to inbox/manual_products.csv (dashboard > CSV editor).")
+        print("NO NEW PRODUCTS:", why)
         rebuild_site(queue)
         return
+    added, log = [], jload(ADDED_LOG, [])
     for p in picked:
         page_text, variants = write_copy(p, ppp)
         slug = f"{slugify(p['title'])[:45]}-{slugify(p['id'])[-8:]}"
@@ -282,13 +323,23 @@ def main():
             catalog.append({"pid": p["id"], "store": p["store"], "title": p["title"], "link": p["link"], "page_text": page_text,
                             "slug": slug, "image": p["image"], "created": today(), "category": p["category"]})
         jsave(CATALOG, catalog)
+        ts = now_ist()
+        added.append({"name": p["title"], "category": p["category"], "link": p["link"], "added_at": ts})
+        log.append({"date": today(), "time": ts, "name": p["title"], "category": p["category"], "link": p["link"], "pins_queued": len(variants),
+                    "mode": "forced" if force else "scheduled"})
     queue = queue[-400:]
     jsave(QUEUE, queue)
     jsave(HISTORY, sorted(used))
+    jsave(ADDED_LOG, log[-300:])
     state["last_added"] = today()
     jsave(STATE, state)
     rebuild_site(queue)
-    print(f"Added {len(picked)} products x {ppp} pin(s).")
+    left = max(len(mq["candidates"]) - len(picked), 0)
+    names = [x["name"] for x in added]
+    set_status(**base, outcome="added", added_today=(prev.get("added_today", []) if same_day else []) + added, last_added={"date": today(), "names": names},
+               next_up=[c["title"] for c in mq["candidates"][len(picked):][:4]], csv=csv_report(mq, len(picked)),
+               message=f"Added to the website and queued {ppp * len(picked)} pin(s): {', '.join(names)}. {left} product(s) left in the CSV (about {left // max(n, 1)} day(s)).")
+    print(f"Added {len(picked)} products x {ppp} pin(s):", names)
 
 
 if __name__ == "__main__":

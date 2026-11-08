@@ -332,6 +332,12 @@ def checkpoint(msg):
         print("checkpoint skipped:", e)
 
 
+def update_pin_status(queue, error=""):
+    t = today()
+    set_status(pins={"updated": now_ist(), "posted_today": [i["pin_title"] for i in queue if i.get("status") == "posted" and i.get("posted_on") == t],
+                     "pending": sum(i["status"] == "pending" for i in queue), "failed": sum(i["status"] == "failed" for i in queue), "error": error[:300]})
+
+
 def report(queue):
     posted = [i for i in queue if i["status"] == "posted"]
     pend = [i for i in queue if i["status"] == "pending"]
@@ -382,6 +388,7 @@ def main():
     token = get_token()
     if not token:
         print("No Pinterest token found. Add PINTEREST_ACCESS_TOKEN (or the refresh-token secrets) in GitHub Secrets.")
+        update_pin_status(jload(QUEUE, []), "No Pinterest token found in GitHub Secrets. Pins are NOT being created.")
         sys.exit(1)
     PH["Authorization"] = "Bearer " + token
     queue = jload(QUEUE, [])
@@ -389,7 +396,7 @@ def main():
     learn(queue)
     jsave(QUEUE, queue)
     per_run = plan(get_state())[2]
-    fatal = False
+    fatal, last_error = False, ""
     for it in [i for i in queue if i["status"] == "pending" and not i.get("image") and not i.get("pin_image")][:6]:
         try:                      # make every pending page image now, so the website never shows a gap
             ensure_scene_image(it)
@@ -435,6 +442,7 @@ def main():
         except PermissionError as e:
             print(e)
             fatal = True
+            last_error = str(e)
         except Exception as e:
             it["attempts"] = it.get("attempts", 0) + 1
             it["last_error"] = str(e)[:200]
@@ -445,6 +453,7 @@ def main():
         if fatal:
             break
         time.sleep(45)
+    update_pin_status(queue, last_error)
     report(queue)
     if fatal:
         sys.exit(1)

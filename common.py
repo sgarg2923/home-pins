@@ -3,6 +3,7 @@ import os, json, re, time, math, datetime as dt
 import requests
 
 DATA, DOCS = "data", "docs"
+STATUS, ADDED_LOG = f"{DATA}/agent_status.json", f"{DATA}/added_log.json"
 QUEUE, HISTORY, STATE, STATS = (f"{DATA}/{n}.json" for n in ("queue", "history", "state", "stats"))
 WARMUP_DAYS = 14          # new Pinterest accounts: start slow, then scale up
 PRODUCTS_PER_DAY = 2
@@ -87,3 +88,15 @@ def guess_category(text):
         if any(w in t for w in words):
             return cat
     return "Home Finds"
+
+
+def now_ist():
+    return (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=5, minutes=30)).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def set_status(**kw):
+    """Merge fields into data/agent_status.json (the dashboard reads it)."""
+    s = jload(STATUS, {})
+    s.update(kw)
+    jsave(STATUS, s)
+    return s
