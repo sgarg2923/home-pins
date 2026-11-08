@@ -368,8 +368,9 @@
     "group": "digital",
     "pin_image": "./adhd27-pin1.jpg",
     "status": "pending",
-    "attempts": 0,
-    "created": "2026-11-08"
+    "attempts": 1,
+    "created": "2026-11-08",
+    "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
   {
     "store": "amazon",
@@ -384,13 +385,15 @@
     "slug": "l-shaped-2-tier-pull-out-under-sink-organizer-rganizer",
     "page_url": "https://sgarg2923.github.io/home-pins/p/l-shaped-2-tier-pull-out-under-sink-organizer-rganizer.html",
     "page_text": "L-Shaped 2 Tier Pull Out Under Sink Organizer. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-08",
     "pin_title": "Under Sink Organizer for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for under sink organizer? A practical pick to refresh your space. #homedecor #undersinkorganizer #homeideas",
-    "alt_text": "L-Shaped 2 Tier Pull Out Under Sink Organizer styled in a home"
+    "alt_text": "L-Shaped 2 Tier Pull Out Under Sink Organizer styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-08"
   },
   {
     "store": "amazon",

@@ -63,5 +63,14 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): L-Shaped 2 Tier Pull Out Under Sink Organizer, SpaceAid Spice Drawer Organizer with 28 Jars. 24 product(s) left in the CSV (about 12 day(s))."
+  "message": "Added to the website and queued 2 pin(s): L-Shaped 2 Tier Pull Out Under Sink Organizer, SpaceAid Spice Drawer Organizer with 28 Jars. 24 product(s) left in the CSV (about 12 day(s)).",
+  "pins": {
+    "updated": "2026-11-08 16:50:43",
+    "posted_today": [
+      "Under Sink Organizer for Your Home"
+    ],
+    "pending": 2,
+    "failed": 1,
+    "error": ""
+  }
 }
