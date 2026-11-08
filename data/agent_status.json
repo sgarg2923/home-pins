@@ -1,0 +1,67 @@
+{
+  "updated": "2026-11-08 16:49:41",
+  "date": "2026-11-08",
+  "mode": "scheduled/manual run",
+  "outcome": "added",
+  "added_today": [
+    {
+      "name": "L-Shaped 2 Tier Pull Out Under Sink Organizer",
+      "category": "Organization",
+      "link": "https://link.amazon/B02lWyGK7",
+      "added_at": "2026-11-08 16:49:47"
+    },
+    {
+      "name": "SpaceAid Spice Drawer Organizer with 28 Jars",
+      "category": "Organization",
+      "link": "https://link.amazon/B0g8ILraT",
+      "added_at": "2026-11-08 16:49:53"
+    }
+  ],
+  "last_added": {
+    "date": "2026-11-08",
+    "names": [
+      "L-Shaped 2 Tier Pull Out Under Sink Organizer",
+      "SpaceAid Spice Drawer Organizer with 28 Jars"
+    ]
+  },
+  "next_up": [
+    "Zulay Powerful Milk Frother Wand",
+    "Royal Craft Wood Bamboo Drawer Organizer 7 Slot",
+    "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
+    "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed"
+  ],
+  "csv": {
+    "total_rows": 36,
+    "already_added": 10,
+    "remaining": 24,
+    "skipped": [],
+    "last6": [
+      {
+        "name": "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
+        "link": "https://link.amazon/B0dTvRmg6"
+      },
+      {
+        "name": "Apple AirTag 4 Pack",
+        "link": "https://link.amazon/B0bpADYrN"
+      },
+      {
+        "name": "Anker Portable Charger Power Bank 10000mAh",
+        "link": "https://link.amazon/B0fMgcISx"
+      },
+      {
+        "name": "Amazon Fire TV Stick 4K Streaming Device",
+        "link": "https://link.amazon/B01wRxOIY"
+      },
+      {
+        "name": "Amazon Echo Dot Smart Speaker with Alexa",
+        "link": "https://link.amazon/B0dQZSrqk"
+      },
+      {
+        "name": "Crocs Unisex Classic Clog",
+        "link": "https://link.amazon/B059c945X"
+      }
+    ],
+    "error": ""
+  },
+  "message": "Added to the website and queued 2 pin(s): L-Shaped 2 Tier Pull Out Under Sink Organizer, SpaceAid Spice Drawer Organizer with 28 Jars. 24 product(s) left in the CSV (about 12 day(s))."
+}

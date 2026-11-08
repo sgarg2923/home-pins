@@ -1,51 +1,25 @@
 {
-  "generated": "2026-11-01",
-  "last_try": "2026-11-01",
+  "generated": "2026-11-08",
+  "last_try": "2026-11-08",
   "status": "ok",
   "region": "US",
   "window": "12 months",
   "note": "Search-demand signal from Google Trends and autocomplete. This is NOT sales data.",
   "ideas": [
     {
-      "keyword": "subscription tracker",
-      "score": 43.8,
-      "level": 0.88,
-      "momentum": 0.87,
-      "peak_month": "April",
-      "type": "Trackers",
-      "idea": "Subscription and bill tracker",
-      "rising": [
-        "how to make sushi",
-        "free calorie counter app no subscription",
-        "best laptop for work",
-        "how to bake a cake",
-        "best pizza near me"
-      ],
-      "suggestions": [
-        "subscription tracker app",
-        "subscription tracker free",
-        "subscription tracker app free",
-        "subscription tracker google sheets",
-        "subscription tracker notifications life360",
-        "subscription tracker life360",
-        "subscription tracker template",
-        "subscription tracker reddit"
-      ]
-    },
-    {
       "keyword": "chore chart",
-      "score": 40.0,
-      "level": 0.88,
-      "momentum": 0.68,
+      "score": 45.4,
+      "level": 1.0,
+      "momentum": 0.77,
       "peak_month": "April",
       "type": "Trackers",
       "idea": "Family chore chart",
       "rising": [
-        "free editable printable chore charts pdf",
-        "free editable printable chore charts",
-        "roommate chore chart",
-        "weekly chore chart template",
-        "melissa and doug chore chart"
+        "melissa and doug chore chart",
+        "teen chore chart",
+        "chore chart for 6 year old",
+        "chore chart for 5 year old",
+        "roommate chore chart"
       ],
       "suggestions": [
         "chore chart for kids",
@@ -59,106 +33,88 @@
       ]
     },
     {
+      "keyword": "subscription tracker",
+      "score": 44.6,
+      "level": 0.9,
+      "momentum": 0.88,
+      "peak_month": "April",
+      "type": "Trackers",
+      "idea": "Subscription and bill tracker",
+      "rising": [
+        "top tourist attractions in paris",
+        "how to make sushi",
+        "how to bake a cake",
+        "free period tracker apps",
+        "best health tracker wearable"
+      ],
+      "suggestions": [
+        "subscription tracker app",
+        "subscription tracker app free",
+        "subscription tracker free",
+        "subscription tracker google sheets",
+        "subscription tracker notifications life360",
+        "subscription tracker life360",
+        "subscription tracker template",
+        "subscription tracker reddit"
+      ]
+    },
+    {
       "keyword": "savings challenge",
-      "score": 34.4,
-      "level": 0.6,
-      "momentum": 0.82,
+      "score": 35.4,
+      "level": 0.62,
+      "momentum": 0.84,
       "peak_month": "December",
       "type": "Trackers",
       "idea": "Savings challenge printables",
       "rising": [
-        "why might it be better to keep your emergency fund money in a separate account?",
         "you want to start building an emergency fund. what is one challenge you anticipate that could get in the way? what is a possible solution?",
-        "when might the 50/30/20 rule not be the best saving strategy to use?",
+        "why might it be better to keep your emergency fund money in a separate account?",
         "savings challenge printable pdf free download",
-        "baddies and budgets savings challenge"
+        "20 000 savings challenge",
+        "when is daylight savings"
       ],
       "suggestions": [
         "savings challenge book",
-        "savings challenge printable free",
         "savings challenge printable pdf free download",
+        "savings challenge printable free",
         "savings challenge printable",
         "savings challenge printable pdf",
         "savings challenge ideas",
         "savings challenge box",
-        "savings challenge printable pdf free"
+        "savings challenge book pdf free"
       ]
     },
     {
-      "keyword": "sinking funds tracker",
-      "score": 31.2,
-      "level": 0.04,
-      "momentum": 1.5,
-      "peak_month": "November",
-      "type": "Trackers",
-      "idea": "Sinking funds tracker set",
-      "rising": [],
-      "suggestions": [
-        "sinking funds tracker google sheets free",
-        "sinking funds tracker printable free",
-        "sinking funds tracker free",
-        "sinking funds tracker spreadsheet",
-        "sinking funds tracker excel",
-        "sinking funds tracker template",
-        "sinking funds tracker google sheets free template",
-        "sinking funds tracker pdf"
-      ]
-    },
-    {
-      "keyword": "habit tracker printable",
+      "keyword": "bi weekly budget",
       "score": 31.2,
       "level": 0.04,
       "momentum": 1.5,
       "peak_month": "December",
-      "type": "Trackers",
-      "idea": "Habit tracker bundle",
-      "rising": [
-        "printable habit tracker pdf free download",
-        "daily habit tracker printable"
-      ],
-      "suggestions": [
-        "habit tracker printable free",
-        "habit tracker printable pdf",
-        "habit tracker printable free pdf",
-        "habit tracker printable pdf free download",
-        "habit tracker printable weekly",
-        "habit tracker printable a4",
-        "habit tracker printable monthly",
-        "habit tracker printable kids"
-      ]
-    },
-    {
-      "keyword": "meal planner printable",
-      "score": 31.2,
-      "level": 0.04,
-      "momentum": 1.5,
-      "peak_month": "January",
       "type": "Planners",
-      "idea": "Weekly meal planner and grocery list",
-      "rising": [
-        "thanksgiving meal planner printable"
-      ],
+      "idea": "Bi-weekly paycheck budget planner",
+      "rising": [],
       "suggestions": [
-        "meal planner printable free",
-        "meal planner printable pdf",
-        "meal planner printable free pdf",
-        "meal planner printable monthly",
-        "meal planner printable weekly",
-        "meal plan printable",
-        "meal plan printable free",
-        "meal plan printable pdf"
+        "bi weekly budget template",
+        "bi weekly budget template google sheets",
+        "bi weekly budget template excel",
+        "bi weekly budget planner",
+        "bi weekly budget template free",
+        "bi weekly budget template google sheets free",
+        "bi weekly budget app",
+        "bi weekly budget calculator"
       ]
     },
     {
       "keyword": "cash envelope",
-      "score": 28.5,
-      "level": 0.37,
-      "momentum": 0.87,
+      "score": 30.2,
+      "level": 0.4,
+      "momentum": 0.91,
       "peak_month": "April",
       "type": "Trackers",
       "idea": "Cash envelope and savings challenge binder",
       "rising": [
-        "cash envelope budget definition"
+        "cash envelope budget definition",
+        "cash envelope budget"
       ],
       "suggestions": [
         "cash envelopes",
@@ -167,24 +123,24 @@
         "cash envelopes for budgeting",
         "cash envelope binder",
         "cash envelope categories",
-        "cash envelopes near me",
-        "cash envelope template"
+        "cash envelope template",
+        "cash envelopes near me"
       ]
     },
     {
       "keyword": "paycheck budget",
-      "score": 27.4,
-      "level": 0.46,
-      "momentum": 0.68,
+      "score": 29.4,
+      "level": 0.5,
+      "momentum": 0.72,
       "peak_month": "April",
       "type": "Planners",
       "idea": "Paycheck-to-paycheck budget planner",
       "rising": [
-        "what categories encompass the portion of your paycheck that is designated for saving?",
+        "what categories encompass the portion of your paycheck that is designated for saving",
         "when might the 50/30/20 rule not be the best saving strategy to use?",
         "why does it make sense to start saving or investing right now?",
-        "which of the following is most likely missing from your financial plan if you are not prepared for an emergency? a. financing b. a budget c. investments d. savings",
-        "how to budget your paycheck"
+        "why do you think it is recommended that you save 3-6 months of expenses in your emergency fund?",
+        "what categories encompass the portion of your paycheck that is designated for saving?"
       ],
       "suggestions": [
         "paycheck budget template",
@@ -198,46 +154,83 @@
       ]
     },
     {
+      "keyword": "habit tracker printable",
+      "score": 27.8,
+      "level": 0.04,
+      "momentum": 1.33,
+      "peak_month": "December",
+      "type": "Trackers",
+      "idea": "Habit tracker bundle",
+      "rising": [
+        "daily habit tracker printable"
+      ],
+      "suggestions": [
+        "habit tracker printable free",
+        "habit tracker printable pdf",
+        "habit tracker printable free pdf",
+        "habit tracker printable weekly",
+        "habit tracker printable a4",
+        "habit tracker printable monthly",
+        "habit tracker printable pdf free download",
+        "habit tracker printable template"
+      ]
+    },
+    {
       "keyword": "undated planner",
-      "score": 25.9,
-      "level": 0.37,
-      "momentum": 0.74,
+      "score": 26.1,
+      "level": 0.39,
+      "momentum": 0.72,
       "peak_month": "April",
       "type": "Planners",
       "idea": "Undated weekly planner",
+      "rising": [
+        "dailee planner",
+        "aura estelle",
+        "kinbor planner",
+        "aura estelle planner",
+        "hobonichi"
+      ],
+      "suggestions": [
+        "undated planner near me",
+        "undated planner notebook",
+        "undated planner nearby",
+        "undated planner weekly",
+        "undated planner inserts",
+        "undated planner spiral bound",
+        "undated planner amazon",
+        "undated planner stickers"
+      ]
+    },
+    {
+      "keyword": "debt payoff tracker",
+      "score": 25.6,
+      "level": 0.02,
+      "momentum": 1.25,
+      "peak_month": "May",
+      "type": "Trackers",
+      "idea": "Debt payoff tracker",
       "rising": [],
       "suggestions": []
     },
     {
-      "keyword": "bi weekly budget",
-      "score": 23.0,
+      "keyword": "meal planner printable",
+      "score": 25.2,
       "level": 0.04,
-      "momentum": 1.09,
-      "peak_month": "December",
+      "momentum": 1.2,
+      "peak_month": "March",
       "type": "Planners",
-      "idea": "Bi-weekly paycheck budget planner",
+      "idea": "Weekly meal planner and grocery list",
       "rising": [],
       "suggestions": []
     },
     {
-      "keyword": "weekly planner printable",
-      "score": 21.3,
-      "level": 0.17,
-      "momentum": 0.81,
-      "peak_month": "April",
-      "type": "Planners",
-      "idea": "Weekly planner",
-      "rising": [],
-      "suggestions": []
-    },
-    {
-      "keyword": "reading log printable",
-      "score": 20.2,
-      "level": 0.08,
-      "momentum": 0.89,
+      "keyword": "no spend challenge",
+      "score": 23.2,
+      "level": 0.16,
+      "momentum": 0.92,
       "peak_month": "December",
       "type": "Trackers",
-      "idea": "Reading log and book tracker",
+      "idea": "No-spend challenge tracker",
       "rising": [],
       "suggestions": []
     },
@@ -246,20 +239,20 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "December",
+      "peak_month": "",
       "type": "Planners",
       "idea": "ADHD-friendly 2027 budget planner",
       "rising": [],
       "suggestions": []
     },
     {
-      "keyword": "debt payoff tracker",
+      "keyword": "sinking funds tracker",
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "May",
+      "peak_month": "April",
       "type": "Trackers",
-      "idea": "Debt payoff tracker",
+      "idea": "Sinking funds tracker set",
       "rising": [],
       "suggestions": []
     },
@@ -268,7 +261,7 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "December",
+      "peak_month": "November",
       "type": "Planners",
       "idea": "Cleaning schedule planner",
       "rising": [],
@@ -279,7 +272,7 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "",
+      "peak_month": "March",
       "type": "Worksheets",
       "idea": "Gratitude journal pages",
       "rising": [],
@@ -290,7 +283,7 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "February",
+      "peak_month": "",
       "type": "Trackers",
       "idea": "Workout log",
       "rising": [],
@@ -312,7 +305,7 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "",
+      "peak_month": "February",
       "type": "Planners",
       "idea": "Student study planner",
       "rising": [],
@@ -323,7 +316,7 @@
       "score": 20.0,
       "level": 0.0,
       "momentum": 1.0,
-      "peak_month": "February",
+      "peak_month": "",
       "type": "Planners",
       "idea": "Wedding planning checklist set",
       "rising": [],
@@ -341,13 +334,24 @@
       "suggestions": []
     },
     {
-      "keyword": "no spend challenge",
-      "score": 19.0,
-      "level": 0.12,
-      "momentum": 0.77,
-      "peak_month": "December",
+      "keyword": "weekly planner printable",
+      "score": 18.4,
+      "level": 0.14,
+      "momentum": 0.71,
+      "peak_month": "April",
+      "type": "Planners",
+      "idea": "Weekly planner",
+      "rising": [],
+      "suggestions": []
+    },
+    {
+      "keyword": "reading log printable",
+      "score": 18.4,
+      "level": 0.04,
+      "momentum": 0.86,
+      "peak_month": "January",
       "type": "Trackers",
-      "idea": "No-spend challenge tracker",
+      "idea": "Reading log and book tracker",
       "rising": [],
       "suggestions": []
     }
