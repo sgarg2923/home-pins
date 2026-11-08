@@ -368,7 +368,7 @@
     "group": "digital",
     "pin_image": "./adhd27-pin1.jpg",
     "status": "pending",
-    "attempts": 1,
+    "attempts": 2,
     "created": "2026-11-08",
     "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
@@ -408,13 +408,15 @@
     "slug": "spaceaid-spice-drawer-organizer-with-28-jars--28-jars",
     "page_url": "https://sgarg2923.github.io/home-pins/p/spaceaid-spice-drawer-organizer-with-28-jars--28-jars.html",
     "page_text": "SpaceAid Spice Drawer Organizer with 28 Jars. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-08",
     "pin_title": "Spice Organizer for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for spice organizer? A practical pick to refresh your space. #homedecor #spiceorganizer #homeideas",
-    "alt_text": "SpaceAid Spice Drawer Organizer with 28 Jars styled in a home"
+    "alt_text": "SpaceAid Spice Drawer Organizer with 28 Jars styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-09"
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p1-v0",
