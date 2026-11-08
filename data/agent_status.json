@@ -1,39 +1,39 @@
 {
-  "updated": "2026-11-08 16:49:41",
-  "date": "2026-11-08",
+  "updated": "2026-11-09 03:50:13",
+  "date": "2026-11-09",
   "mode": "scheduled/manual run",
   "outcome": "added",
   "added_today": [
     {
-      "name": "L-Shaped 2 Tier Pull Out Under Sink Organizer",
-      "category": "Organization",
-      "link": "https://link.amazon/B02lWyGK7",
-      "added_at": "2026-11-08 16:49:47"
+      "name": "Zulay Powerful Milk Frother Wand",
+      "category": "Kitchen",
+      "link": "https://link.amazon/B0h9AQTPC",
+      "added_at": "2026-11-09 03:50:20"
     },
     {
-      "name": "SpaceAid Spice Drawer Organizer with 28 Jars",
+      "name": "Royal Craft Wood Bamboo Drawer Organizer 7 Slot",
       "category": "Organization",
-      "link": "https://link.amazon/B0g8ILraT",
-      "added_at": "2026-11-08 16:49:53"
+      "link": "https://link.amazon/B02Ke84GP",
+      "added_at": "2026-11-09 03:50:30"
     }
   ],
   "last_added": {
-    "date": "2026-11-08",
+    "date": "2026-11-09",
     "names": [
-      "L-Shaped 2 Tier Pull Out Under Sink Organizer",
-      "SpaceAid Spice Drawer Organizer with 28 Jars"
+      "Zulay Powerful Milk Frother Wand",
+      "Royal Craft Wood Bamboo Drawer Organizer 7 Slot"
     ]
   },
   "next_up": [
-    "Zulay Powerful Milk Frother Wand",
-    "Royal Craft Wood Bamboo Drawer Organizer 7 Slot",
     "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
-    "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed"
+    "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed",
+    "Sunbeam Electric Heating Pad with Auto Shut-Off",
+    "Pure Enrichment PureRelief XL Electric Heating Pad"
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 10,
-    "remaining": 24,
+    "already_added": 12,
+    "remaining": 22,
     "skipped": [],
     "last6": [
       {
@@ -63,7 +63,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): L-Shaped 2 Tier Pull Out Under Sink Organizer, SpaceAid Spice Drawer Organizer with 28 Jars. 24 product(s) left in the CSV (about 12 day(s)).",
+  "message": "Added to the website and queued 2 pin(s): Zulay Powerful Milk Frother Wand, Royal Craft Wood Bamboo Drawer Organizer 7 Slot. 22 product(s) left in the CSV (about 11 day(s)).",
   "pins": {
     "updated": "2026-11-08 16:50:43",
     "posted_today": [
