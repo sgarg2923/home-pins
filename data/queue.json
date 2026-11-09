@@ -367,8 +367,8 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./adhd27-pin1.jpg",
-    "status": "pending",
-    "attempts": 2,
+    "status": "failed",
+    "attempts": 3,
     "created": "2026-11-08",
     "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
@@ -437,8 +437,9 @@
     "group": "digital",
     "pin_image": "./adhd27-pin2.jpg",
     "status": "pending",
-    "attempts": 0,
-    "created": "2026-11-09"
+    "attempts": 1,
+    "created": "2026-11-09",
+    "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
   {
     "store": "amazon",
