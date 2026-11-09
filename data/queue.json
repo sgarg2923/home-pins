@@ -437,7 +437,7 @@
     "group": "digital",
     "pin_image": "./adhd27-pin2.jpg",
     "status": "pending",
-    "attempts": 1,
+    "attempts": 2,
     "created": "2026-11-09",
     "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
@@ -454,13 +454,15 @@
     "slug": "zulay-powerful-milk-frother-wand-her-wand",
     "page_url": "https://sgarg2923.github.io/home-pins/p/zulay-powerful-milk-frother-wand-her-wand.html",
     "page_text": "Zulay Powerful Milk Frother Wand. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-09",
     "pin_title": "Milk Frother for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for milk frother? A practical pick to refresh your space. #homedecor #milkfrother #homeideas",
-    "alt_text": "Zulay Powerful Milk Frother Wand styled in a home"
+    "alt_text": "Zulay Powerful Milk Frother Wand styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-09"
   },
   {
     "store": "amazon",
