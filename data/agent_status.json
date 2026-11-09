@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-09 03:50:13",
+  "updated": "2026-11-09 20:33:44",
   "date": "2026-11-09",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Zulay Powerful Milk Frother Wand",
@@ -32,7 +32,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 12,
+    "already_added": 14,
     "remaining": 22,
     "skipped": [],
     "last6": [
@@ -63,7 +63,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Zulay Powerful Milk Frother Wand, Royal Craft Wood Bamboo Drawer Organizer 7 Slot. 22 product(s) left in the CSV (about 11 day(s)).",
+  "message": "Today's products were already added (Zulay Powerful Milk Frother Wand, Royal Craft Wood Bamboo Drawer Organizer 7 Slot). Nothing was added again. Next up: Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-09 03:51:21",
     "posted_today": [
