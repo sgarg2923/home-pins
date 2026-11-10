@@ -61,7 +61,8 @@ def cf_text(system, user, max_tokens=900):
                       "max_tokens": max_tokens},
                 timeout=120)
             r.raise_for_status()
-            return r.json()["result"]["response"]
+            res = r.json()["result"]["response"]
+            return res if isinstance(res, str) else json.dumps(res)      # Cloudflare sometimes returns an object, not text
         except Exception as e:
             last = e
             time.sleep(5 * (i + 1))

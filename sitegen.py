@@ -443,7 +443,7 @@ def static_pages(c, cats):
 def build(catalog):
     use_local_bootstrap()
     c = cfg()
-    items = sorted(catalog, key=lambda p: (p.get("created", ""), p["pid"]), reverse=True)
+    items = sorted(catalog, key=lambda p: (p.get("created", ""), p.get("seq", 0), p["pid"]), reverse=True)
     for p in items:
         p.setdefault("category", "Home Finds")
         p.setdefault("image", "")

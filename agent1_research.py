@@ -177,7 +177,7 @@ def load_catalog(queue):
             if it["pid"] not in seen:
                 seen[it["pid"]] = {"pid": it["pid"], "store": detect_store(it["affiliate_link"]), "title": it["title"],
                                    "link": it["affiliate_link"], "page_text": it["page_text"], "slug": it["slug"],
-                                   "image": it.get("image") or "", "created": it["created"],
+                                   "image": it.get("image") or "", "created": it["created"], "seq": len(seen) + 1,
                                    "category": guess_category(it["title"] + " " + it["keyword"])}
         cat = list(seen.values())
     return cat
@@ -321,11 +321,12 @@ def main():
         catalog = load_catalog(queue)
         if not any(x["pid"] == p["id"] for x in catalog):
             catalog.append({"pid": p["id"], "store": p["store"], "title": p["title"], "link": p["link"], "page_text": page_text,
-                            "slug": slug, "image": p["image"], "created": today(), "category": p["category"]})
+                            "slug": slug, "image": p["image"], "created": today(), "category": p["category"], "seq": len(catalog) + 1})
         jsave(CATALOG, catalog)
         ts = now_ist()
-        added.append({"name": p["title"], "category": p["category"], "link": p["link"], "added_at": ts})
-        log.append({"date": today(), "time": ts, "name": p["title"], "category": p["category"], "link": p["link"], "pins_queued": len(variants),
+        page = f"{SITE}/p/{slug}.html"
+        added.append({"name": p["title"], "category": p["category"], "link": p["link"], "added_at": ts, "page": page})
+        log.append({"date": today(), "time": ts, "name": p["title"], "category": p["category"], "link": p["link"], "page": page, "pins_queued": len(variants),
                     "mode": "forced" if force else "scheduled"})
     queue = queue[-400:]
     jsave(QUEUE, queue)
