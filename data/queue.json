@@ -437,9 +437,9 @@
     "group": "digital",
     "pin_image": "./adhd27-pin2.jpg",
     "status": "pending",
-    "attempts": 0,
+    "attempts": 1,
     "created": "2026-11-09",
-    "last_error": ""
+    "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}"
   },
   {
     "store": "amazon",
@@ -506,9 +506,9 @@
     "group": "digital",
     "pin_image": "./adhd27-pin3.jpg",
     "status": "pending",
-    "attempts": 1,
+    "attempts": 2,
     "created": "2026-11-10",
-    "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
+    "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}"
   },
   {
     "store": "amazon",
