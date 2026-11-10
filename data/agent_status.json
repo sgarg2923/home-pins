@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-10 18:26:55",
+  "updated": "2026-11-10 18:38:55",
   "date": "2026-11-10",
-  "mode": "forced (Add now button)",
-  "outcome": "added",
+  "mode": "scheduled/manual run",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
@@ -46,7 +46,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 16,
+    "already_added": 18,
     "remaining": 18,
     "skipped": [],
     "last6": [
@@ -77,7 +77,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Sunbeam Electric Heating Pad with Auto Shut-Off, Pure Enrichment PureRelief XL Electric Heating Pad. 18 product(s) left in the CSV (about 9 day(s)).",
+  "message": "Today's products were already added (Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed, Sunbeam Electric Heating Pad with Auto Shut-Off, Pure Enrichment PureRelief XL Electric Heating Pad). Nothing was added again. Next up: Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-10 18:28:40",
     "posted_today": [
