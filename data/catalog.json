@@ -210,5 +210,29 @@
     "image": "",
     "created": "2026-11-10",
     "category": "Home Finds"
+  },
+  {
+    "pid": "m-sunbeam-electric-heating-pad-with-auto-shut-off",
+    "store": "amazon",
+    "title": "Sunbeam Electric Heating Pad with Auto Shut-Off",
+    "link": "https://link.amazon/B0gEEaAKS",
+    "page_text": "Relieve muscle tension with a safe and easy-to-use electric heating pad. The Sunbeam Electric Heating Pad with Auto Shut-Off features a comfortable design and convenient auto shut-off for added peace of mind. Perfect for soothing sore muscles after a long day.",
+    "slug": "sunbeam-electric-heating-pad-with-auto-shut-o-shut-off",
+    "image": "",
+    "created": "2026-11-10",
+    "category": "Home Finds",
+    "seq": 20
+  },
+  {
+    "pid": "m-pure-enrichment-purerelief-xl-electric-heating-pad",
+    "store": "amazon",
+    "title": "Pure Enrichment PureRelief XL Electric Heating Pad",
+    "link": "https://link.amazon/B09m0W6hr",
+    "page_text": "Find relief from sore muscles and joints with the Pure Enrichment PureRelief XL Electric Heating Pad. Its large size and 6 heat settings make it perfect for targeting hard-to-reach areas. Say goodbye to discomfort and hello to relaxation.",
+    "slug": "pure-enrichment-purerelief-xl-electric-heatin-ting-pad",
+    "image": "",
+    "created": "2026-11-10",
+    "category": "Home Finds",
+    "seq": 21
   }
 ]

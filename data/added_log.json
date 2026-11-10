@@ -52,5 +52,25 @@
     "link": "https://link.amazon/B00aBsxQ6",
     "pins_queued": 1,
     "mode": "scheduled"
+  },
+  {
+    "date": "2026-11-10",
+    "time": "2026-11-10 18:26:57",
+    "name": "Sunbeam Electric Heating Pad with Auto Shut-Off",
+    "category": "Home Finds",
+    "link": "https://link.amazon/B0gEEaAKS",
+    "page": "https://sgarg2923.github.io/home-pins/p/sunbeam-electric-heating-pad-with-auto-shut-o-shut-off.html",
+    "pins_queued": 1,
+    "mode": "forced"
+  },
+  {
+    "date": "2026-11-10",
+    "time": "2026-11-10 18:27:00",
+    "name": "Pure Enrichment PureRelief XL Electric Heating Pad",
+    "category": "Home Finds",
+    "link": "https://link.amazon/B09m0W6hr",
+    "page": "https://sgarg2923.github.io/home-pins/p/pure-enrichment-purerelief-xl-electric-heatin-ting-pad.html",
+    "pins_queued": 1,
+    "mode": "forced"
   }
 ]
