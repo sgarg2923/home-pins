@@ -60,14 +60,14 @@
     "page_url": "https://sgarg2923.github.io/home-pins/p/mueller-pro-series-12-blade-mandoline-slicer-e-slicer.html",
     "page_text": "Mueller Pro-Series 12 Blade Mandoline Slicer. A practical pick for your home.",
     "status": "pending",
-    "attempts": 1,
+    "attempts": 2,
     "created": "2026-11-03",
     "pin_title": "Vegetable Chopper for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for vegetable chopper? A practical pick to refresh your space. #homedecor #vegetablechopper #homeideas",
     "alt_text": "Mueller Pro-Series 12 Blade Mandoline Slicer styled in a home",
     "scene": "lifestyle",
-    "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}"
+    "last_error": "Pinterest 400: {\"code\":1,\"message\":\"Invalid request: '343118134050390195 ' does not match '^\\\\\\\\d+$' (constraint: pattern=^\\\\d+$)\"}"
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
@@ -368,9 +368,9 @@
     "group": "digital",
     "pin_image": "./adhd27-pin1.jpg",
     "status": "pending",
-    "attempts": 1,
+    "attempts": 2,
     "created": "2026-11-08",
-    "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}"
+    "last_error": "Pinterest 400: {\"code\":1,\"message\":\"Invalid request: '343118134050390195 ' does not match '^\\\\\\\\d+$' (constraint: pattern=^\\\\d+$)\"}"
   },
   {
     "store": "amazon",
