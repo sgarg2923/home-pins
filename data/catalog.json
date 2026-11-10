@@ -234,5 +234,29 @@
     "created": "2026-11-10",
     "category": "Home Finds",
     "seq": 21
+  },
+  {
+    "pid": "m-revlon-one-step-hair-dryer-and-volumizer-hot-air-brush",
+    "store": "amazon",
+    "title": "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
+    "link": "https://link.amazon/B09lbk7pr",
+    "page_text": "Discover the versatility of hot air brushes for effortless styling and salon-quality results. From curly to straight, achieve your desired look with ease.",
+    "slug": "revlon-one-step-hair-dryer-and-volumizer-hot--ir-brush",
+    "image": "",
+    "created": "2026-11-11",
+    "category": "Home Finds",
+    "seq": 22
+  },
+  {
+    "pid": "m-laneige-lip-sleeping-mask",
+    "store": "amazon",
+    "title": "LANEIGE Lip Sleeping Mask",
+    "link": "https://link.amazon/B08ui9YRG",
+    "page_text": "Wake up to soft, smooth lips with Laneige's Lip Sleeping Mask. This overnight lip treatment provides long-lasting hydration and nourishment to dry, chapped lips.",
+    "slug": "laneige-lip-sleeping-mask-ing-mask",
+    "image": "",
+    "created": "2026-11-11",
+    "category": "Home Finds",
+    "seq": 23
   }
 ]

@@ -1,53 +1,41 @@
 {
-  "updated": "2026-11-10 23:09:00",
-  "date": "2026-11-10",
+  "updated": "2026-11-11 05:07:36",
+  "date": "2026-11-11",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
-      "category": "Kitchen",
-      "link": "https://link.amazon/B0fyaBvQa",
-      "added_at": "2026-11-10 07:12:43"
+      "name": "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
+      "category": "Home Finds",
+      "link": "https://link.amazon/B09lbk7pr",
+      "added_at": "2026-11-11 05:07:38",
+      "page": "https://sgarg2923.github.io/home-pins/p/revlon-one-step-hair-dryer-and-volumizer-hot--ir-brush.html"
     },
     {
-      "name": "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed",
+      "name": "LANEIGE Lip Sleeping Mask",
       "category": "Home Finds",
-      "link": "https://link.amazon/B00aBsxQ6",
-      "added_at": "2026-11-10 07:12:51"
-    },
-    {
-      "name": "Sunbeam Electric Heating Pad with Auto Shut-Off",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B0gEEaAKS",
-      "added_at": "2026-11-10 18:26:57",
-      "page": "https://sgarg2923.github.io/home-pins/p/sunbeam-electric-heating-pad-with-auto-shut-o-shut-off.html"
-    },
-    {
-      "name": "Pure Enrichment PureRelief XL Electric Heating Pad",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B09m0W6hr",
-      "added_at": "2026-11-10 18:27:00",
-      "page": "https://sgarg2923.github.io/home-pins/p/pure-enrichment-purerelief-xl-electric-heatin-ting-pad.html"
+      "link": "https://link.amazon/B08ui9YRG",
+      "added_at": "2026-11-11 05:07:40",
+      "page": "https://sgarg2923.github.io/home-pins/p/laneige-lip-sleeping-mask-ing-mask.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "names": [
-      "Sunbeam Electric Heating Pad with Auto Shut-Off",
-      "Pure Enrichment PureRelief XL Electric Heating Pad"
+      "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
+      "LANEIGE Lip Sleeping Mask"
     ]
   },
   "next_up": [
-    "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
-    "LANEIGE Lip Sleeping Mask",
     "COSRX Acne Pimple Master Patch",
-    "COSRX Advanced Snail 96 Mucin Power Essence"
+    "COSRX Advanced Snail 96 Mucin Power Essence",
+    "Govee Warm White LED String Lights for Christmas Decoration",
+    "Christmas Tree Skirt for Holiday Decoration"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 18,
-    "remaining": 18,
+    "remaining": 16,
     "skipped": [],
     "last6": [
       {
@@ -77,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed, Sunbeam Electric Heating Pad with Auto Shut-Off, Pure Enrichment PureRelief XL Electric Heating Pad). Nothing was added again. Next up: Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. 16 product(s) left in the CSV (about 8 day(s)).",
   "pins": {
     "updated": "2026-11-10 23:10:40",
     "posted_today": [
