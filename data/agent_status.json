@@ -67,12 +67,10 @@
   },
   "message": "Added to the website and queued 2 pin(s): Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. 16 product(s) left in the CSV (about 8 day(s)).",
   "pins": {
-    "updated": "2026-11-10 23:10:40",
-    "posted_today": [
-      "Drawer Organizer for Your Home"
-    ],
-    "pending": 5,
-    "failed": 3,
+    "updated": "2026-11-11 05:09:28",
+    "posted_today": [],
+    "pending": 7,
+    "failed": 4,
     "error": ""
   }
 }
