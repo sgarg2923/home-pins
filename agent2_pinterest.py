@@ -380,8 +380,29 @@ def pin_it(it, b64):
     if r.status_code in (401, 403):
         raise PermissionError(f"Pinterest auth/permission error {r.status_code}: {r.text[:200]}. "
                               "If this says authentication failed, the token is wrong or expired (sandbox tokens last 30 days). Create a new token and update the GitHub secret.")
-    r.raise_for_status()
+    if not r.ok:
+        raise RuntimeError(f"Pinterest {r.status_code}: {r.text[:300]}")
     return r.json()
+
+
+def preflight(queue):
+    """Checks the board before posting. Lists your real boards when the id is wrong, and re-queues pins that failed only because of that."""
+    try:
+        r = requests.get(f"{API}/boards/{BOARD}", headers=PH, timeout=30)
+        if r.ok:
+            for it in queue:                                  # one-time heal: old failures caused by the wrong board
+                if it.get("status") == "failed" and "400 Client Error" in (it.get("last_error") or ""):
+                    it.update(status="pending", attempts=0, last_error="")
+            return True
+        b = requests.get(f"{API}/boards", headers=PH, params={"page_size": 50}, timeout=30)
+        names = "; ".join(f"{x.get('name')} = {x.get('id')}" for x in (b.json().get("items", []) if b.ok else []))
+        msg = (f"Pinterest says the board id {BOARD} is not valid for this token (HTTP {r.status_code}: {r.text[:120]}). "
+               f"Put one of YOUR board ids in the GitHub secret PINTEREST_BOARD_ID. Your boards: {names or 'could not list boards (token needs boards:read)'}")
+    except Exception as e:
+        msg = f"Could not check the Pinterest board: {e}"
+    note(msg)
+    update_pin_status(queue, msg)
+    return False
 
 
 def main():
@@ -392,6 +413,9 @@ def main():
         sys.exit(1)
     PH["Authorization"] = "Bearer " + token
     queue = jload(QUEUE, [])
+    if not preflight(queue):
+        report(queue)
+        sys.exit(1)
     existing = board_pins()
     learn(queue)
     jsave(QUEUE, queue)
