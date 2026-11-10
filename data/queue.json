@@ -436,8 +436,8 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./adhd27-pin2.jpg",
-    "status": "pending",
-    "attempts": 2,
+    "status": "failed",
+    "attempts": 3,
     "created": "2026-11-09",
     "last_error": "400 Client Error: Bad Request for url: https://api.pinterest.com/v5/pins"
   },
@@ -477,13 +477,15 @@
     "slug": "royal-craft-wood-bamboo-drawer-organizer-7-sl-r-7-slot",
     "page_url": "https://sgarg2923.github.io/home-pins/p/royal-craft-wood-bamboo-drawer-organizer-7-sl-r-7-slot.html",
     "page_text": "Royal Craft Wood Bamboo Drawer Organizer 7 Slot. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-09",
     "pin_title": "Drawer Organizer for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for drawer organizer? A practical pick to refresh your space. #homedecor #drawerorganizer #homeideas",
-    "alt_text": "Royal Craft Wood Bamboo Drawer Organizer 7 Slot styled in a home"
+    "alt_text": "Royal Craft Wood Bamboo Drawer Organizer 7 Slot styled in a home",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-10"
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p2-v0",
