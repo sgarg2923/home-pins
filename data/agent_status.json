@@ -79,12 +79,12 @@
   },
   "message": "Added to the website and queued 2 pin(s): Sunbeam Electric Heating Pad with Auto Shut-Off, Pure Enrichment PureRelief XL Electric Heating Pad. 18 product(s) left in the CSV (about 9 day(s)).",
   "pins": {
-    "updated": "2026-11-10 13:49:40",
+    "updated": "2026-11-10 18:28:40",
     "posted_today": [
       "Drawer Organizer for Your Home"
     ],
-    "pending": 3,
-    "failed": 3,
+    "pending": 8,
+    "failed": 0,
     "error": ""
   }
 }
