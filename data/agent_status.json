@@ -79,12 +79,12 @@
   },
   "message": "Today's products were already added (Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed, Sunbeam Electric Heating Pad with Auto Shut-Off, Pure Enrichment PureRelief XL Electric Heating Pad). Nothing was added again. Next up: Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. Use 'Add next products now' to add them early.",
   "pins": {
-    "updated": "2026-11-10 20:42:23",
+    "updated": "2026-11-10 23:10:40",
     "posted_today": [
       "Drawer Organizer for Your Home"
     ],
-    "pending": 6,
-    "failed": 2,
+    "pending": 5,
+    "failed": 3,
     "error": ""
   }
 }
