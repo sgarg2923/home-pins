@@ -1,39 +1,39 @@
 {
-  "updated": "2026-11-09 22:17:30",
-  "date": "2026-11-09",
+  "updated": "2026-11-10 07:12:36",
+  "date": "2026-11-10",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Zulay Powerful Milk Frother Wand",
+      "name": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
       "category": "Kitchen",
-      "link": "https://link.amazon/B0h9AQTPC",
-      "added_at": "2026-11-09 03:50:20"
+      "link": "https://link.amazon/B0fyaBvQa",
+      "added_at": "2026-11-10 07:12:43"
     },
     {
-      "name": "Royal Craft Wood Bamboo Drawer Organizer 7 Slot",
-      "category": "Organization",
-      "link": "https://link.amazon/B02Ke84GP",
-      "added_at": "2026-11-09 03:50:30"
+      "name": "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed",
+      "category": "Home Finds",
+      "link": "https://link.amazon/B00aBsxQ6",
+      "added_at": "2026-11-10 07:12:51"
     }
   ],
   "last_added": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "names": [
-      "Zulay Powerful Milk Frother Wand",
-      "Royal Craft Wood Bamboo Drawer Organizer 7 Slot"
+      "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
+      "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed"
     ]
   },
   "next_up": [
-    "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw",
-    "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed",
     "Sunbeam Electric Heating Pad with Auto Shut-Off",
-    "Pure Enrichment PureRelief XL Electric Heating Pad"
+    "Pure Enrichment PureRelief XL Electric Heating Pad",
+    "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
+    "LANEIGE Lip Sleeping Mask"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 14,
-    "remaining": 22,
+    "remaining": 20,
     "skipped": [],
     "last6": [
       {
@@ -63,7 +63,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Zulay Powerful Milk Frother Wand, Royal Craft Wood Bamboo Drawer Organizer 7 Slot). Nothing was added again. Next up: Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw, Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed. 20 product(s) left in the CSV (about 10 day(s)).",
   "pins": {
     "updated": "2026-11-09 22:18:19",
     "posted_today": [
