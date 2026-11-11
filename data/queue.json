@@ -624,9 +624,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./adhd27-pin4.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-11"
+    "created": "2026-11-11",
+    "pin_id": "343118065388010947",
+    "posted_on": "2026-11-11"
   },
   {
     "store": "amazon",
