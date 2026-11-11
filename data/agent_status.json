@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-11 05:07:36",
+  "updated": "2026-11-11 09:30:30",
   "date": "2026-11-11",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 18,
+    "already_added": 20,
     "remaining": 16,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask. 16 product(s) left in the CSV (about 8 day(s)).",
+  "message": "Today's products were already added (Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask). Nothing was added again. Next up: COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-11 05:09:28",
     "posted_today": [],
