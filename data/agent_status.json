@@ -67,10 +67,10 @@
   },
   "message": "Today's products were already added (Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask). Nothing was added again. Next up: COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. Use 'Add next products now' to add them early.",
   "pins": {
-    "updated": "2026-11-11 05:09:28",
+    "updated": "2026-11-11 09:32:06",
     "posted_today": [],
-    "pending": 7,
-    "failed": 4,
+    "pending": 6,
+    "failed": 5,
     "error": ""
   }
 }

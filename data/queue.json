@@ -523,8 +523,8 @@
     "slug": "owala-freesip-24-oz-insulated-stainless-steel-r-bottle",
     "page_url": "https://sgarg2923.github.io/home-pins/p/owala-freesip-24-oz-insulated-stainless-steel-r-bottle.html",
     "page_text": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw. A practical pick for your home.",
-    "status": "pending",
-    "attempts": 2,
+    "status": "failed",
+    "attempts": 3,
     "created": "2026-11-10",
     "pin_title": "Insulated Water Bottle for Your Home",
     "overlay_text": "Small upgrade, big change",
@@ -547,12 +547,14 @@
     "page_url": "https://sgarg2923.github.io/home-pins/p/bedsure-sherpa-fleece-throw-blanket-soft-fuzz-y-blanke.html",
     "page_text": "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed. A practical pick for your home.",
     "status": "pending",
-    "attempts": 0,
+    "attempts": 1,
     "created": "2026-11-10",
     "pin_title": "Sherpa Throw Blanket for Your Home",
     "overlay_text": "Small upgrade, big change",
     "pin_description": "Looking for sherpa throw blanket? A practical pick to refresh your space. #homedecor #sherpathrowblanket #homeideas",
-    "alt_text": "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed styled in a home"
+    "alt_text": "Bedsure Sherpa Fleece Throw Blanket Soft Fuzzy Cozy Blanket for Couch and Bed styled in a home",
+    "scene": "lifestyle",
+    "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}"
   },
   {
     "store": "amazon",
