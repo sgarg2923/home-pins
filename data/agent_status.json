@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-12 06:25:10",
+  "updated": "2026-11-12 21:02:41",
   "date": "2026-11-12",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "COSRX Acne Pimple Master Patch",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 20,
+    "already_added": 22,
     "remaining": 14,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. 14 product(s) left in the CSV (about 7 day(s)).",
+  "message": "Today's products were already added (COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence). Nothing was added again. Next up: Govee Warm White LED String Lights for Christmas Decoration, Christmas Tree Skirt for Holiday Decoration. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-12 06:27:01",
     "posted_today": [
