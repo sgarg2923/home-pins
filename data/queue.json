@@ -556,7 +556,14 @@
     "scene": "lifestyle",
     "last_error": "Pinterest 400: {\"code\":15,\"message\":\"Cannot add non-sandbox pins on sandbox boards.\"}",
     "pin_id": "343118065388008324",
-    "posted_on": "2026-11-11"
+    "posted_on": "2026-11-11",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-13",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -580,7 +587,14 @@
     "overlay_text": "Relieve Back Pain",
     "scene": "lifestyle",
     "pin_id": "343118065388008328",
-    "posted_on": "2026-11-11"
+    "posted_on": "2026-11-11",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-13",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -604,7 +618,14 @@
     "overlay_text": "Relieve Back Pain",
     "scene": "lifestyle",
     "pin_id": "343118065388010946",
-    "posted_on": "2026-11-11"
+    "posted_on": "2026-11-11",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-13",
+    "measures": 1
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p3-v0",
@@ -739,13 +760,16 @@
     "slug": "cosrx-advanced-snail-96-mucin-power-essence--essence",
     "page_url": "https://sgarg2923.github.io/home-pins/p/cosrx-advanced-snail-96-mucin-power-essence--essence.html",
     "page_text": "Say goodbye to dull skin with COSRX's Advanced Snail 96 Mucin Power Essence, a concentrated snail mucin essence that provides intense hydration and promotes skin elasticity. Suitable for all skin types, this essence helps to improve skin texture and reduce fine lines.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-12",
     "pin_title": "Snail Mucin Essence for Hydration",
     "pin_description": "Get the benefits of snail mucin in a concentrated essence that provides long-lasting hydration. Suitable for all skin types, this essence helps to improve skin texture and reduce fine lines. #SnailMucinEssence #HydratingSkin #AntiAging",
     "alt_text": "Close-up of COSRX Advanced Snail 96 Mucin Power Essence",
-    "overlay_text": "Hydrate your skin"
+    "overlay_text": "Hydrate your skin",
+    "scene": "lifestyle",
+    "pin_id": "343118065388022279",
+    "posted_on": "2026-11-13"
   },
   {
     "id": "dg-30-day-january-reset-challenge-p0-v0",

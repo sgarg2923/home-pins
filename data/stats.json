@@ -1,4 +1,16 @@
 {
-  "scene": {},
-  "group": {}
+  "scene": {
+    "lifestyle": {
+      "sum": 0.015,
+      "n": 3,
+      "avg": 0.005
+    }
+  },
+  "group": {
+    "other": {
+      "sum": 0.015,
+      "n": 3,
+      "avg": 0.005
+    }
+  }
 }
