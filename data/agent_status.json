@@ -67,14 +67,12 @@
   },
   "message": "Added to the website and queued 2 pin(s): COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. 14 product(s) left in the CSV (about 7 day(s)).",
   "pins": {
-    "updated": "2026-11-11 20:12:43",
+    "updated": "2026-11-12 06:27:01",
     "posted_today": [
-      "Sherpa Throw Blanket for Your Home",
-      "Electric Heating Pad for Back Pain Relief",
-      "Large Heating Pad for Back Pain Relief",
-      "Four-Bucket Budget Template | Simple Budgeting Printable"
+      "Revlon Hot Air Brush for Curly Hair",
+      "Laneige Lip Sleeping Mask for Hydration"
     ],
-    "pending": 2,
+    "pending": 3,
     "failed": 5,
     "error": ""
   }
