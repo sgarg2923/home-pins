@@ -282,5 +282,29 @@
     "created": "2026-11-12",
     "category": "Home Finds",
     "seq": 25
+  },
+  {
+    "pid": "m-govee-warm-white-led-string-lights-for-christmas-decoration",
+    "store": "amazon",
+    "title": "Govee Warm White LED String Lights for Christmas Decoration",
+    "link": "https://link.amazon/B018gMXan",
+    "page_text": "Add a warm and cozy ambiance to your home with Govee's LED string lights, perfect for Christmas decoration. These energy-efficient lights are easy to install and come with a 6-foot cable for flexible placement. Create a magical atmosphere for the holiday season with these soft and warm white lights.",
+    "slug": "govee-warm-white-led-string-lights-for-christ-ecoratio",
+    "image": "",
+    "created": "2026-11-13",
+    "category": "Festive",
+    "seq": 26
+  },
+  {
+    "pid": "m-christmas-tree-skirt-for-holiday-decoration",
+    "store": "amazon",
+    "title": "Christmas Tree Skirt for Holiday Decoration",
+    "link": "https://link.amazon/B00yGcpV7",
+    "page_text": "Complete your holiday decor with our Christmas tree skirts. Made with durable materials, they're easy to clean and maintain. Choose from a variety of styles to match your home's unique aesthetic.",
+    "slug": "christmas-tree-skirt-for-holiday-decoration-coration",
+    "image": "",
+    "created": "2026-11-13",
+    "category": "Festive",
+    "seq": 27
   }
 ]

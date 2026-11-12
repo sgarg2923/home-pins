@@ -1,41 +1,41 @@
 {
-  "updated": "2026-11-12 21:02:41",
-  "date": "2026-11-12",
+  "updated": "2026-11-13 05:14:33",
+  "date": "2026-11-13",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "COSRX Acne Pimple Master Patch",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B0cUgW8bP",
-      "added_at": "2026-11-12 06:25:12",
-      "page": "https://sgarg2923.github.io/home-pins/p/cosrx-acne-pimple-master-patch-er-patch.html"
+      "name": "Govee Warm White LED String Lights for Christmas Decoration",
+      "category": "Festive",
+      "link": "https://link.amazon/B018gMXan",
+      "added_at": "2026-11-13 05:14:35",
+      "page": "https://sgarg2923.github.io/home-pins/p/govee-warm-white-led-string-lights-for-christ-ecoratio.html"
     },
     {
-      "name": "COSRX Advanced Snail 96 Mucin Power Essence",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B0elRlJiK",
-      "added_at": "2026-11-12 06:25:15",
-      "page": "https://sgarg2923.github.io/home-pins/p/cosrx-advanced-snail-96-mucin-power-essence--essence.html"
+      "name": "Christmas Tree Skirt for Holiday Decoration",
+      "category": "Festive",
+      "link": "https://link.amazon/B00yGcpV7",
+      "added_at": "2026-11-13 05:14:37",
+      "page": "https://sgarg2923.github.io/home-pins/p/christmas-tree-skirt-for-holiday-decoration-coration.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "names": [
-      "COSRX Acne Pimple Master Patch",
-      "COSRX Advanced Snail 96 Mucin Power Essence"
+      "Govee Warm White LED String Lights for Christmas Decoration",
+      "Christmas Tree Skirt for Holiday Decoration"
     ]
   },
   "next_up": [
-    "Govee Warm White LED String Lights for Christmas Decoration",
-    "Christmas Tree Skirt for Holiday Decoration",
     "Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations",
-    "Advent Calendar 2026 Countdown to Christmas Gift Set"
+    "Advent Calendar 2026 Countdown to Christmas Gift Set",
+    "COSORI Air Fryer Pro Large Capacity",
+    "Ninja Air Fryer Max XL"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 22,
-    "remaining": 14,
+    "remaining": 12,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence). Nothing was added again. Next up: Govee Warm White LED String Lights for Christmas Decoration, Christmas Tree Skirt for Holiday Decoration. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): Govee Warm White LED String Lights for Christmas Decoration, Christmas Tree Skirt for Holiday Decoration. 12 product(s) left in the CSV (about 6 day(s)).",
   "pins": {
     "updated": "2026-11-12 21:04:22",
     "posted_today": [
