@@ -789,9 +789,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./jan27-cpin1-30-day-challenge.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-13"
+    "created": "2026-11-13",
+    "pin_id": "343118065388022283",
+    "posted_on": "2026-11-13"
   },
   {
     "store": "amazon",
