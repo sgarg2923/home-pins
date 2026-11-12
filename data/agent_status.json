@@ -1,41 +1,41 @@
 {
-  "updated": "2026-11-11 20:11:03",
-  "date": "2026-11-11",
+  "updated": "2026-11-12 06:25:10",
+  "date": "2026-11-12",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
+      "name": "COSRX Acne Pimple Master Patch",
       "category": "Home Finds",
-      "link": "https://link.amazon/B09lbk7pr",
-      "added_at": "2026-11-11 05:07:38",
-      "page": "https://sgarg2923.github.io/home-pins/p/revlon-one-step-hair-dryer-and-volumizer-hot--ir-brush.html"
+      "link": "https://link.amazon/B0cUgW8bP",
+      "added_at": "2026-11-12 06:25:12",
+      "page": "https://sgarg2923.github.io/home-pins/p/cosrx-acne-pimple-master-patch-er-patch.html"
     },
     {
-      "name": "LANEIGE Lip Sleeping Mask",
+      "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Home Finds",
-      "link": "https://link.amazon/B08ui9YRG",
-      "added_at": "2026-11-11 05:07:40",
-      "page": "https://sgarg2923.github.io/home-pins/p/laneige-lip-sleeping-mask-ing-mask.html"
+      "link": "https://link.amazon/B0elRlJiK",
+      "added_at": "2026-11-12 06:25:15",
+      "page": "https://sgarg2923.github.io/home-pins/p/cosrx-advanced-snail-96-mucin-power-essence--essence.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "names": [
-      "Revlon One-Step Hair Dryer and Volumizer Hot Air Brush",
-      "LANEIGE Lip Sleeping Mask"
+      "COSRX Acne Pimple Master Patch",
+      "COSRX Advanced Snail 96 Mucin Power Essence"
     ]
   },
   "next_up": [
-    "COSRX Acne Pimple Master Patch",
-    "COSRX Advanced Snail 96 Mucin Power Essence",
     "Govee Warm White LED String Lights for Christmas Decoration",
-    "Christmas Tree Skirt for Holiday Decoration"
+    "Christmas Tree Skirt for Holiday Decoration",
+    "Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations",
+    "Advent Calendar 2026 Countdown to Christmas Gift Set"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 20,
-    "remaining": 16,
+    "remaining": 14,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Revlon One-Step Hair Dryer and Volumizer Hot Air Brush, LANEIGE Lip Sleeping Mask). Nothing was added again. Next up: COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): COSRX Acne Pimple Master Patch, COSRX Advanced Snail 96 Mucin Power Essence. 14 product(s) left in the CSV (about 7 day(s)).",
   "pins": {
     "updated": "2026-11-11 20:12:43",
     "posted_today": [

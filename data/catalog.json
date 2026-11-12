@@ -258,5 +258,29 @@
     "created": "2026-11-11",
     "category": "Home Finds",
     "seq": 23
+  },
+  {
+    "pid": "m-cosrx-acne-pimple-master-patch",
+    "store": "amazon",
+    "title": "COSRX Acne Pimple Master Patch",
+    "link": "https://link.amazon/B0cUgW8bP",
+    "page_text": "Say goodbye to acne with our effective pimple patches. COSRX's Acne Pimple Master Patch is a hydrocolloid patch that helps draw out impurities and reduce inflammation, promoting faster healing and minimizing scarring. It's a discreet and easy solution for acne-prone skin.",
+    "slug": "cosrx-acne-pimple-master-patch-er-patch",
+    "image": "",
+    "created": "2026-11-12",
+    "category": "Home Finds",
+    "seq": 24
+  },
+  {
+    "pid": "m-cosrx-advanced-snail-96-mucin-power-essence",
+    "store": "amazon",
+    "title": "COSRX Advanced Snail 96 Mucin Power Essence",
+    "link": "https://link.amazon/B0elRlJiK",
+    "page_text": "Say goodbye to dull skin with COSRX's Advanced Snail 96 Mucin Power Essence, a concentrated snail mucin essence that provides intense hydration and promotes skin elasticity. Suitable for all skin types, this essence helps to improve skin texture and reduce fine lines.",
+    "slug": "cosrx-advanced-snail-96-mucin-power-essence--essence",
+    "image": "",
+    "created": "2026-11-12",
+    "category": "Home Finds",
+    "seq": 25
   }
 ]
