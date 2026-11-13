@@ -558,12 +558,12 @@
     "pin_id": "343118065388008324",
     "posted_on": "2026-11-11",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-13",
-    "measures": 1
+    "measured_on": "2026-11-14",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -589,12 +589,12 @@
     "pin_id": "343118065388008328",
     "posted_on": "2026-11-11",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-13",
-    "measures": 1
+    "measured_on": "2026-11-14",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -620,12 +620,12 @@
     "pin_id": "343118065388010946",
     "posted_on": "2026-11-11",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-13",
-    "measures": 1
+    "measured_on": "2026-11-14",
+    "measures": 2
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p3-v0",
@@ -649,7 +649,14 @@
     "attempts": 0,
     "created": "2026-11-11",
     "pin_id": "343118065388010947",
-    "posted_on": "2026-11-11"
+    "posted_on": "2026-11-11",
+    "metrics": {
+      "IMPRESSION": 3,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-14",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -673,7 +680,14 @@
     "overlay_text": "Effortless curls",
     "scene": "lifestyle",
     "pin_id": "343118065388015270",
-    "posted_on": "2026-11-12"
+    "posted_on": "2026-11-12",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-14",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -697,7 +711,14 @@
     "overlay_text": "Hydrate your lips",
     "scene": "lifestyle",
     "pin_id": "343118065388015272",
-    "posted_on": "2026-11-12"
+    "posted_on": "2026-11-12",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-14",
+    "measures": 1
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p4-v0",
@@ -861,9 +882,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./jan27-cpin2-streak-tracker.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-14"
+    "created": "2026-11-14",
+    "pin_id": "343118065388029926",
+    "posted_on": "2026-11-14"
   },
   {
     "store": "amazon",
