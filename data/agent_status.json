@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-13 05:14:33",
+  "updated": "2026-11-13 20:20:16",
   "date": "2026-11-13",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Govee Warm White LED String Lights for Christmas Decoration",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 22,
+    "already_added": 24,
     "remaining": 12,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Govee Warm White LED String Lights for Christmas Decoration, Christmas Tree Skirt for Holiday Decoration. 12 product(s) left in the CSV (about 6 day(s)).",
+  "message": "Today's products were already added (Govee Warm White LED String Lights for Christmas Decoration, Christmas Tree Skirt for Holiday Decoration). Nothing was added again. Next up: Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations, Advent Calendar 2026 Countdown to Christmas Gift Set. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-13 05:16:22",
     "posted_today": [
