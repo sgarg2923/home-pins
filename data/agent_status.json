@@ -1,41 +1,41 @@
 {
-  "updated": "2026-11-14 19:15:44",
-  "date": "2026-11-14",
+  "updated": "2026-11-15 04:10:43",
+  "date": "2026-11-15",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations",
-      "category": "Festive",
-      "link": "https://link.amazon/B0eU0ePlr",
-      "added_at": "2026-11-14 05:16:02",
-      "page": "https://sgarg2923.github.io/home-pins/p/joiedomi-christmas-ornaments-set-shatterproof--decorat.html"
+      "name": "COSORI Air Fryer Pro Large Capacity",
+      "category": "Kitchen",
+      "link": "https://link.amazon/B0fzfl2DO",
+      "added_at": "2026-11-15 04:10:46",
+      "page": "https://sgarg2923.github.io/home-pins/p/cosori-air-fryer-pro-large-capacity-capacity.html"
     },
     {
-      "name": "Advent Calendar 2026 Countdown to Christmas Gift Set",
-      "category": "Festive",
-      "link": "https://link.amazon/B0dg8qpPJ",
-      "added_at": "2026-11-14 05:16:05",
-      "page": "https://sgarg2923.github.io/home-pins/p/advent-calendar-2026-countdown-to-christmas-g-gift-set.html"
+      "name": "Ninja Air Fryer Max XL",
+      "category": "Kitchen",
+      "link": "https://link.amazon/B00mOyIgQ",
+      "added_at": "2026-11-15 04:10:48",
+      "page": "https://sgarg2923.github.io/home-pins/p/ninja-air-fryer-max-xl-r-max-xl.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "names": [
-      "Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations",
-      "Advent Calendar 2026 Countdown to Christmas Gift Set"
+      "COSORI Air Fryer Pro Large Capacity",
+      "Ninja Air Fryer Max XL"
     ]
   },
   "next_up": [
-    "COSORI Air Fryer Pro Large Capacity",
-    "Ninja Air Fryer Max XL",
     "Lodge Pre-Seasoned Cast Iron Skillet 12 Inch",
-    "Electric Candle Warmer Lamp with Timer and Dimmer"
+    "Electric Candle Warmer Lamp with Timer and Dimmer",
+    "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
+    "Apple AirTag 4 Pack"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 26,
-    "remaining": 10,
+    "remaining": 8,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations, Advent Calendar 2026 Countdown to Christmas Gift Set). Nothing was added again. Next up: COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL. 8 product(s) left in the CSV (about 4 day(s)).",
   "pins": {
     "updated": "2026-11-14 19:16:35",
     "posted_today": [

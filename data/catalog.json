@@ -330,5 +330,29 @@
     "created": "2026-11-14",
     "category": "Festive",
     "seq": 29
+  },
+  {
+    "pid": "m-cosori-air-fryer-pro-large-capacity",
+    "store": "amazon",
+    "title": "COSORI Air Fryer Pro Large Capacity",
+    "link": "https://link.amazon/B0fzfl2DO",
+    "page_text": "Elevate your cooking with the COSORI Air Fryer Pro, perfect for large families or entertaining. Its spacious capacity and advanced features make cooking healthier and more convenient.",
+    "slug": "cosori-air-fryer-pro-large-capacity-capacity",
+    "image": "",
+    "created": "2026-11-15",
+    "category": "Kitchen",
+    "seq": 30
+  },
+  {
+    "pid": "m-ninja-air-fryer-max-xl",
+    "store": "amazon",
+    "title": "Ninja Air Fryer Max XL",
+    "link": "https://link.amazon/B00mOyIgQ",
+    "page_text": "Discover the power of air frying with Ninja's Max XL model, perfect for cooking a variety of dishes with minimal oil. Achieve crispy results with even heat distribution and a large 5.5-quart capacity.",
+    "slug": "ninja-air-fryer-max-xl-r-max-xl",
+    "image": "",
+    "created": "2026-11-15",
+    "category": "Kitchen",
+    "seq": 31
   }
 ]
