@@ -67,13 +67,12 @@
   },
   "message": "Added to the website and queued 2 pin(s): COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL. 8 product(s) left in the CSV (about 4 day(s)).",
   "pins": {
-    "updated": "2026-11-14 19:16:35",
+    "updated": "2026-11-15 04:12:36",
     "posted_today": [
-      "30-Day Streak Tracker Printable | Habit Tracker",
-      "Shatterproof Christmas Ornaments Set",
-      "24-Day Christmas Countdown Calendar"
+      "Urge and Trigger Log Printable | Build Better Habits",
+      "Air Fryer Pro Large Capacity"
     ],
-    "pending": 0,
+    "pending": 1,
     "failed": 5,
     "error": ""
   }
