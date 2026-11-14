@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-14 05:16:00",
+  "updated": "2026-11-14 19:15:44",
   "date": "2026-11-14",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 24,
+    "already_added": 26,
     "remaining": 10,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations, Advent Calendar 2026 Countdown to Christmas Gift Set. 10 product(s) left in the CSV (about 5 day(s)).",
+  "message": "Today's products were already added (Joiedomi Christmas Ornaments Set Shatterproof Tree Decorations, Advent Calendar 2026 Countdown to Christmas Gift Set). Nothing was added again. Next up: COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-14 05:17:54",
     "posted_today": [
