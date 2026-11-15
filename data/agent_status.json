@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-15 04:10:43",
+  "updated": "2026-11-15 16:52:18",
   "date": "2026-11-15",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "COSORI Air Fryer Pro Large Capacity",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 26,
+    "already_added": 28,
     "remaining": 8,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL. 8 product(s) left in the CSV (about 4 day(s)).",
+  "message": "Today's products were already added (COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL). Nothing was added again. Next up: Lodge Pre-Seasoned Cast Iron Skillet 12 Inch, Electric Candle Warmer Lamp with Timer and Dimmer. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-15 04:12:36",
     "posted_today": [
