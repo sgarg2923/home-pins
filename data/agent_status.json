@@ -67,14 +67,16 @@
   },
   "message": "Today's products were already added (COSORI Air Fryer Pro Large Capacity, Ninja Air Fryer Max XL). Nothing was added again. Next up: Lodge Pre-Seasoned Cast Iron Skillet 12 Inch, Electric Candle Warmer Lamp with Timer and Dimmer. Use 'Add next products now' to add them early.",
   "pins": {
-    "updated": "2026-11-15 16:53:14",
+    "updated": "2026-11-15 19:46:51",
     "posted_today": [
       "Vegetable Chopper for Your Home",
       "ADHD-Friendly Budget Planner Printable | Simple Budgeting for Busy Brains",
+      "Budget in 5 Minutes: Simple Start-Here Setup Page (Printable)",
+      "Stop Impulse Buying: 24-Hour Pause List Printable",
       "Urge and Trigger Log Printable | Build Better Habits",
       "Air Fryer Pro Large Capacity"
     ],
-    "pending": 5,
+    "pending": 3,
     "failed": 0,
     "error": ""
   }
