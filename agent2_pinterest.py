@@ -182,6 +182,8 @@ def ensure_scene_image(it):
     extra = "" if v == 0 else ", " + SCENES[random.choice(list(SCENES))]
     prompt = (f"{it['keyword']} in a bright, modern, tidy home{extra}, styled lifestyle photo, natural light, "
               "photorealistic, no text, no logos, no brand names, no people")
+    if it.get("scene_prompt"):                         # gift-guide pins bring their own picture idea
+        prompt = f"{it['scene_prompt']}{extra}, photorealistic, natural light, no text, no logos, no brand names, no people"
     last = None
     for fn in (cf_image, pollinations_image):
         for _ in range(2):
@@ -385,13 +387,22 @@ def pin_it(it, b64):
     return r.json()
 
 
+def boards_hint():
+    try:
+        r = requests.get(f"{API}/boards", headers=PH, params={"page_size": 50}, timeout=30)
+        names = "; ".join(f"{x.get('name')} = {x.get('id')}" for x in (r.json().get("items", []) if r.ok else []))
+        return "Your boards (copy the id of a board you made on pinterest.com): " + (names or "could not list boards")
+    except Exception as e:
+        return f"Could not list boards: {e}"
+
+
 def preflight(queue):
     """Checks the board before posting. Lists your real boards when the id is wrong, and re-queues pins that failed only because of that."""
     try:
         r = requests.get(f"{API}/boards/{BOARD}", headers=PH, timeout=30)
         if r.ok:
             for it in queue:                                  # one-time heal: old failures caused by the wrong board
-                if it.get("status") == "failed" and "400 Client Error" in (it.get("last_error") or ""):
+                if it.get("status") == "failed" and ("400 Client Error" in (it.get("last_error") or "") or "Pinterest 400" in (it.get("last_error") or "")):
                     it.update(status="pending", attempts=0, last_error="")
             return True
         b = requests.get(f"{API}/boards", headers=PH, params={"page_size": 50}, timeout=30)
@@ -468,11 +479,17 @@ def main():
             fatal = True
             last_error = str(e)
         except Exception as e:
-            it["attempts"] = it.get("attempts", 0) + 1
-            it["last_error"] = str(e)[:200]
-            if it["attempts"] >= 3:
-                it["status"] = "failed"
-            print(f"Failed ({it['attempts']}/3) {it['title'][:50]}: {e}")
+            if '"code":15' in str(e) or "non-sandbox" in str(e):       # wrong kind of board: stop now, do not burn the pin's 3 tries
+                last_error = ("The board in PINTEREST_BOARD_ID is a SANDBOX board (made through the API test mode), so real pins cannot be added to it. "
+                              "Use a REAL board that you created on pinterest.com. " + boards_hint())
+                note(last_error)
+                fatal = True
+            else:
+                it["attempts"] = it.get("attempts", 0) + 1
+                it["last_error"] = str(e)[:200]
+                if it["attempts"] >= 3:
+                    it["status"] = "failed"
+                print(f"Failed ({it['attempts']}/3) {it['title'][:50]}: {e}")
         jsave(QUEUE, queue)
         if fatal:
             break

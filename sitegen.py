@@ -9,6 +9,7 @@ DOCS = "docs"
 PER_PAGE = 10
 VERIFY = os.getenv("PINTEREST_VERIFY") or "ff656e25a52b7f22a3ff1cef9239d416"
 POLICY_DATE = "October 26, 2026"
+HAS_GUIDES = False
 HOME_CATS = ["Kitchen", "Organization", "Decor", "Festive"]
 DIGITAL_CATS = ["Planners", "Trackers", "Worksheets", "Wall Art", "Templates", "Printables"]
 CAT_ORDER = HOME_CATS + DIGITAL_CATS
@@ -152,6 +153,9 @@ main{padding:34px 0 56px}body.home main{padding:0 0 56px}.section-title{display:
 .carousel-indicators{margin-bottom:.6rem}.carousel-control-prev,.carousel-control-next{width:9%}
 .f-brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:#fff!important;text-decoration:none;margin-bottom:10px}.f-brand img{width:48px;height:48px;border-radius:12px}
 .f-pin{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#e60023;color:#fff!important;margin-top:6px}.f-pin:hover{background:#ad081b}
+.gift-banner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:16px 22px;border-radius:16px;background:linear-gradient(135deg,#fff1e6,#ffe3e8);border:1px solid var(--line);text-decoration:none;color:var(--text);font-weight:700}.gb-go{color:var(--accent-d)}
+.guide .lead{font-size:1.08rem}.gitem{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:16px 0}.gnum{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:20px}
+.gbody h2{font-size:1.25rem;margin:.2rem 0 .4rem}.guide .box ol{margin:.4rem 0 0;padding-left:1.2rem}.guide{max-width:820px}
 .sticky-cta{display:none}
 @media(max-width:860px){.sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px;z-index:40}.sticky-cta .btn{display:block}body.has-cta{padding-bottom:76px}}
 footer.site{background:#2b2623;color:#d9cdc1;padding:44px 0 26px;font-size:14.5px}footer.site a{color:#f3e9de}footer.site h4{color:#fff;margin:0 0 10px}
@@ -242,10 +246,11 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
         return f'<li class="nav-item"><a class="nav-link{cur}" href="{href}">{label}</a></li>'
     nav_items = (_link(SITE + "/", "Home", "home")
                  + f'<li class="nav-item dropdown"><a class="nav-link dropdown-toggle{" active" if active in cats else ""}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a><ul class="dropdown-menu">{menu}</ul></li>'
-                 + _link(u("about.html"), "About", "about") + _link(u("contact.html"), "Contact", "contact"))
+                 + (_link(u("gift-guides.html"), "Gift Guides", "guides") if HAS_GUIDES else "") + _link(u("about.html"), "About", "about") + _link(u("contact.html"), "Contact", "contact"))
     search = (f'<form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="{u("search.html")}" method="get">'
               '<input class="form-control form-control-sm me-2" type="search" name="q" placeholder="Search finds" aria-label="Search">'
               '<button class="btn-search" type="submit">Search</button></form>')
+    gl = f'<li><a href="{u("gift-guides.html")}">Gift Guides</a></li>' if HAS_GUIDES else ""
     tok = (c.get("cloudflare_analytics_token") or "").strip()
     analytics = (f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "{e(tok)}"}}\'></script>') if tok else ""
     fcats = "".join(f'<li><a href="{u("category-" + slugify(x) + ".html")}">{e(x)}</a></li>' for x in cats)
@@ -271,7 +276,7 @@ def layout(c, cats, title, desc, body, canonical, active="", og_img=None, noinde
 <main id="content">{body}</main>
 <footer class="site"><div class="container"><div class="fgrid">
 <div><a class="f-brand" href="{SITE}/"><img src="{u('assets/logo.png')}" alt="" width="48" height="48"><span>{e(c['name'])}</span></a><p>{e(c['tagline'])}.</p><p>We share products we found while researching popular, well-reviewed home and kitchen items.</p>{pin_btn}</div>
-<div><h4>Explore</h4><ul><li><a href="{SITE}/">All finds</a></li>{fcats}<li><a href="{u('search.html')}">Search</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="{SITE}/">All finds</a></li>{gl}{fcats}<li><a href="{u('search.html')}">Search</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="{u('about.html')}">About</a></li><li><a href="{u('contact.html')}">Contact</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="{u('privacy.html')}">Privacy Policy</a></li><li><a href="{u('disclosure.html')}">Affiliate Disclosure</a></li><li><a href="{u('terms.html')}">Terms &amp; Disclaimer</a></li></ul></div>
 </div><div class="legal">&copy; {dt.date.today().year} {e(c['name'])}. As an Amazon Associate I earn from qualifying purchases. Prices, ratings and availability are set by Amazon and can change at any time. Product names and logos belong to their owners.</div></div></footer>
@@ -327,7 +332,7 @@ def listing(c, cats, base, items, heading, intro, active, hero=False, crumb=""):
             head = (f'<section class="hero"><div class="container"><h1>{e(c["tagline"])}</h1>'
                     f'<p>Simple, honest picks for your kitchen, storage and home. No fluff, just things people actually buy and use.</p>'
                     f'<a class="btn" href="#finds">Browse the latest finds</a><div class="chips">{chips}</div></div></section>'
-                    + slider(items[:5]))
+                    + slider(items[:5]) + gift_banner())
         title_h = heading if n == 1 else f"{heading} (page {n})"
         body = (head + f'<div class="container" id="finds">{crumb}<div class="section-title"><h2>{e(title_h)}</h2><p>{e(intro)}</p></div>'
                 f'<div class="grid">{grid}</div>{pager(base, n, total)}</div>')
@@ -440,9 +445,50 @@ def static_pages(c, cats):
 
 
 # ---------------- build ----------------
+def gift_banner():
+    if not HAS_GUIDES:
+        return ""
+    return (f'<section class="container"><a class="gift-banner" href="{u("gift-guides.html")}"><span>&#127873; New: Christmas gift guides</span>'
+            f'<span class="gb-go">See the guides &rarr;</span></a></section>')
+
+
+def guide_pages(c, cats, guides):
+    import urllib.parse
+    tag = c.get("amazon_tag", "")
+    cards = []
+    for g in guides:
+        url = u(f"guides/{g['slug']}.html")
+        items = []
+        for i, it in enumerate(g["items"], 1):
+            if it.get("own"):
+                btns = "".join(f'<a class="btn{" alt" if k else ""}" rel="noopener" target="_blank" href="{e(l["url"])}">{e(l["label"])}</a> ' for k, l in enumerate(it["links"]))
+                badge = '<span class="tag">Our own pick</span>'
+            else:
+                link = it.get("link") or f"https://www.amazon.com/s?k={urllib.parse.quote_plus(it.get('search', it['name']))}" + (f"&tag={tag}" if tag else "")
+                btns = f'<a class="btn" rel="sponsored nofollow noopener" target="_blank" href="{e(link)}">See options on Amazon</a>'
+                badge = ""
+            items.append(f'<section class="gitem" id="g{i}"><div class="gnum">{i}</div><div class="gbody">{badge}<h2>{e(it["name"])}</h2><p>{e(it["blurb"])}</p><p>{btns}</p></div></section>')
+        toc = "".join(f'<li><a href="#g{i}">{e(it["name"])}</a></li>' for i, it in enumerate(g["items"], 1))
+        body = (f'<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="{SITE}/">Home</a> &rsaquo; <a href="{u("gift-guides.html")}">Gift guides</a> &rsaquo; {e(g["title"])}</nav>'
+                f'<article class="guide"><span class="tag">Gift guide</span><h1>{e(g["title"])}</h1><p class="meta">Updated {e(nice_date(g.get("date", "")))}</p><p class="lead">{e(g["intro"])}</p>'
+                f'<div class="box"><strong>In this guide</strong><ol>{toc}</ol></div>{"".join(items)}'
+                f'<div class="box"><strong>How we chose</strong><p>{e(g.get("how", ""))}</p></div>'
+                f'<p class="note">As an Amazon Associate I earn from qualifying purchases. Some links above are Amazon affiliate links. Prices and availability are shown on Amazon and can change. '
+                f'<a href="{u("disclosure.html")}">Affiliate disclosure</a>.</p>'
+                f'<div class="share"><a href="https://www.pinterest.com/pin/create/button/?url={e(url)}&amp;description={e(g["title"])}" target="_blank" rel="noopener">Save on Pinterest</a></div></article></div>')
+        write(f"guides/{g['slug']}.html", layout(c, cats, g["title"], g["intro"][:200], body, url, active="guides"))
+        cards.append(f'<article class="card"><div class="cbody"><span class="tag">Gift guide</span><h3><a href="{url}">{e(g["title"])}</a></h3><p>{e(g["intro"][:150])}...</p><a class="more" href="{url}">Read the guide &rarr;</a></div></article>')
+    write("gift-guides.html", layout(c, cats, "Gift guides", "Simple gift guides with ideas that are easy to shop for.",
+          f'<div class="container"><div class="section-title"><h2>Gift guides</h2><p>Simple ideas that are easy to shop for.</p></div><div class="grid">{"".join(cards)}</div></div>',
+          u("gift-guides.html"), active="guides"))
+
+
 def build(catalog):
+    global HAS_GUIDES
     use_local_bootstrap()
     c = cfg()
+    guides = [g for g in (jload("guides.json", []) or []) if isinstance(g, dict) and g.get("live", True) and g.get("items")]
+    HAS_GUIDES = bool(guides)
     items = sorted(catalog, key=lambda p: (p.get("created", ""), p.get("seq", 0), p["pid"]), reverse=True)
     for p in items:
         p.setdefault("category", "Home Finds")
@@ -465,6 +511,9 @@ def build(catalog):
         product_page(c, cats, p, items)
         urls.append(u(f"p/{p['slug']}.html"))
     static_pages(c, cats)
+    if guides:
+        guide_pages(c, cats, guides)
+        urls += [u("gift-guides.html")] + [u(f"guides/{g['slug']}.html") for g in guides]
     urls += [u(x) for x in ("about.html", "contact.html", "privacy.html", "disclosure.html", "terms.html")]
     today = dt.date.today().isoformat()
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

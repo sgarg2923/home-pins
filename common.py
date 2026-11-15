@@ -7,7 +7,7 @@ STATUS, ADDED_LOG = f"{DATA}/agent_status.json", f"{DATA}/added_log.json"
 QUEUE, HISTORY, STATE, STATS = (f"{DATA}/{n}.json" for n in ("queue", "history", "state", "stats"))
 WARMUP_DAYS = 14          # new Pinterest accounts: start slow, then scale up
 PRODUCTS_PER_DAY = 2
-DIGITAL_PER_DAY = 1        # one pin per day for your own digital products
+DIGITAL_PER_DAY = 2        # per day: 1 pin for your own digital products + 1 pin for the gift guides
 
 
 def jload(path, default):

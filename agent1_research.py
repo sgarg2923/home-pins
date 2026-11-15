@@ -259,6 +259,33 @@ def add_digital(queue):
     return queue
 
 
+def add_guide_pins(queue):
+    """Queues at most ONE gift-guide pin per day (each pin has its own headline and picture idea)."""
+    guides = [g for g in (jload("guides.json", []) or []) if isinstance(g, dict) and g.get("live", True) and g.get("items")]
+    state = get_state()
+    if not guides or state.get("last_guide") == today():
+        return queue
+    queued = {q["id"] for q in queue}
+    for g in guides:
+        gs = g["slug"][:30]
+        url = f"{SITE}/guides/{g['slug']}.html"
+        link = f"{url}?utm_source=pinterest&utm_medium=pin&utm_campaign={gs}"
+        for i, p in enumerate(g.get("pins", [])):
+            qid = f"gd-{gs}-p{i}-v0"
+            if qid in queued:
+                continue
+            queue.append({"id": qid, "pid": f"gd-{gs}", "store": "guide", "keyword": g["title"], "title": p["title"], "image": "", "image_local": None,
+                          "affiliate_link": url, "page_url": link, "slug": f"{gs}-p{i}", "page_text": g["intro"][:200], "pin_title": p["title"],
+                          "pin_description": p["description"], "alt_text": p["title"], "overlay_text": p.get("overlay") or p["title"][:40],
+                          "scene_prompt": p.get("scene", ""), "group": "guide", "status": "pending", "attempts": 0, "created": today()})
+            state["last_guide"] = today()
+            jsave(STATE, state)
+            jsave(QUEUE, queue)
+            print("Queued gift-guide pin:", p["title"])
+            return queue
+    return queue
+
+
 # ---------- main ----------
 def csv_report(mq, picked_n=0):
     """Numbers + messages the dashboard shows about the CSV."""
@@ -273,7 +300,7 @@ def main():
         agent3_radar.run_if_due()
     except Exception as ex:      # the radar must never stop the daily work
         print("Radar skipped:", ex)
-    queue = add_digital(jload(QUEUE, []))
+    queue = add_guide_pins(add_digital(jload(QUEUE, [])))
     state = get_state()
     force = os.getenv("FORCE_ADD", "").strip().lower() in ("1", "true", "yes")
     used = set(jload(HISTORY, []))
