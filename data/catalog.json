@@ -354,5 +354,29 @@
     "created": "2026-11-15",
     "category": "Kitchen",
     "seq": 31
+  },
+  {
+    "pid": "m-lodge-pre-seasoned-cast-iron-skillet-12-inch",
+    "store": "amazon",
+    "title": "Lodge Pre-Seasoned Cast Iron Skillet 12 Inch",
+    "link": "https://link.amazon/B04L2xnvh",
+    "page_text": "Add a touch of rustic charm to your cooking with our pre-seasoned cast iron skillets. Perfect for searing steaks, cooking hearty stews, or baking delicious cornbread. Cast iron cookware is durable, long-lasting, and can be used on various heat sources, including stovetops, ovens, and campfires.",
+    "slug": "lodge-pre-seasoned-cast-iron-skillet-12-inch--12-inch",
+    "image": "",
+    "created": "2026-11-16",
+    "category": "Home Finds",
+    "seq": 32
+  },
+  {
+    "pid": "m-electric-candle-warmer-lamp-with-timer-and-dimmer",
+    "store": "amazon",
+    "title": "Electric Candle Warmer Lamp with Timer and Dimmer",
+    "link": "https://link.amazon/B0hK8PiBo",
+    "page_text": "Create a cozy ambiance with our electric candle warmer lamp. Enjoy the soft, warm glow of a candle without the flame. Perfect for any room, it's easy to use and has a built-in timer and dimmer for your convenience. Say goodbye to wax messes and hello to a relaxing atmosphere.",
+    "slug": "electric-candle-warmer-lamp-with-timer-and-di-d-dimmer",
+    "image": "",
+    "created": "2026-11-16",
+    "category": "Decor",
+    "seq": 33
   }
 ]
