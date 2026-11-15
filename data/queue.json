@@ -75,8 +75,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 1
+    "measured_on": "2026-11-16",
+    "measures": 2
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
@@ -452,7 +452,14 @@
     "created": "2026-11-09",
     "last_error": "",
     "pin_id": "343118065388041523",
-    "posted_on": "2026-11-15"
+    "posted_on": "2026-11-15",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -523,7 +530,14 @@
     "created": "2026-11-10",
     "last_error": "",
     "pin_id": "343118065388041538",
-    "posted_on": "2026-11-15"
+    "posted_on": "2026-11-15",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -538,7 +552,7 @@
     "slug": "owala-freesip-24-oz-insulated-stainless-steel-r-bottle",
     "page_url": "https://sgarg2923.github.io/home-pins/p/owala-freesip-24-oz-insulated-stainless-steel-r-bottle.html",
     "page_text": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw. A practical pick for your home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-10",
     "pin_title": "Insulated Water Bottle for Your Home",
@@ -546,7 +560,9 @@
     "pin_description": "Looking for insulated water bottle? A practical pick to refresh your space. #homedecor #insulatedwaterbottle #homeideas",
     "alt_text": "Owala FreeSip 24 oz Insulated Stainless Steel Water Bottle with Straw styled in a home",
     "scene": "lifestyle",
-    "last_error": ""
+    "last_error": "",
+    "pin_id": "343118065388045210",
+    "posted_on": "2026-11-16"
   },
   {
     "store": "amazon",
@@ -577,8 +593,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 3
+    "measured_on": "2026-11-16",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -608,8 +624,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 3
+    "measured_on": "2026-11-16",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -639,8 +655,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 3
+    "measured_on": "2026-11-16",
+    "measures": 4
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p3-v0",
@@ -670,8 +686,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 2
+    "measured_on": "2026-11-16",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -701,8 +717,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 2
+    "measured_on": "2026-11-16",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -732,8 +748,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 2
+    "measured_on": "2026-11-16",
+    "measures": 3
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p4-v0",
@@ -763,8 +779,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 1
+    "measured_on": "2026-11-16",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -794,8 +810,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 1
+    "measured_on": "2026-11-16",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -825,8 +841,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-15",
-    "measures": 1
+    "measured_on": "2026-11-16",
+    "measures": 2
   },
   {
     "id": "dg-30-day-january-reset-challenge-p0-v0",
@@ -850,7 +866,14 @@
     "attempts": 0,
     "created": "2026-11-13",
     "pin_id": "343118065388022283",
-    "posted_on": "2026-11-13"
+    "posted_on": "2026-11-13",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -874,7 +897,14 @@
     "overlay_text": "Cozy Christmas Vibe",
     "scene": "lifestyle",
     "pin_id": "343118065388026559",
-    "posted_on": "2026-11-13"
+    "posted_on": "2026-11-13",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -898,7 +928,14 @@
     "overlay_text": "Traditional holiday decor",
     "scene": "lifestyle",
     "pin_id": "343118065388026566",
-    "posted_on": "2026-11-13"
+    "posted_on": "2026-11-13",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "id": "dg-30-day-january-reset-challenge-p1-v0",
