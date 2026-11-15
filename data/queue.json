@@ -69,7 +69,14 @@
     "scene": "lifestyle",
     "last_error": "",
     "pin_id": "343118065388040523",
-    "posted_on": "2026-11-15"
+    "posted_on": "2026-11-15",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-15",
+    "measures": 1
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
@@ -440,10 +447,12 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./adhd27-pin2.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-09",
-    "last_error": ""
+    "last_error": "",
+    "pin_id": "343118065388041523",
+    "posted_on": "2026-11-15"
   },
   {
     "store": "amazon",
