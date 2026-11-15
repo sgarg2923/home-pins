@@ -369,10 +369,12 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./adhd27-pin1.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-08",
-    "last_error": ""
+    "last_error": "",
+    "pin_id": "already-on-board",
+    "posted_on": "2026-11-15"
   },
   {
     "store": "amazon",
