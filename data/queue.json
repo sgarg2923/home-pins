@@ -1131,9 +1131,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./jan27-cpin4-weekly-review.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-16"
+    "created": "2026-11-16",
+    "pin_id": "343118065388050216",
+    "posted_on": "2026-11-16"
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p1-v0",
