@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-16 04:32:32",
+  "updated": "2026-11-16 21:49:34",
   "date": "2026-11-16",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Lodge Pre-Seasoned Cast Iron Skillet 12 Inch",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 28,
+    "already_added": 30,
     "remaining": 6,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 2 pin(s): Lodge Pre-Seasoned Cast Iron Skillet 12 Inch, Electric Candle Warmer Lamp with Timer and Dimmer. 6 product(s) left in the CSV (about 3 day(s)).",
+  "message": "Today's products were already added (Lodge Pre-Seasoned Cast Iron Skillet 12 Inch, Electric Candle Warmer Lamp with Timer and Dimmer). Nothing was added again. Next up: LEVOIT Cool Mist Humidifier for Bedroom and Large Room, Apple AirTag 4 Pack. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-16 04:34:24",
     "posted_today": [
