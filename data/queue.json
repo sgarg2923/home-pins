@@ -562,7 +562,14 @@
     "scene": "lifestyle",
     "last_error": "",
     "pin_id": "343118065388045210",
-    "posted_on": "2026-11-16"
+    "posted_on": "2026-11-16",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-16",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1099,9 +1106,12 @@
     "overlay_text": "Gifts for little artists",
     "scene_prompt": "children's art supplies, crayons and sketchbooks on a wooden table, cozy Christmas decorations, warm light",
     "group": "guide",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-15"
+    "created": "2026-11-15",
+    "scene": "lifestyle",
+    "pin_id": "343118065388050209",
+    "posted_on": "2026-11-16"
   },
   {
     "id": "dg-30-day-january-reset-challenge-p3-v0",
