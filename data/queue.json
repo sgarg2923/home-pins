@@ -1273,9 +1273,12 @@
     "overlay_text": "Kids art gift guide",
     "scene_prompt": "neatly arranged kids art supplies on a table with a small Christmas tree in the background, bright natural light",
     "group": "guide",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-17"
+    "created": "2026-11-17",
+    "scene": "lifestyle",
+    "pin_id": "343118065388057964",
+    "posted_on": "2026-11-17"
   },
   {
     "store": "amazon",
