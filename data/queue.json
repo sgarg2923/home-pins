@@ -1249,9 +1249,11 @@
     "overlay_text": "",
     "group": "digital",
     "pin_image": "./jan27-cpin5-reset-plan.jpg",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-17"
+    "created": "2026-11-17",
+    "pin_id": "343118065388057962",
+    "posted_on": "2026-11-17"
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p2-v0",
