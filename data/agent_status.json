@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-17 07:26:18",
+  "updated": "2026-11-17 21:54:29",
   "date": "2026-11-17",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 30,
+    "already_added": 32,
     "remaining": 4,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): LEVOIT Cool Mist Humidifier for Bedroom and Large Room, Apple AirTag 4 Pack. 4 product(s) left in the CSV (about 2 day(s)).",
+  "message": "Today's products were already added (LEVOIT Cool Mist Humidifier for Bedroom and Large Room, Apple AirTag 4 Pack). Nothing was added again. Next up: Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-17 07:29:04",
     "posted_today": [
