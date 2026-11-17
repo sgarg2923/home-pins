@@ -378,5 +378,29 @@
     "created": "2026-11-16",
     "category": "Decor",
     "seq": 33
+  },
+  {
+    "pid": "m-levoit-cool-mist-humidifier-for-bedroom-and-large-room",
+    "store": "amazon",
+    "title": "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
+    "link": "https://link.amazon/B0dTvRmg6",
+    "page_text": "Stay hydrated and breathe easy with the LEVOIT Cool Mist Humidifier. Perfect for bedrooms and large rooms, it helps relieve dry skin and congestion. Easy to clean and maintain, this humidifier is a must-have for any home.",
+    "slug": "levoit-cool-mist-humidifier-for-bedroom-and-l-rge-room",
+    "image": "",
+    "created": "2026-11-17",
+    "category": "Home Finds",
+    "seq": 34
+  },
+  {
+    "pid": "m-apple-airtag-4-pack",
+    "store": "amazon",
+    "title": "Apple AirTag 4 Pack",
+    "link": "https://link.amazon/B0bpADYrN",
+    "page_text": "Stay organized with Apple AirTag. Easily track your belongings with precision locating. Perfect for keys, luggage, and more.",
+    "slug": "apple-airtag-4-pack-g-4-pack",
+    "image": "",
+    "created": "2026-11-17",
+    "category": "Home Finds",
+    "seq": 35
   }
 ]
