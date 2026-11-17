@@ -75,8 +75,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 2
+    "measured_on": "2026-11-17",
+    "measures": 3
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
@@ -458,8 +458,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -536,8 +536,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -568,8 +568,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -693,8 +693,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 3
+    "measured_on": "2026-11-17",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -724,8 +724,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 3
+    "measured_on": "2026-11-17",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -755,8 +755,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 3
+    "measured_on": "2026-11-17",
+    "measures": 4
   },
   {
     "id": "dg-adhd-friendly-budget-planner-2-p4-v0",
@@ -786,8 +786,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 2
+    "measured_on": "2026-11-17",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -817,8 +817,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 2
+    "measured_on": "2026-11-17",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -848,8 +848,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 2
+    "measured_on": "2026-11-17",
+    "measures": 3
   },
   {
     "id": "dg-30-day-january-reset-challenge-p0-v0",
@@ -879,8 +879,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -910,8 +910,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -941,8 +941,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-16",
-    "measures": 1
+    "measured_on": "2026-11-17",
+    "measures": 2
   },
   {
     "id": "dg-30-day-january-reset-challenge-p1-v0",
@@ -966,7 +966,14 @@
     "attempts": 0,
     "created": "2026-11-14",
     "pin_id": "343118065388029926",
-    "posted_on": "2026-11-14"
+    "posted_on": "2026-11-14",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-17",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -990,7 +997,14 @@
     "overlay_text": "Worry-Free Decor",
     "scene": "lifestyle",
     "pin_id": "343118065388029931",
-    "posted_on": "2026-11-14"
+    "posted_on": "2026-11-14",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-17",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1014,7 +1028,14 @@
     "overlay_text": "Countdown to Christmas",
     "scene": "lifestyle",
     "pin_id": "343118065388033775",
-    "posted_on": "2026-11-14"
+    "posted_on": "2026-11-14",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-17",
+    "measures": 1
   },
   {
     "id": "dg-30-day-january-reset-challenge-p2-v0",
@@ -1155,9 +1176,12 @@
     "overlay_text": "Art stocking stuffers",
     "scene_prompt": "colorful crayons and small art supplies spilling out of a red Christmas stocking, soft warm light",
     "group": "guide",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-16"
+    "created": "2026-11-16",
+    "scene": "lifestyle",
+    "pin_id": "343118065388054144",
+    "posted_on": "2026-11-17"
   },
   {
     "store": "amazon",
