@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-18 06:36:44",
+  "updated": "2026-11-18 21:25:47",
   "date": "2026-11-18",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Anker Portable Charger Power Bank 10000mAh",
@@ -32,7 +32,7 @@
   ],
   "csv": {
     "total_rows": 36,
-    "already_added": 32,
+    "already_added": 34,
     "remaining": 2,
     "skipped": [],
     "last6": [
@@ -63,7 +63,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device. 2 product(s) left in the CSV (about 1 day(s)).",
+  "message": "Today's products were already added (Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device). Nothing was added again. Next up: Amazon Echo Dot Smart Speaker with Alexa, Crocs Unisex Classic Clog. Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-18 06:39:22",
     "posted_today": [
