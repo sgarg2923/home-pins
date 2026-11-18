@@ -65,16 +65,13 @@
   },
   "message": "Added to the website and queued 4 pin(s): Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device. 2 product(s) left in the CSV (about 1 day(s)).",
   "pins": {
-    "updated": "2026-11-17 21:57:14",
+    "updated": "2026-11-18 06:39:22",
     "posted_today": [
-      "Stocking Stuffers for Kids Who Love Art",
-      "12\" Pre-Seasoned Cast Iron Skillet",
-      "Candle Warmer Lamp with Timer",
-      "Slipped? Restart Without Guilt | Printable Reset Plan",
-      "Christmas Gift Guide: Art Supplies for Kids",
-      "LEVOIT Cool Mist Humidifier for Bedroom"
+      "Large Room Cool Mist Humidifier",
+      "Apple AirTag 4 Pack for Keys",
+      "Apple AirTag 4 Pack for Luggage"
     ],
-    "pending": 3,
+    "pending": 5,
     "failed": 0,
     "error": ""
   }
