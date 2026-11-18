@@ -402,5 +402,29 @@
     "created": "2026-11-17",
     "category": "Home Finds",
     "seq": 35
+  },
+  {
+    "pid": "m-anker-portable-charger-power-bank-10000mah",
+    "store": "amazon",
+    "title": "Anker Portable Charger Power Bank 10000mAh",
+    "link": "https://link.amazon/B0fMgcISx",
+    "page_text": "Stay powered on the go with Anker's reliable portable chargers. Our 10000mAh power bank is perfect for long trips or daily commutes. Compact and lightweight, it's easy to take with you wherever you go.",
+    "slug": "anker-portable-charger-power-bank-10000mah-10000mah",
+    "image": "",
+    "created": "2026-11-18",
+    "category": "Home Finds",
+    "seq": 36
+  },
+  {
+    "pid": "m-amazon-fire-tv-stick-4k-streaming-device",
+    "store": "amazon",
+    "title": "Amazon Fire TV Stick 4K Streaming Device",
+    "link": "https://link.amazon/B01wRxOIY",
+    "page_text": "Stream your favorite shows and movies in stunning 4K with the Amazon Fire TV Stick 4K. Enjoy access to thousands of channels, apps, and games, and control it all with your voice using Alexa. Perfect for any room in the house, this compact device is easy to set up and use.",
+    "slug": "amazon-fire-tv-stick-4k-streaming-device-g-device",
+    "image": "",
+    "created": "2026-11-18",
+    "category": "Home Finds",
+    "seq": 37
   }
 ]

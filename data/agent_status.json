@@ -1,41 +1,39 @@
 {
-  "updated": "2026-11-17 21:54:29",
-  "date": "2026-11-17",
+  "updated": "2026-11-18 06:36:44",
+  "date": "2026-11-18",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
+      "name": "Anker Portable Charger Power Bank 10000mAh",
       "category": "Home Finds",
-      "link": "https://link.amazon/B0dTvRmg6",
-      "added_at": "2026-11-17 07:26:20",
-      "page": "https://sgarg2923.github.io/home-pins/p/levoit-cool-mist-humidifier-for-bedroom-and-l-rge-room.html"
+      "link": "https://link.amazon/B0fMgcISx",
+      "added_at": "2026-11-18 06:36:45",
+      "page": "https://sgarg2923.github.io/home-pins/p/anker-portable-charger-power-bank-10000mah-10000mah.html"
     },
     {
-      "name": "Apple AirTag 4 Pack",
+      "name": "Amazon Fire TV Stick 4K Streaming Device",
       "category": "Home Finds",
-      "link": "https://link.amazon/B0bpADYrN",
-      "added_at": "2026-11-17 07:26:21",
-      "page": "https://sgarg2923.github.io/home-pins/p/apple-airtag-4-pack-g-4-pack.html"
+      "link": "https://link.amazon/B01wRxOIY",
+      "added_at": "2026-11-18 06:36:47",
+      "page": "https://sgarg2923.github.io/home-pins/p/amazon-fire-tv-stick-4k-streaming-device-g-device.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "names": [
-      "LEVOIT Cool Mist Humidifier for Bedroom and Large Room",
-      "Apple AirTag 4 Pack"
+      "Anker Portable Charger Power Bank 10000mAh",
+      "Amazon Fire TV Stick 4K Streaming Device"
     ]
   },
   "next_up": [
-    "Anker Portable Charger Power Bank 10000mAh",
-    "Amazon Fire TV Stick 4K Streaming Device",
     "Amazon Echo Dot Smart Speaker with Alexa",
     "Crocs Unisex Classic Clog"
   ],
   "csv": {
     "total_rows": 36,
     "already_added": 32,
-    "remaining": 4,
+    "remaining": 2,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +63,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (LEVOIT Cool Mist Humidifier for Bedroom and Large Room, Apple AirTag 4 Pack). Nothing was added again. Next up: Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 4 pin(s): Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device. 2 product(s) left in the CSV (about 1 day(s)).",
   "pins": {
     "updated": "2026-11-17 21:57:14",
     "posted_today": [
