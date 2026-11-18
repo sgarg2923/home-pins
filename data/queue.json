@@ -71,12 +71,12 @@
     "pin_id": "343118065388040523",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 3
+    "measured_on": "2026-11-18",
+    "measures": 4
   },
   {
     "id": "dg-2027-budget-money-planner-p1-v0",
@@ -458,8 +458,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -536,8 +536,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -568,8 +568,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -782,12 +782,12 @@
     "pin_id": "343118065388019309",
     "posted_on": "2026-11-12",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 3
+    "measured_on": "2026-11-18",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -813,12 +813,12 @@
     "pin_id": "343118065388019312",
     "posted_on": "2026-11-12",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 3
+    "measured_on": "2026-11-18",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -844,12 +844,12 @@
     "pin_id": "343118065388022279",
     "posted_on": "2026-11-13",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 3
+    "measured_on": "2026-11-18",
+    "measures": 4
   },
   {
     "id": "dg-30-day-january-reset-challenge-p0-v0",
@@ -875,12 +875,12 @@
     "pin_id": "343118065388022283",
     "posted_on": "2026-11-13",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -906,12 +906,12 @@
     "pin_id": "343118065388026559",
     "posted_on": "2026-11-13",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -937,12 +937,12 @@
     "pin_id": "343118065388026566",
     "posted_on": "2026-11-13",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 2
+    "measured_on": "2026-11-18",
+    "measures": 3
   },
   {
     "id": "dg-30-day-january-reset-challenge-p1-v0",
@@ -968,12 +968,12 @@
     "pin_id": "343118065388029926",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 1
+    "measured_on": "2026-11-18",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -999,12 +999,12 @@
     "pin_id": "343118065388029931",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 1
+    "measured_on": "2026-11-18",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1030,12 +1030,12 @@
     "pin_id": "343118065388033775",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-17",
-    "measures": 1
+    "measured_on": "2026-11-18",
+    "measures": 2
   },
   {
     "id": "dg-30-day-january-reset-challenge-p2-v0",
@@ -1059,7 +1059,14 @@
     "attempts": 0,
     "created": "2026-11-15",
     "pin_id": "343118065388036819",
-    "posted_on": "2026-11-15"
+    "posted_on": "2026-11-15",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-18",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1083,7 +1090,14 @@
     "overlay_text": "Kitchen essentials upgraded",
     "scene": "lifestyle",
     "pin_id": "343118065388036830",
-    "posted_on": "2026-11-15"
+    "posted_on": "2026-11-15",
+    "metrics": {
+      "IMPRESSION": 2,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-18",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1107,7 +1121,14 @@
     "overlay_text": "Healthy cooking made easy",
     "scene": "lifestyle",
     "pin_id": "343118065388045219",
-    "posted_on": "2026-11-16"
+    "posted_on": "2026-11-16",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-18",
+    "measures": 1
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p0-v0",
@@ -1132,7 +1153,14 @@
     "created": "2026-11-15",
     "scene": "lifestyle",
     "pin_id": "343118065388050209",
-    "posted_on": "2026-11-16"
+    "posted_on": "2026-11-16",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-18",
+    "measures": 1
   },
   {
     "id": "dg-30-day-january-reset-challenge-p3-v0",
@@ -1317,13 +1345,16 @@
     "slug": "levoit-cool-mist-humidifier-for-bedroom-and-l-rge-room",
     "page_url": "https://sgarg2923.github.io/home-pins/p/levoit-cool-mist-humidifier-for-bedroom-and-l-rge-room.html",
     "page_text": "Stay hydrated and breathe easy with the LEVOIT Cool Mist Humidifier. Perfect for bedrooms and large rooms, it helps relieve dry skin and congestion. Easy to clean and maintain, this humidifier is a must-have for any home.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-17",
     "pin_title": "Large Room Cool Mist Humidifier",
     "pin_description": "Keep large rooms and spaces hydrated with the LEVOIT Cool Mist Humidifier. Its powerful mist output and large water tank ensure consistent humidity levels, perfect for relieving congestion and dry skin. Easy to maintain and clean, it's a great addition to any home. #LargeRoomHumidifier #CongestionRelief #DrySkinTreatment",
     "alt_text": "LEVOIT Cool Mist Humidifier for large room",
-    "overlay_text": "Large space humidifier"
+    "overlay_text": "Large space humidifier",
+    "scene": "lifestyle",
+    "pin_id": "343118065388061604",
+    "posted_on": "2026-11-18"
   },
   {
     "store": "amazon",
