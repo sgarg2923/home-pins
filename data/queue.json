@@ -454,12 +454,12 @@
     "pin_id": "343118065388041523",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -532,12 +532,12 @@
     "pin_id": "343118065388041538",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -564,12 +564,12 @@
     "pin_id": "343118065388045210",
     "posted_on": "2026-11-16",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -879,8 +879,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -910,8 +910,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -941,8 +941,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 3
+    "measured_on": "2026-11-19",
+    "measures": 4
   },
   {
     "id": "dg-30-day-january-reset-challenge-p1-v0",
@@ -968,12 +968,12 @@
     "pin_id": "343118065388029926",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 2
+    "measured_on": "2026-11-19",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -999,12 +999,12 @@
     "pin_id": "343118065388029931",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 2
+    "measured_on": "2026-11-19",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1030,12 +1030,12 @@
     "pin_id": "343118065388033775",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 2
+    "measured_on": "2026-11-19",
+    "measures": 3
   },
   {
     "id": "dg-30-day-january-reset-challenge-p2-v0",
@@ -1061,12 +1061,12 @@
     "pin_id": "343118065388036819",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 1
+    "measured_on": "2026-11-19",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1092,12 +1092,12 @@
     "pin_id": "343118065388036830",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 1
+    "measured_on": "2026-11-19",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1123,12 +1123,12 @@
     "pin_id": "343118065388045219",
     "posted_on": "2026-11-16",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 1
+    "measured_on": "2026-11-19",
+    "measures": 2
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p0-v0",
@@ -1159,8 +1159,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-18",
-    "measures": 1
+    "measured_on": "2026-11-19",
+    "measures": 2
   },
   {
     "id": "dg-30-day-january-reset-challenge-p3-v0",
@@ -1184,7 +1184,14 @@
     "attempts": 0,
     "created": "2026-11-16",
     "pin_id": "343118065388050216",
-    "posted_on": "2026-11-16"
+    "posted_on": "2026-11-16",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-19",
+    "measures": 1
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p1-v0",
@@ -1209,7 +1216,14 @@
     "created": "2026-11-16",
     "scene": "lifestyle",
     "pin_id": "343118065388054144",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-19",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1233,7 +1247,14 @@
     "overlay_text": "Rustic Cooking Made Easy",
     "scene": "lifestyle",
     "pin_id": "343118065388054154",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-19",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1257,7 +1278,14 @@
     "overlay_text": "Cozy home decor",
     "scene": "lifestyle",
     "pin_id": "343118065388054156",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-19",
+    "measures": 1
   },
   {
     "id": "dg-30-day-january-reset-challenge-p4-v0",
@@ -1490,13 +1518,16 @@
     "slug": "amazon-fire-tv-stick-4k-streaming-device-g-device",
     "page_url": "https://sgarg2923.github.io/home-pins/p/amazon-fire-tv-stick-4k-streaming-device-g-device.html",
     "page_text": "Stream your favorite shows and movies in stunning 4K with the Amazon Fire TV Stick 4K. Enjoy access to thousands of channels, apps, and games, and control it all with your voice using Alexa. Perfect for any room in the house, this compact device is easy to set up and use.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-18",
     "pin_title": "4K Streaming for the Whole Family",
     "pin_description": "Bring the big screen experience to your living room with the Amazon Fire TV Stick 4K. Stream your favorite shows and movies in stunning 4K resolution, and access thousands of channels, apps, and games. Control it all with your voice using Alexa, making it easy for anyone to navigate.",
     "alt_text": "Amazon Fire TV Stick 4K streaming device on a TV",
-    "overlay_text": "Elevate your home entertainment"
+    "overlay_text": "Elevate your home entertainment",
+    "scene": "lifestyle",
+    "pin_id": "343118065388069110",
+    "posted_on": "2026-11-19"
   },
   {
     "store": "amazon",
