@@ -1571,9 +1571,12 @@
     "overlay_text": "Screen-free gifts",
     "scene_prompt": "a child's desk with sketchbook and coloured pencils beside a window with fairy lights, soft cozy light",
     "group": "guide",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-19"
+    "created": "2026-11-19",
+    "scene": "lifestyle",
+    "pin_id": "343118065388069125",
+    "posted_on": "2026-11-19"
   },
   {
     "store": "amazon",
