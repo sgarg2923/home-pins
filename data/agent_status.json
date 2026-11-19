@@ -62,13 +62,16 @@
   },
   "message": "Today's products were already added (Amazon Echo Dot Smart Speaker with Alexa, Crocs Unisex Classic Clog). Nothing was added again. Next up: nothing left in the CSV. Use 'Add next products now' to add them early.",
   "pins": {
-    "updated": "2026-11-19 06:10:48",
+    "updated": "2026-11-19 21:32:10",
     "posted_today": [
       "4K Streaming for the Whole Family",
       "Stream Your Favorite Sports in 4K",
-      "Screen-Free Christmas Gifts for Kids Who Love to Draw"
+      "Screen-Free Christmas Gifts for Kids Who Love to Draw",
+      "Echo Dot for Small Spaces",
+      "Echo Dot for Home Entertainment",
+      "Crocs Unisex Classic Clog - Comfortable Casual Shoes"
     ],
-    "pending": 4,
+    "pending": 1,
     "failed": 0,
     "error": ""
   }
