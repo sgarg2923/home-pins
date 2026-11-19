@@ -1,39 +1,36 @@
 {
-  "updated": "2026-11-18 21:25:47",
-  "date": "2026-11-18",
+  "updated": "2026-11-19 06:08:02",
+  "date": "2026-11-19",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Anker Portable Charger Power Bank 10000mAh",
+      "name": "Amazon Echo Dot Smart Speaker with Alexa",
       "category": "Home Finds",
-      "link": "https://link.amazon/B0fMgcISx",
-      "added_at": "2026-11-18 06:36:45",
-      "page": "https://sgarg2923.github.io/home-pins/p/anker-portable-charger-power-bank-10000mah-10000mah.html"
+      "link": "https://link.amazon/B0dQZSrqk",
+      "added_at": "2026-11-19 06:08:04",
+      "page": "https://sgarg2923.github.io/home-pins/p/amazon-echo-dot-smart-speaker-with-alexa-th-alexa.html"
     },
     {
-      "name": "Amazon Fire TV Stick 4K Streaming Device",
+      "name": "Crocs Unisex Classic Clog",
       "category": "Home Finds",
-      "link": "https://link.amazon/B01wRxOIY",
-      "added_at": "2026-11-18 06:36:47",
-      "page": "https://sgarg2923.github.io/home-pins/p/amazon-fire-tv-stick-4k-streaming-device-g-device.html"
+      "link": "https://link.amazon/B059c945X",
+      "added_at": "2026-11-19 06:08:07",
+      "page": "https://sgarg2923.github.io/home-pins/p/crocs-unisex-classic-clog-sic-clog.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "names": [
-      "Anker Portable Charger Power Bank 10000mAh",
-      "Amazon Fire TV Stick 4K Streaming Device"
+      "Amazon Echo Dot Smart Speaker with Alexa",
+      "Crocs Unisex Classic Clog"
     ]
   },
-  "next_up": [
-    "Amazon Echo Dot Smart Speaker with Alexa",
-    "Crocs Unisex Classic Clog"
-  ],
+  "next_up": [],
   "csv": {
     "total_rows": 36,
     "already_added": 34,
-    "remaining": 2,
+    "remaining": 0,
     "skipped": [],
     "last6": [
       {
@@ -63,7 +60,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Anker Portable Charger Power Bank 10000mAh, Amazon Fire TV Stick 4K Streaming Device). Nothing was added again. Next up: Amazon Echo Dot Smart Speaker with Alexa, Crocs Unisex Classic Clog. Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 4 pin(s): Amazon Echo Dot Smart Speaker with Alexa, Crocs Unisex Classic Clog. 0 product(s) left in the CSV (about 0 day(s)).",
   "pins": {
     "updated": "2026-11-18 21:28:21",
     "posted_today": [

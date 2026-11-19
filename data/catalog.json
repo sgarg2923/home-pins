@@ -426,5 +426,29 @@
     "created": "2026-11-18",
     "category": "Home Finds",
     "seq": 37
+  },
+  {
+    "pid": "m-amazon-echo-dot-smart-speaker-with-alexa",
+    "store": "amazon",
+    "title": "Amazon Echo Dot Smart Speaker with Alexa",
+    "link": "https://link.amazon/B0dQZSrqk",
+    "page_text": "Upgrade your home with the Amazon Echo Dot, a compact smart speaker that brings the power of Alexa to your living space. Control your music, lights, and more with just your voice. Discover a more convenient and connected way to live.",
+    "slug": "amazon-echo-dot-smart-speaker-with-alexa-th-alexa",
+    "image": "",
+    "created": "2026-11-19",
+    "category": "Home Finds",
+    "seq": 38
+  },
+  {
+    "pid": "m-crocs-unisex-classic-clog",
+    "store": "amazon",
+    "title": "Crocs Unisex Classic Clog",
+    "link": "https://link.amazon/B059c945X",
+    "page_text": "Discover the comfort and practicality of the Crocs Unisex Classic Clog. Perfect for everyday wear, these clogs are easy to slip on and off and come in a range of colors. Whether you're looking for a casual shoe or a comfortable alternative to traditional footwear, the Crocs Unisex Classic Clog is a great choice.",
+    "slug": "crocs-unisex-classic-clog-sic-clog",
+    "image": "",
+    "created": "2026-11-19",
+    "category": "Home Finds",
+    "seq": 39
   }
 ]
