@@ -1734,8 +1734,11 @@
     "overlay_text": "Last-minute gift idea",
     "scene_prompt": "printed drawing activity pages with crayons on a kitchen table, Christmas ribbon and gift wrap, warm light",
     "group": "guide",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
-    "created": "2026-11-20"
+    "created": "2026-11-20",
+    "scene": "lifestyle",
+    "pin_id": "343118065388076030",
+    "posted_on": "2026-11-20"
   }
 ]
