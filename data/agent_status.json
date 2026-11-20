@@ -1,24 +1,9 @@
 {
-  "updated": "2026-11-19 21:29:36",
-  "date": "2026-11-19",
+  "updated": "2026-11-20 06:16:17",
+  "date": "2026-11-20",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
-  "added_today": [
-    {
-      "name": "Amazon Echo Dot Smart Speaker with Alexa",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B0dQZSrqk",
-      "added_at": "2026-11-19 06:08:04",
-      "page": "https://sgarg2923.github.io/home-pins/p/amazon-echo-dot-smart-speaker-with-alexa-th-alexa.html"
-    },
-    {
-      "name": "Crocs Unisex Classic Clog",
-      "category": "Home Finds",
-      "link": "https://link.amazon/B059c945X",
-      "added_at": "2026-11-19 06:08:07",
-      "page": "https://sgarg2923.github.io/home-pins/p/crocs-unisex-classic-clog-sic-clog.html"
-    }
-  ],
+  "outcome": "no_new_products",
+  "added_today": [],
   "last_added": {
     "date": "2026-11-19",
     "names": [
@@ -60,7 +45,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Amazon Echo Dot Smart Speaker with Alexa, Crocs Unisex Classic Clog). Nothing was added again. Next up: nothing left in the CSV. Use 'Add next products now' to add them early.",
+  "message": "No product was added: all 36 usable products in the CSV are already added. Upload new products to inbox/manual_products.csv (dashboard > CSV editor).",
   "pins": {
     "updated": "2026-11-19 21:32:10",
     "posted_today": [
