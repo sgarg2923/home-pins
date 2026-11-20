@@ -968,12 +968,12 @@
     "pin_id": "343118065388029926",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 3
+    "measured_on": "2026-11-20",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -999,12 +999,12 @@
     "pin_id": "343118065388029931",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 5,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 3
+    "measured_on": "2026-11-20",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1030,12 +1030,12 @@
     "pin_id": "343118065388033775",
     "posted_on": "2026-11-14",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 3
+    "measured_on": "2026-11-20",
+    "measures": 4
   },
   {
     "id": "dg-30-day-january-reset-challenge-p2-v0",
@@ -1061,12 +1061,12 @@
     "pin_id": "343118065388036819",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 2
+    "measured_on": "2026-11-20",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1092,12 +1092,12 @@
     "pin_id": "343118065388036830",
     "posted_on": "2026-11-15",
     "metrics": {
-      "IMPRESSION": 3,
+      "IMPRESSION": 5,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 2
+    "measured_on": "2026-11-20",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1123,12 +1123,12 @@
     "pin_id": "343118065388045219",
     "posted_on": "2026-11-16",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 2
+    "measured_on": "2026-11-20",
+    "measures": 3
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p0-v0",
@@ -1155,12 +1155,12 @@
     "pin_id": "343118065388050209",
     "posted_on": "2026-11-16",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 2
+    "measured_on": "2026-11-20",
+    "measures": 3
   },
   {
     "id": "dg-30-day-january-reset-challenge-p3-v0",
@@ -1186,12 +1186,12 @@
     "pin_id": "343118065388050216",
     "posted_on": "2026-11-16",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 1
+    "measured_on": "2026-11-20",
+    "measures": 2
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p1-v0",
@@ -1218,12 +1218,12 @@
     "pin_id": "343118065388054144",
     "posted_on": "2026-11-17",
     "metrics": {
-      "IMPRESSION": 0,
-      "PIN_CLICK": 0,
+      "IMPRESSION": 3,
+      "PIN_CLICK": 1,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 1
+    "measured_on": "2026-11-20",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1249,12 +1249,12 @@
     "pin_id": "343118065388054154",
     "posted_on": "2026-11-17",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 1
+    "measured_on": "2026-11-20",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1280,12 +1280,12 @@
     "pin_id": "343118065388054156",
     "posted_on": "2026-11-17",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 2,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-19",
-    "measures": 1
+    "measured_on": "2026-11-20",
+    "measures": 2
   },
   {
     "id": "dg-30-day-january-reset-challenge-p4-v0",
@@ -1309,7 +1309,14 @@
     "attempts": 0,
     "created": "2026-11-17",
     "pin_id": "343118065388057962",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p2-v0",
@@ -1334,7 +1341,14 @@
     "created": "2026-11-17",
     "scene": "lifestyle",
     "pin_id": "343118065388057964",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1358,7 +1372,14 @@
     "overlay_text": "Bedroom humidifier",
     "scene": "lifestyle",
     "pin_id": "343118065388057975",
-    "posted_on": "2026-11-17"
+    "posted_on": "2026-11-17",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1382,7 +1403,14 @@
     "overlay_text": "Large space humidifier",
     "scene": "lifestyle",
     "pin_id": "343118065388061604",
-    "posted_on": "2026-11-18"
+    "posted_on": "2026-11-18",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1406,7 +1434,14 @@
     "overlay_text": "Never lose your keys",
     "scene": "lifestyle",
     "pin_id": "343118065388061613",
-    "posted_on": "2026-11-18"
+    "posted_on": "2026-11-18",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1430,7 +1465,14 @@
     "overlay_text": "Track your luggage",
     "scene": "lifestyle",
     "pin_id": "343118065388061621",
-    "posted_on": "2026-11-18"
+    "posted_on": "2026-11-18",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-20",
+    "measures": 1
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p3-v0",
@@ -1663,13 +1705,16 @@
     "slug": "crocs-unisex-classic-clog-sic-clog",
     "page_url": "https://sgarg2923.github.io/home-pins/p/crocs-unisex-classic-clog-sic-clog.html",
     "page_text": "Discover the comfort and practicality of the Crocs Unisex Classic Clog. Perfect for everyday wear, these clogs are easy to slip on and off and come in a range of colors. Whether you're looking for a casual shoe or a comfortable alternative to traditional footwear, the Crocs Unisex Classic Clog is a great choice.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-19",
     "pin_title": "Classic Clog for Everyday Wear - Slip-Resistant Outsole",
     "pin_description": "Take your everyday wear to the next level with the Crocs Unisex Classic Clog. Featuring a slip-resistant outsole and a comfortable design, these clogs are perfect for work, school, or just running errands. Plus, they're easy to clean and maintain. #CrocsClassicClog #SlipResistant #EverydayWear",
     "alt_text": "Crocs Unisex Classic Clog with slip-resistant outsole",
-    "overlay_text": "Slip-Resistant Outsole"
+    "overlay_text": "Slip-Resistant Outsole",
+    "scene": "lifestyle",
+    "pin_id": "343118065388076024",
+    "posted_on": "2026-11-20"
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p5-v0",
