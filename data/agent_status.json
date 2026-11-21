@@ -47,7 +47,7 @@
   },
   "message": "No product was added: all 36 usable products in the CSV are already added. Upload new products to inbox/manual_products.csv (dashboard > CSV editor).",
   "pins": {
-    "updated": "2026-11-21 20:24:11",
+    "updated": "2026-11-22 05:02:49",
     "posted_today": [],
     "pending": 0,
     "failed": 0,

@@ -1190,8 +1190,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 3
+    "measured_on": "2026-11-22",
+    "measures": 4
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p1-v0",
@@ -1222,8 +1222,8 @@
       "PIN_CLICK": 1,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 3
+    "measured_on": "2026-11-22",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1253,8 +1253,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 3
+    "measured_on": "2026-11-22",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1284,8 +1284,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 3
+    "measured_on": "2026-11-22",
+    "measures": 4
   },
   {
     "id": "dg-30-day-january-reset-challenge-p4-v0",
@@ -1315,8 +1315,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p2-v0",
@@ -1347,8 +1347,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1378,8 +1378,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1409,8 +1409,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1440,8 +1440,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1471,8 +1471,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 2
+    "measured_on": "2026-11-22",
+    "measures": 3
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p3-v0",
@@ -1503,8 +1503,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 1
+    "measured_on": "2026-11-22",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1534,8 +1534,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 1
+    "measured_on": "2026-11-22",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1565,8 +1565,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 1
+    "measured_on": "2026-11-22",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1596,8 +1596,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 1
+    "measured_on": "2026-11-22",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1627,8 +1627,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-21",
-    "measures": 1
+    "measured_on": "2026-11-22",
+    "measures": 2
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p4-v0",
@@ -1653,7 +1653,14 @@
     "created": "2026-11-19",
     "scene": "lifestyle",
     "pin_id": "343118065388069125",
-    "posted_on": "2026-11-19"
+    "posted_on": "2026-11-19",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-22",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1677,7 +1684,14 @@
     "overlay_text": "Small kitchen upgrade",
     "scene": "lifestyle",
     "pin_id": "343118065388072899",
-    "posted_on": "2026-11-19"
+    "posted_on": "2026-11-19",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-22",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1701,7 +1715,14 @@
     "overlay_text": "Upgrade your living room",
     "scene": "lifestyle",
     "pin_id": "343118065388072904",
-    "posted_on": "2026-11-19"
+    "posted_on": "2026-11-19",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-22",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1725,7 +1746,14 @@
     "overlay_text": "Comfortable Casual Shoes",
     "scene": "lifestyle",
     "pin_id": "343118065388072906",
-    "posted_on": "2026-11-19"
+    "posted_on": "2026-11-19",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-22",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1749,7 +1777,14 @@
     "overlay_text": "Slip-Resistant Outsole",
     "scene": "lifestyle",
     "pin_id": "343118065388076024",
-    "posted_on": "2026-11-20"
+    "posted_on": "2026-11-20",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-22",
+    "measures": 1
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p5-v0",
