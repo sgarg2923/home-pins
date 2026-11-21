@@ -47,11 +47,8 @@
   },
   "message": "No product was added: all 36 usable products in the CSV are already added. Upload new products to inbox/manual_products.csv (dashboard > CSV editor).",
   "pins": {
-    "updated": "2026-11-20 21:12:37",
-    "posted_today": [
-      "Classic Clog for Everyday Wear - Slip-Resistant Outsole",
-      "Last-Minute Gift: Printable Drawing Book for Kids"
-    ],
+    "updated": "2026-11-21 05:35:44",
+    "posted_today": [],
     "pending": 0,
     "failed": 0,
     "error": ""
