@@ -341,7 +341,7 @@ def main():
         slug = f"{slugify(p['title'])[:45]}-{slugify(p['id'])[-8:]}"
         for i, v in enumerate(variants):
             queue.append({**{k: p[k] for k in ("store", "keyword", "title", "image", "image_local")},
-                          "id": f"{p['id']}-v{i}", "pid": p["id"], "group": GROUP_OF.get(p["keyword"], "other"),
+                          "id": f"{p['id']}-v{i}", "pid": p["id"], "group": GROUP_OF.get(p["keyword"], "other"), "category": p["category"],
                           "affiliate_link": p["link"], "slug": slug, "page_url": f"{SITE}/p/{slug}.html",
                           "page_text": page_text, "status": "pending", "attempts": 0, "created": today(), **v})
         used.add(p["id"])

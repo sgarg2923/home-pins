@@ -10,7 +10,7 @@ PER_PAGE = 10
 VERIFY = os.getenv("PINTEREST_VERIFY") or "ff656e25a52b7f22a3ff1cef9239d416"
 POLICY_DATE = "October 26, 2026"
 HAS_GUIDES = False
-HOME_CATS = ["Kitchen", "Organization", "Decor", "Festive"]
+HOME_CATS = ["Kitchen", "Organization", "Decor", "Festive", "Gifts"]
 DIGITAL_CATS = ["Planners", "Trackers", "Worksheets", "Wall Art", "Templates", "Printables"]
 CAT_ORDER = HOME_CATS + DIGITAL_CATS
 CAT_TEXT = {
@@ -18,6 +18,7 @@ CAT_TEXT = {
     "Organization": "Storage ideas and organizers to tidy up your kitchen, cabinets and drawers.",
     "Decor": "Cozy lighting and simple decor touches that make a home feel warm.",
     "Festive": "Decorations and ideas for festivals and celebrations, including Diwali.",
+    "Gifts": "Gift ideas that are easy to shop for.",
     "Planners": "Printable planners for money, goals and daily life. Instant download.",
     "Trackers": "Habit, challenge and progress trackers you can print at home.",
     "Worksheets": "Printable worksheets for learning and planning.",
@@ -155,7 +156,7 @@ main{padding:34px 0 56px}body.home main{padding:0 0 56px}.section-title{display:
 .f-pin{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#e60023;color:#fff!important;margin-top:6px}.f-pin:hover{background:#ad081b}
 .gift-banner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:16px 22px;border-radius:16px;background:linear-gradient(135deg,#fff1e6,#ffe3e8);border:1px solid var(--line);text-decoration:none;color:var(--text);font-weight:700}.gb-go{color:var(--accent-d)}
 .guide .lead{font-size:1.08rem}.gitem{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:16px 0}.gnum{flex:0 0 44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:20px}
-.gbody h2{font-size:1.25rem;margin:.2rem 0 .4rem}.guide .box ol{margin:.4rem 0 0;padding-left:1.2rem}.guide{max-width:820px}
+.gbody h2{font-size:1.25rem;margin:.2rem 0 .4rem}.guide .box ol{margin:.4rem 0 0;padding-left:1.2rem}.guide{max-width:820px}.pick{margin:.1rem 0 .3rem;color:var(--muted)}
 .sticky-cta{display:none}
 @media(max-width:860px){.sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px;z-index:40}.sticky-cta .btn{display:block}body.has-cta{padding-bottom:76px}}
 footer.site{background:#2b2623;color:#d9cdc1;padding:44px 0 26px;font-size:14.5px}footer.site a{color:#f3e9de}footer.site h4{color:#fff;margin:0 0 10px}
@@ -452,9 +453,25 @@ def gift_banner():
             f'<span class="gb-go">See the guides &rarr;</span></a></section>')
 
 
+def csv_picks():
+    """keyword -> (product name, affiliate link) from inbox/manual_products.csv, so a guide item shows YOUR chosen product."""
+    import csv
+    out = {}
+    try:
+        with open("inbox/manual_products.csv", encoding="utf-8-sig", newline="") as f:
+            for r in csv.DictReader(f):
+                r = {(k or "").strip().lower(): (v or "").strip() for k, v in r.items() if k}
+                if r.get("link", "").startswith("http") and r.get("keyword"):
+                    out.setdefault(r["keyword"].lower(), (r.get("name", ""), r["link"]))
+    except Exception:
+        pass
+    return out
+
+
 def guide_pages(c, cats, guides):
     import urllib.parse
     tag = c.get("amazon_tag", "")
+    picks = csv_picks()
     cards = []
     for g in guides:
         url = u(f"guides/{g['slug']}.html")
@@ -463,8 +480,16 @@ def guide_pages(c, cats, guides):
             if it.get("own"):
                 btns = "".join(f'<a class="btn{" alt" if k else ""}" rel="noopener" target="_blank" href="{e(l["url"])}">{e(l["label"])}</a> ' for k, l in enumerate(it["links"]))
                 badge = '<span class="tag">Our own pick</span>'
+            elif it.get("link") or it["name"].lower() in picks or it.get("search", "").lower() in picks:
+                pn, lk = picks.get(it["name"].lower()) or picks.get(it.get("search", "").lower()) or ("", it["link"])
+                nm = f'<p class="pick">Our pick: <strong>{e(pn)}</strong></p>' if pn else ""
+                btns = f'<a class="btn" rel="sponsored nofollow noopener" target="_blank" href="{e(it.get("link") or lk)}">See it on Amazon</a>'
+                badge = '<span class="tag">Our pick</span>'
+                it = {**it, "blurb": it["blurb"]}
+                items.append(f'<section class="gitem" id="g{i}"><div class="gnum">{i}</div><div class="gbody">{badge}<h2>{e(it["name"])}</h2>{nm}<p>{e(it["blurb"])}</p><p>{btns}</p></div></section>')
+                continue
             else:
-                link = it.get("link") or f"https://www.amazon.com/s?k={urllib.parse.quote_plus(it.get('search', it['name']))}" + (f"&tag={tag}" if tag else "")
+                link = f"https://www.amazon.com/s?k={urllib.parse.quote_plus(it.get('search', it['name']))}" + (f"&tag={tag}" if tag else "")
                 btns = f'<a class="btn" rel="sponsored nofollow noopener" target="_blank" href="{e(link)}">See options on Amazon</a>'
                 badge = ""
             items.append(f'<section class="gitem" id="g{i}"><div class="gnum">{i}</div><div class="gbody">{badge}<h2>{e(it["name"])}</h2><p>{e(it["blurb"])}</p><p>{btns}</p></div></section>')

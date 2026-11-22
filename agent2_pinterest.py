@@ -291,7 +291,32 @@ def note(s):
     print(s)
 
 
-def board_pins():
+def board_for(it):
+    """Which board gets this pin. boards.json can name separate boards for gift guides ("guide") and your own printables ("digital")."""
+    cfgb = jload("boards.json", {}) or {}
+    key = "guide" if (it.get("store") == "guide" or it.get("category") == "Gifts") else "digital" if it.get("store") == "own" else "default"
+    return str(cfgb.get(key) or "").strip() or BOARD
+
+
+_EXIST, _OK = {}, {}
+
+
+def existing_for(board):
+    if board not in _EXIST:
+        _EXIST[board] = board_pins(board)
+    return _EXIST[board]
+
+
+def board_ok(board):
+    if board not in _OK:
+        try:
+            _OK[board] = requests.get(f"{API}/boards/{board}", headers=PH, timeout=30).ok
+        except Exception:
+            _OK[board] = False
+    return _OK[board]
+
+
+def board_pins(board=None):
     """(title, link) of pins already on the board. Used so a pin is NEVER posted twice. None if the list is unavailable."""
     seen, bookmark = set(), None
     try:
@@ -299,7 +324,7 @@ def board_pins():
             params = {"page_size": 100}
             if bookmark:
                 params["bookmark"] = bookmark
-            r = requests.get(f"{API}/boards/{BOARD}/pins", headers=PH, params=params, timeout=30)
+            r = requests.get(f"{API}/boards/{board or BOARD}/pins", headers=PH, params=params, timeout=30)
             if not r.ok:
                 print(f"Could not list board pins ({r.status_code}); relying on the local log only.")
                 return None
@@ -374,7 +399,7 @@ def pin_it(it, b64):
         tail += "\n\nImage: AI-generated illustration."
     if tag:
         tail += "\n\n" + tag
-    payload = {"board_id": BOARD, "title": it["pin_title"][:100],
+    payload = {"board_id": board_for(it), "title": it["pin_title"][:100],
                "description": it["pin_description"][: 495 - len(tail)] + tail,
                "link": it["page_url"], "alt_text": it["alt_text"][:500],
                "media_source": {"source_type": "image_base64", "content_type": "image/jpeg", "data": b64}}
@@ -427,7 +452,6 @@ def main():
     if not preflight(queue):
         report(queue)
         sys.exit(1)
-    existing = board_pins()
     learn(queue)
     jsave(QUEUE, queue)
     per_run = plan(get_state())[2]
@@ -439,6 +463,11 @@ def main():
             print("page image failed:", e)
     for it in [i for i in queue if i["status"] == "pending"][:per_run]:
         key = (it["pin_title"][:100].strip(), it["page_url"].split("?")[0])
+        target = board_for(it)
+        if target != BOARD and not board_ok(target):          # a separate board that does not exist: skip these pins, tell the user
+            note(f"Board {target} (from boards.json) is not valid for this token. Pins for it are waiting: {it['pin_title'][:40]}. {boards_hint()}")
+            continue
+        existing = existing_for(target)
         if existing is not None and key in existing:        # already on the board: never post twice
             it.update(status="posted", pin_id=it.get("pin_id") or "already-on-board", posted_on=it.get("posted_on") or today())
             note(f"Skipped duplicate (already on the board): {it['pin_title'][:60]}")
