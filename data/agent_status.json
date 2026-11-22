@@ -67,9 +67,13 @@
   },
   "message": "Added to the website and queued 4 pin(s): Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic, Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV). 7 product(s) left in the CSV (about 3 day(s)).",
   "pins": {
-    "updated": "2026-11-22 12:16:12",
-    "posted_today": [],
-    "pending": 0,
+    "updated": "2026-11-22 13:33:43",
+    "posted_today": [
+      "Washable Markers for Kids - 10 Count",
+      "Nontoxic Washable Markers for School",
+      "Chunky Crayons for Kids"
+    ],
+    "pending": 1,
     "failed": 0,
     "error": ""
   }
