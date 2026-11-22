@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-22 13:30:41",
+  "updated": "2026-11-22 20:19:45",
   "date": "2026-11-22",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic",
@@ -34,7 +34,7 @@
   ],
   "csv": {
     "total_rows": 45,
-    "already_added": 36,
+    "already_added": 38,
     "remaining": 7,
     "skipped": [],
     "last6": [
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic, Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV). 7 product(s) left in the CSV (about 3 day(s)).",
+  "message": "Today's products were already added (Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic, Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV)). Nothing was added again. Next up: Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI), Crayola Colored Pencils 50 ct (B00000J0S3). Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-22 13:33:43",
     "posted_today": [
