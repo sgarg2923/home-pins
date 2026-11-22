@@ -67,14 +67,13 @@
   },
   "message": "Added to the website and queued 4 pin(s): Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI), Crayola Colored Pencils 50 ct (B00000J0S3). 5 product(s) left in the CSV (about 2 day(s)).",
   "pins": {
-    "updated": "2026-11-22 20:20:36",
+    "updated": "2026-11-23 05:16:05",
     "posted_today": [
-      "Washable Markers for Kids - 10 Count",
-      "Nontoxic Washable Markers for School",
-      "Chunky Crayons for Kids",
-      "Adult Coloring with Chunky Crayons"
+      "Large Sketchbook for Artists",
+      "Sketchbook for Large Drawings",
+      "Colored Pencil Set for Artists & Students"
     ],
-    "pending": 0,
+    "pending": 1,
     "failed": 0,
     "error": ""
   }
