@@ -1,41 +1,41 @@
 {
-  "updated": "2026-11-22 20:19:45",
-  "date": "2026-11-22",
+  "updated": "2026-11-23 05:13:09",
+  "date": "2026-11-23",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic",
+      "name": "Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI)",
       "category": "Gifts",
-      "link": "https://link.amazon/B0diSyVrB",
-      "added_at": "2026-11-22 13:30:42",
-      "page": "https://sgarg2923.github.io/home-pins/p/crayola-ultra-clean-washable-markers-10-count-d-line-m.html"
+      "link": "https://link.amazon/B0cLsxxL5",
+      "added_at": "2026-11-23 05:13:12",
+      "page": "https://sgarg2923.github.io/home-pins/p/strathmore-400-series-sketch-pad-9x12-100-she-004j2d4k.html"
     },
     {
-      "name": "Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV)",
+      "name": "Crayola Colored Pencils 50 ct (B00000J0S3)",
       "category": "Gifts",
-      "link": "https://link.amazon/B0fsf70HJ",
-      "added_at": "2026-11-22 13:30:44",
-      "page": "https://sgarg2923.github.io/home-pins/p/crayola-24-ct-large-ultra-clean-washable-cray-olors-of.html"
+      "link": "https://link.amazon/B0doUEiAZ",
+      "added_at": "2026-11-23 05:13:13",
+      "page": "https://sgarg2923.github.io/home-pins/p/crayola-colored-pencils-50-ct-b00000j0s3-0000j0s3.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "names": [
-      "Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic",
-      "Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV)"
+      "Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI)",
+      "Crayola Colored Pencils 50 ct (B00000J0S3)"
     ]
   },
   "next_up": [
-    "Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI)",
-    "Crayola Colored Pencils 50 ct (B00000J0S3)",
     "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
-    "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)"
+    "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)",
+    "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
+    "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)"
   ],
   "csv": {
     "total_rows": 45,
     "already_added": 38,
-    "remaining": 7,
+    "remaining": 5,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +65,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Crayola Ultra Clean Washable Markers (10 Count), Broad Line Markers For Kids, Great For Crafting & School Supplies, Nontoxic, Crayola 24 Ct Large Ultra-Clean Washable Crayons, Colors of the World (B0CG9L36KV)). Nothing was added again. Next up: Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI), Crayola Colored Pencils 50 ct (B00000J0S3). Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 4 pin(s): Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI), Crayola Colored Pencils 50 ct (B00000J0S3). 5 product(s) left in the CSV (about 2 day(s)).",
   "pins": {
     "updated": "2026-11-22 20:20:36",
     "posted_today": [
