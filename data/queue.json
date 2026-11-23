@@ -1503,8 +1503,8 @@
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 3
+    "measured_on": "2026-11-24",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1530,12 +1530,12 @@
     "pin_id": "343118065388065802",
     "posted_on": "2026-11-18",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 3
+    "measured_on": "2026-11-24",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1561,12 +1561,12 @@
     "pin_id": "343118065388065807",
     "posted_on": "2026-11-18",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 3
+    "measured_on": "2026-11-24",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1592,12 +1592,12 @@
     "pin_id": "343118065388069110",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 3
+    "measured_on": "2026-11-24",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1623,12 +1623,12 @@
     "pin_id": "343118065388069116",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 3
+    "measured_on": "2026-11-24",
+    "measures": 4
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p4-v0",
@@ -1655,12 +1655,12 @@
     "pin_id": "343118065388069125",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 2
+    "measured_on": "2026-11-24",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1686,12 +1686,12 @@
     "pin_id": "343118065388072899",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 2
+    "measured_on": "2026-11-24",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1717,12 +1717,12 @@
     "pin_id": "343118065388072904",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 2
+    "measured_on": "2026-11-24",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1748,12 +1748,12 @@
     "pin_id": "343118065388072906",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 2
+    "measured_on": "2026-11-24",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1779,12 +1779,12 @@
     "pin_id": "343118065388076024",
     "posted_on": "2026-11-20",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 2
+    "measured_on": "2026-11-24",
+    "measures": 3
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p5-v0",
@@ -1811,12 +1811,12 @@
     "pin_id": "343118065388076030",
     "posted_on": "2026-11-20",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-23",
-    "measures": 1
+    "measured_on": "2026-11-24",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -2007,13 +2007,16 @@
     "slug": "crayola-colored-pencils-50-ct-b00000j0s3-0000j0s3",
     "page_url": "https://sgarg2923.github.io/home-pins/p/crayola-colored-pencils-50-ct-b00000j0s3-0000j0s3.html",
     "page_text": "Elevate your creativity with a wide range of colored pencils. Perfect for artists, students, and hobbyists, these pencils offer vibrant colors and smooth application. Explore different techniques and styles with a set that's sure to inspire.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-23",
     "pin_title": "Vibrant Colors for Your Next Project",
     "pin_description": "Take your art projects to the next level with this 50-count Crayola Colored Pencil set. With a wide range of colors to choose from, you'll be able to bring your ideas to life. Great for sketching, drawing, and coloring books, this set is perfect for artists and hobbyists.",
     "alt_text": "Crayola Colored Pencils on a worktable",
-    "overlay_text": "Color your creativity"
+    "overlay_text": "Color your creativity",
+    "scene": "lifestyle",
+    "pin_id": "343118065388105478",
+    "posted_on": "2026-11-24"
   },
   {
     "store": "amazon",
