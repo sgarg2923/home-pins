@@ -1,41 +1,40 @@
 {
-  "updated": "2026-11-23 05:13:09",
-  "date": "2026-11-23",
+  "updated": "2026-11-24 00:11:12",
+  "date": "2026-11-24",
   "mode": "scheduled/manual run",
   "outcome": "added",
   "added_today": [
     {
-      "name": "Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI)",
+      "name": "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
       "category": "Gifts",
-      "link": "https://link.amazon/B0cLsxxL5",
-      "added_at": "2026-11-23 05:13:12",
-      "page": "https://sgarg2923.github.io/home-pins/p/strathmore-400-series-sketch-pad-9x12-100-she-004j2d4k.html"
+      "link": "https://link.amazon/B03EpLF7x",
+      "added_at": "2026-11-24 00:11:14",
+      "page": "https://sgarg2923.github.io/home-pins/p/etch-a-sketch-classic-red-drawing-toy-b01n1zv-1n1zvydm.html"
     },
     {
-      "name": "Crayola Colored Pencils 50 ct (B00000J0S3)",
+      "name": "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)",
       "category": "Gifts",
-      "link": "https://link.amazon/B0doUEiAZ",
-      "added_at": "2026-11-23 05:13:13",
-      "page": "https://sgarg2923.github.io/home-pins/p/crayola-colored-pencils-50-ct-b00000j0s3-0000j0s3.html"
+      "link": "https://link.amazon/B00nOYBLF",
+      "added_at": "2026-11-24 00:11:18",
+      "page": "https://sgarg2923.github.io/home-pins/p/melissa-doug-deluxe-double-sided-magnetic-tab--easel-4.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "names": [
-      "Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI)",
-      "Crayola Colored Pencils 50 ct (B00000J0S3)"
+      "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
+      "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)"
     ]
   },
   "next_up": [
-    "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
-    "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)",
     "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
-    "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)"
+    "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)",
+    "Crayola Construction Paper 240 ct (B00125Q27M)"
   ],
   "csv": {
     "total_rows": 45,
-    "already_added": 38,
-    "remaining": 5,
+    "already_added": 40,
+    "remaining": 3,
     "skipped": [],
     "last6": [
       {
@@ -65,7 +64,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): Strathmore 400 Series Sketch Pad 9x12, 100 sheets (B004J2D4KI), Crayola Colored Pencils 50 ct (B00000J0S3). 5 product(s) left in the CSV (about 2 day(s)).",
+  "message": "Added to the website and queued 4 pin(s): Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM), Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3). 3 product(s) left in the CSV (about 1 day(s)).",
   "pins": {
     "updated": "2026-11-23 05:16:05",
     "posted_today": [
