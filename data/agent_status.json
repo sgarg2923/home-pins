@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-24 00:11:12",
+  "updated": "2026-11-24 09:30:53",
   "date": "2026-11-24",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
@@ -33,7 +33,7 @@
   ],
   "csv": {
     "total_rows": 45,
-    "already_added": 40,
+    "already_added": 42,
     "remaining": 3,
     "skipped": [],
     "last6": [
@@ -64,7 +64,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM), Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3). 3 product(s) left in the CSV (about 1 day(s)).",
+  "message": "Today's products were already added (Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM), Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)). Nothing was added again. Next up: Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K). Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-24 00:14:16",
     "posted_today": [
