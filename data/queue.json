@@ -1655,12 +1655,12 @@
     "pin_id": "343118065388069125",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 7,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 3
+    "measured_on": "2026-11-25",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1686,12 +1686,12 @@
     "pin_id": "343118065388072899",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 10,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 3
+    "measured_on": "2026-11-25",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1717,12 +1717,12 @@
     "pin_id": "343118065388072904",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 10,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 3
+    "measured_on": "2026-11-25",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1748,12 +1748,12 @@
     "pin_id": "343118065388072906",
     "posted_on": "2026-11-19",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 11,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 3
+    "measured_on": "2026-11-25",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1779,12 +1779,12 @@
     "pin_id": "343118065388076024",
     "posted_on": "2026-11-20",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 12,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 3
+    "measured_on": "2026-11-25",
+    "measures": 4
   },
   {
     "id": "gd-gift-ideas-for-kids-who-love-t-p5-v0",
@@ -1811,12 +1811,12 @@
     "pin_id": "343118065388076030",
     "posted_on": "2026-11-20",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 13,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-24",
-    "measures": 2
+    "measured_on": "2026-11-25",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -1841,7 +1841,14 @@
     "overlay_text": "Colorful art projects",
     "scene": "lifestyle",
     "pin_id": "343118065388092589",
-    "posted_on": "2026-11-22"
+    "posted_on": "2026-11-22",
+    "metrics": {
+      "IMPRESSION": 11,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-25",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1866,7 +1873,14 @@
     "overlay_text": "Easy clean-up",
     "scene": "lifestyle",
     "pin_id": "343118065388092593",
-    "posted_on": "2026-11-22"
+    "posted_on": "2026-11-22",
+    "metrics": {
+      "IMPRESSION": 10,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-25",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1891,7 +1905,14 @@
     "overlay_text": "Colorful learning",
     "scene": "lifestyle",
     "pin_id": "343118065388092600",
-    "posted_on": "2026-11-22"
+    "posted_on": "2026-11-22",
+    "metrics": {
+      "IMPRESSION": 10,
+      "PIN_CLICK": 1,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-25",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1916,7 +1937,14 @@
     "overlay_text": "Stress-free art",
     "scene": "lifestyle",
     "pin_id": "343118065388094693",
-    "posted_on": "2026-11-22"
+    "posted_on": "2026-11-22",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-25",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2132,13 +2160,16 @@
     "slug": "crayola-washable-watercolors-kids-paint-set-8-000hhkae",
     "page_url": "https://sgarg2923.github.io/home-pins/p/crayola-washable-watercolors-kids-paint-set-8-000hhkae.html",
     "page_text": "Discover a fun and mess-free way to introduce your child to the world of watercolor painting with Crayola's Washable Watercolors. Perfect for little artists, these vibrant paints are easy to clean up and won't stain skin or surfaces.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-25",
     "pin_title": "8-Count Washable Watercolor Paint Set for Kids",
     "pin_description": "Help your child unleash their creativity with Crayola's 8-count Washable Watercolors paint set. This set includes 8 vibrant colors that are easy to mix and match, making it perfect for kids who love to paint and create. The washable formula ensures that clean-up is a breeze and won't stain skin or surfaces. #kidfriendly #watercolorpaint #art supplies",
     "alt_text": "Crayola's 8-count Washable Watercolors paint set for kids",
-    "overlay_text": "Mess-free art time"
+    "overlay_text": "Mess-free art time",
+    "scene": "lifestyle",
+    "pin_id": "343118065388114795",
+    "posted_on": "2026-11-25"
   },
   {
     "store": "amazon",
