@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-25 08:10:52",
+  "updated": "2026-11-25 23:02:36",
   "date": "2026-11-25",
   "mode": "scheduled/manual run",
-  "outcome": "added",
+  "outcome": "already_today",
   "added_today": [
     {
       "name": "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
@@ -31,7 +31,7 @@
   ],
   "csv": {
     "total_rows": 45,
-    "already_added": 42,
+    "already_added": 44,
     "remaining": 1,
     "skipped": [],
     "last6": [
@@ -62,7 +62,7 @@
     ],
     "error": ""
   },
-  "message": "Added to the website and queued 4 pin(s): Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K). 1 product(s) left in the CSV (about 0 day(s)).",
+  "message": "Today's products were already added (Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)). Nothing was added again. Next up: Crayola Construction Paper 240 ct (B00125Q27M). Use 'Add next products now' to add them early.",
   "pins": {
     "updated": "2026-11-25 08:14:00",
     "posted_today": [
