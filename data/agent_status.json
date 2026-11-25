@@ -1,40 +1,38 @@
 {
-  "updated": "2026-11-24 23:40:06",
-  "date": "2026-11-24",
+  "updated": "2026-11-25 08:10:52",
+  "date": "2026-11-25",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
+      "name": "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
       "category": "Gifts",
-      "link": "https://link.amazon/B03EpLF7x",
-      "added_at": "2026-11-24 00:11:14",
-      "page": "https://sgarg2923.github.io/home-pins/p/etch-a-sketch-classic-red-drawing-toy-b01n1zv-1n1zvydm.html"
+      "link": "https://link.amazon/B07DM20eL",
+      "added_at": "2026-11-25 08:10:54",
+      "page": "https://sgarg2923.github.io/home-pins/p/crayola-washable-watercolors-kids-paint-set-8-000hhkae.html"
     },
     {
-      "name": "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)",
+      "name": "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)",
       "category": "Gifts",
-      "link": "https://link.amazon/B00nOYBLF",
-      "added_at": "2026-11-24 00:11:18",
-      "page": "https://sgarg2923.github.io/home-pins/p/melissa-doug-deluxe-double-sided-magnetic-tab--easel-4.html"
+      "link": "https://link.amazon/B03u1bdHv",
+      "added_at": "2026-11-25 08:10:56",
+      "page": "https://sgarg2923.github.io/home-pins/p/melissa-doug-giant-sticker-collection-book-50-ckers-b0.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "names": [
-      "Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM)",
-      "Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)"
+      "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
+      "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)"
     ]
   },
   "next_up": [
-    "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
-    "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)",
     "Crayola Construction Paper 240 ct (B00125Q27M)"
   ],
   "csv": {
     "total_rows": 45,
     "already_added": 42,
-    "remaining": 3,
+    "remaining": 1,
     "skipped": [],
     "last6": [
       {
@@ -64,7 +62,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Etch A Sketch Classic Red Drawing Toy (B01N1ZVYDM), Melissa & Doug Deluxe Double-Sided Magnetic Tabletop Easel, 42 pcs (B086WNQRC3)). Nothing was added again. Next up: Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K). Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 4 pin(s): Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K). 1 product(s) left in the CSV (about 0 day(s)).",
   "pins": {
     "updated": "2026-11-24 23:40:10",
     "posted_today": [
