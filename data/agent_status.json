@@ -1,38 +1,28 @@
 {
-  "updated": "2026-11-25 23:02:36",
-  "date": "2026-11-25",
+  "updated": "2026-11-26 07:24:12",
+  "date": "2026-11-26",
   "mode": "scheduled/manual run",
-  "outcome": "already_today",
+  "outcome": "added",
   "added_today": [
     {
-      "name": "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
+      "name": "Crayola Construction Paper 240 ct (B00125Q27M)",
       "category": "Gifts",
-      "link": "https://link.amazon/B07DM20eL",
-      "added_at": "2026-11-25 08:10:54",
-      "page": "https://sgarg2923.github.io/home-pins/p/crayola-washable-watercolors-kids-paint-set-8-000hhkae.html"
-    },
-    {
-      "name": "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)",
-      "category": "Gifts",
-      "link": "https://link.amazon/B03u1bdHv",
-      "added_at": "2026-11-25 08:10:56",
-      "page": "https://sgarg2923.github.io/home-pins/p/melissa-doug-giant-sticker-collection-book-50-ckers-b0.html"
+      "link": "https://link.amazon/B0hzHWqs5",
+      "added_at": "2026-11-26 07:24:14",
+      "page": "https://sgarg2923.github.io/home-pins/p/crayola-construction-paper-240-ct-b00125q27m-0125q27m.html"
     }
   ],
   "last_added": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "names": [
-      "Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2)",
-      "Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)"
+      "Crayola Construction Paper 240 ct (B00125Q27M)"
     ]
   },
-  "next_up": [
-    "Crayola Construction Paper 240 ct (B00125Q27M)"
-  ],
+  "next_up": [],
   "csv": {
     "total_rows": 45,
     "already_added": 44,
-    "remaining": 1,
+    "remaining": 0,
     "skipped": [],
     "last6": [
       {
@@ -62,7 +52,7 @@
     ],
     "error": ""
   },
-  "message": "Today's products were already added (Crayola Washable Watercolors, Kids Paint Set, 8 ct (B000HHKAE2), Melissa & Doug Giant Sticker Collection Book, 500+ stickers (B004OFBY7K)). Nothing was added again. Next up: Crayola Construction Paper 240 ct (B00125Q27M). Use 'Add next products now' to add them early.",
+  "message": "Added to the website and queued 2 pin(s): Crayola Construction Paper 240 ct (B00125Q27M). 0 product(s) left in the CSV (about 0 day(s)).",
   "pins": {
     "updated": "2026-11-25 23:03:30",
     "posted_today": [
