@@ -1811,12 +1811,12 @@
     "pin_id": "343118065388076030",
     "posted_on": "2026-11-20",
     "metrics": {
-      "IMPRESSION": 13,
+      "IMPRESSION": 15,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-25",
-    "measures": 3
+    "measured_on": "2026-11-26",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1843,12 +1843,12 @@
     "pin_id": "343118065388092589",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 11,
+      "IMPRESSION": 13,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-25",
-    "measures": 1
+    "measured_on": "2026-11-26",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1875,12 +1875,12 @@
     "pin_id": "343118065388092593",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 10,
+      "IMPRESSION": 12,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-25",
-    "measures": 1
+    "measured_on": "2026-11-26",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1907,12 +1907,12 @@
     "pin_id": "343118065388092600",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 10,
+      "IMPRESSION": 12,
       "PIN_CLICK": 1,
       "SAVE": 0
     },
-    "measured_on": "2026-11-25",
-    "measures": 1
+    "measured_on": "2026-11-26",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1939,12 +1939,12 @@
     "pin_id": "343118065388094693",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 1,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-25",
-    "measures": 1
+    "measured_on": "2026-11-26",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -1969,7 +1969,14 @@
     "overlay_text": "Create Your Masterpiece",
     "scene": "lifestyle",
     "pin_id": "343118065388098855",
-    "posted_on": "2026-11-23"
+    "posted_on": "2026-11-23",
+    "metrics": {
+      "IMPRESSION": 2,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-26",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -1994,7 +2001,14 @@
     "overlay_text": "Sketch Big Dreams",
     "scene": "lifestyle",
     "pin_id": "343118065388098859",
-    "posted_on": "2026-11-23"
+    "posted_on": "2026-11-23",
+    "metrics": {
+      "IMPRESSION": 2,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-26",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2019,7 +2033,14 @@
     "overlay_text": "Colorful creativity at home",
     "scene": "lifestyle",
     "pin_id": "343118065388098865",
-    "posted_on": "2026-11-23"
+    "posted_on": "2026-11-23",
+    "metrics": {
+      "IMPRESSION": 2,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-26",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2044,7 +2065,14 @@
     "overlay_text": "Color your creativity",
     "scene": "lifestyle",
     "pin_id": "343118065388105478",
-    "posted_on": "2026-11-24"
+    "posted_on": "2026-11-24",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-26",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2260,13 +2288,16 @@
     "slug": "crayola-construction-paper-240-ct-b00125q27m-0125q27m",
     "page_url": "https://sgarg2923.github.io/home-pins/p/crayola-construction-paper-240-ct-b00125q27m-0125q27m.html",
     "page_text": "Add a splash of color to your art projects with Crayola Construction Paper. Perfect for kids and adults alike, this paper is great for drawing, painting, and more. With 240 sheets to choose from, you'll never run out of inspiration.",
-    "status": "pending",
+    "status": "posted",
     "attempts": 0,
     "created": "2026-11-26",
     "pin_title": "Crayola Construction Paper for Kids",
     "pin_description": "Help your little ones unleash their creativity with Crayola Construction Paper. This 240-sheet pack is perfect for drawing, painting, and coloring. The vibrant colors and high-quality paper ensure that their artwork turns out amazing every time. #ArtSupplies #KidsActivities #Crayola",
     "alt_text": "Crayola Construction Paper for kids, 240 sheets",
-    "overlay_text": "Colorful art projects"
+    "overlay_text": "Colorful art projects",
+    "scene": "lifestyle",
+    "pin_id": "343118065388121642",
+    "posted_on": "2026-11-26"
   },
   {
     "store": "amazon",
