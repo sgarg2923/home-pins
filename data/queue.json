@@ -1843,12 +1843,12 @@
     "pin_id": "343118065388092589",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 13,
+      "IMPRESSION": 14,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 3
+    "measured_on": "2026-11-28",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1875,12 +1875,12 @@
     "pin_id": "343118065388092593",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 12,
+      "IMPRESSION": 13,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 3
+    "measured_on": "2026-11-28",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1907,12 +1907,12 @@
     "pin_id": "343118065388092600",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 12,
+      "IMPRESSION": 13,
       "PIN_CLICK": 1,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 3
+    "measured_on": "2026-11-28",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1939,12 +1939,12 @@
     "pin_id": "343118065388094693",
     "posted_on": "2026-11-22",
     "metrics": {
-      "IMPRESSION": 3,
+      "IMPRESSION": 4,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 3
+    "measured_on": "2026-11-28",
+    "measures": 4
   },
   {
     "store": "amazon",
@@ -1971,12 +1971,12 @@
     "pin_id": "343118065388098855",
     "posted_on": "2026-11-23",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 2
+    "measured_on": "2026-11-28",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -2003,12 +2003,12 @@
     "pin_id": "343118065388098859",
     "posted_on": "2026-11-23",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 2
+    "measured_on": "2026-11-28",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -2035,12 +2035,12 @@
     "pin_id": "343118065388098865",
     "posted_on": "2026-11-23",
     "metrics": {
-      "IMPRESSION": 2,
+      "IMPRESSION": 3,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 2
+    "measured_on": "2026-11-28",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -2067,12 +2067,12 @@
     "pin_id": "343118065388105478",
     "posted_on": "2026-11-24",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 2
+    "measured_on": "2026-11-28",
+    "measures": 3
   },
   {
     "store": "amazon",
@@ -2099,12 +2099,12 @@
     "pin_id": "343118065388105491",
     "posted_on": "2026-11-24",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 1
+    "measured_on": "2026-11-28",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -2131,12 +2131,12 @@
     "pin_id": "343118065388105503",
     "posted_on": "2026-11-24",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 1
+    "measured_on": "2026-11-28",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -2163,12 +2163,12 @@
     "pin_id": "343118065388108397",
     "posted_on": "2026-11-24",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 1
+    "measured_on": "2026-11-28",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -2195,12 +2195,12 @@
     "pin_id": "343118065388108402",
     "posted_on": "2026-11-24",
     "metrics": {
-      "IMPRESSION": 0,
+      "IMPRESSION": 1,
       "PIN_CLICK": 0,
       "SAVE": 0
     },
-    "measured_on": "2026-11-27",
-    "measures": 1
+    "measured_on": "2026-11-28",
+    "measures": 2
   },
   {
     "store": "amazon",
@@ -2225,7 +2225,14 @@
     "overlay_text": "Mess-free art time",
     "scene": "lifestyle",
     "pin_id": "343118065388114795",
-    "posted_on": "2026-11-25"
+    "posted_on": "2026-11-25",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-28",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2250,7 +2257,14 @@
     "overlay_text": "Easy clean-up",
     "scene": "lifestyle",
     "pin_id": "343118065388114798",
-    "posted_on": "2026-11-25"
+    "posted_on": "2026-11-25",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-28",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2275,7 +2289,14 @@
     "overlay_text": "Sticker Fun for Kids",
     "scene": "lifestyle",
     "pin_id": "343118065388114803",
-    "posted_on": "2026-11-25"
+    "posted_on": "2026-11-25",
+    "metrics": {
+      "IMPRESSION": 1,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-28",
+    "measures": 1
   },
   {
     "store": "amazon",
@@ -2300,7 +2321,14 @@
     "overlay_text": "Colorful Sticker Set",
     "scene": "lifestyle",
     "pin_id": "343118065388119066",
-    "posted_on": "2026-11-25"
+    "posted_on": "2026-11-25",
+    "metrics": {
+      "IMPRESSION": 0,
+      "PIN_CLICK": 0,
+      "SAVE": 0
+    },
+    "measured_on": "2026-11-28",
+    "measures": 1
   },
   {
     "store": "amazon",
